@@ -75,6 +75,19 @@ export const FeatureWorkWrapper = styled.div`
     }
 `
 
+export const FeatureWorkWrapperReverse = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    @media (max-width: ${ theme.breakpoints.lg}) {
+        padding: 20px;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+`
+
 export const FeatureWorkTextWrapper = styled.div`
     width: 360px;
     display: flex;

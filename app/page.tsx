@@ -54,7 +54,7 @@ export default function Home() {
         </S.FeatureWorkTextWrapper>
       </S.FeatureWorkWrapper>
 
-      <S.FeatureWorkWrapper>
+      <S.FeatureWorkWrapperReverse>
         
         <S.FeatureWorkTextWrapper>
           <S.FeatureWorkTextTitle>
@@ -72,7 +72,7 @@ export default function Home() {
           height={700}
           priority
         />
-      </S.FeatureWorkWrapper>
+      </S.FeatureWorkWrapperReverse>
 
       <S.FeatureWorkWrapper>
         <Image
