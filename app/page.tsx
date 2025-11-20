@@ -1,5 +1,5 @@
 "use client"
-// import Link from "next/link";
+import Link from "next/link";
 import Image from "next/image";
 import { Brush } from "@/components/animate-ui/icons/brush";
 import { Navigation } from "@/components/common/navigation/navigation";
@@ -50,7 +50,10 @@ export default function Home() {
           <S.HeroContent>
             Athena Advisory built a Financial Agentic AI that can help clients manage their financial situation.
           </S.HeroContent>
-          <Button className="mt-4">View case study</Button>
+           <Link href="/projects/athena" scroll={false}>
+            <Button className="mt-4" >View case study</Button>
+           </Link>
+          
         </S.FeatureWorkTextWrapper>
       </S.FeatureWorkWrapper>
 
