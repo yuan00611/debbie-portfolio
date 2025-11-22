@@ -18,7 +18,7 @@ export function Navigation() {
             <Link href="/">Home</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
-        <NavigationMenuItem>
+        {/* <NavigationMenuItem>
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
             <Link href="/docs">Works</Link>
           </NavigationMenuLink>
@@ -27,10 +27,10 @@ export function Navigation() {
          <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
             <Link href="/docs">Playground</Link>
           </NavigationMenuLink>
-        </NavigationMenuItem>
+        </NavigationMenuItem> */}
           <NavigationMenuItem>
          <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <Link href="/docs">About</Link>
+            <Link href="/about">About</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
        

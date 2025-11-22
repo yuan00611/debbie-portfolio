@@ -98,7 +98,7 @@ export const HighlightTitle = styled.p`
 export const HighLightList = styled.li`
     list-style-type: circle;
     margin-left: 20px;
-
+    color: #555;
 `
 
 export const SectionText = styled.p`
