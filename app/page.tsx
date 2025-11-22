@@ -50,7 +50,7 @@ export default function Home() {
           <S.HeroContent>
             Athena Advisory built a Financial Agentic AI that can help clients manage their financial situation.
           </S.HeroContent>
-           <Link href="/projects/athena" scroll={false}>
+           <Link href="/projects/athena" scroll={true}>
             <Button className="mt-4" >View case study</Button>
            </Link>
           
@@ -66,7 +66,10 @@ export default function Home() {
           <S.HeroContent>
             Dell Network Graph is an interactive network graphs with React for their next-generation enterprise visualization platform.
           </S.HeroContent>
-          <Button className="mt-4">View case study</Button>
+          <Link href="/projects/dell" scroll={true}>
+            <Button className="mt-4">View case study</Button>
+          </Link>
+          
         </S.FeatureWorkTextWrapper>
         <Image
           src="/Dell.png"
