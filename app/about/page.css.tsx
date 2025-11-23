@@ -40,6 +40,15 @@ export const SectionTitleWrapper = styled.div`
     gap: 8px;
 `
 
+export const SummaryWrapper = styled.div`
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+
+     @media (max-width: ${ theme.breakpoints.md}) {
+        flex-direction: column;
+    }
+`
 
 export const SectionTitle = styled.h2`
     font-size: 22px;
@@ -47,9 +56,18 @@ export const SectionTitle = styled.h2`
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 `
 
+export const SectionSubtitle = styled.h3`
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: -16px;
+    margin-top: 4px;
+`
+
 export const SectionTextWrapper = styled.div`
     padding-left: 20px;
     border-left: 2px solid #9ddccf;
+    max-width: 760px;
 `
 
 export const SectionText = styled.p`
@@ -62,6 +80,8 @@ export const SectionText = styled.p`
 export const IconWrapper = styled.div`
     width: 48px;
     height: 48px;
+    min-width: 48px;
+    min-height: 48px;
     border-radius: 30px;
     background-color: #e8faf6;
     display: flex;
@@ -97,4 +117,23 @@ export const SectionItemContent1 = styled.h3`
 export const SectionItemContent2 = styled.p`
     font-size: 16px;
     color: #888;
+`
+
+export const PublicationWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+`
+
+export const PublicationLinkWrapper = styled.div`
+    display: flex;
+    gap: 8px;
+`
+
+export const PublicationLink = styled.a`
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    color: #3DCAAE;
+    font-weight: 500;
 `
