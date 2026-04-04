@@ -18,8 +18,19 @@ export const CaseTitle = styled.h1`
 `
 
 export const CaseOverview = styled.p`
+    max-width: 720px;
     font-size: 18px;
     color: #777;
+    text-align: center;
+    margin-top: 12px;
+    margin-bottom: 24px;
+`
+
+export const CaseBadgeWrapper = styled.div`
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    justify-content: center;
 `
 
 // Small impact cards
@@ -49,7 +60,7 @@ export const ImpactTitle = styled.h2`
 `
 
 export const ImpactText = styled.p`
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 600;
 `
 
@@ -61,7 +72,7 @@ export const SectionContainer = styled.div`
     margin-top: 60px;
     padding-left: 40px;
     padding-right: 40px;
-    max-width: 800px;
+    max-width: 960px;
 
     @media (max-width: ${ theme.breakpoints.md}) {
         padding: 20px;
@@ -113,7 +124,7 @@ export const SectionText = styled.p`
 // Metric cards
 export const MetricsContainer = styled.div`
     margin-top: 20px;
-    max-width: 800px;
+    max-width: 960px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -165,6 +176,24 @@ export const QuoteName = styled.p`
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
     font-size: 14px;
 
+`
+
+// Summary section
+export const SummaryWrapper = styled.div<{$bgColor: string}>`
+    margin-top: 20px;
+    background-color: ${props => props.$bgColor || "#0672CB1A"};
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 12px;
+`
+
+export const SummaryContent = styled.p<{$mainColor: string}>`
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    color: ${props => props.$mainColor || "#0672CB"};
+    font-style: italic;
+    font-size: 18px;
 `
 
 //Iframe

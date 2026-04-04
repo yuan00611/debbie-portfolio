@@ -37,7 +37,7 @@ export function ImageLightbox({ images }: ImageLightboxProps) {
               </span>
             </div>
             {img.label && (
-              <span className="absolute top-2 left-2 text-xs font-medium px-2 py-1 rounded bg-black/50 text-white">
+              <span className="absolute top-2 left-2 text-xs font-medium px-2 py-1 rounded bg-black/70 text-white">
                 {img.label}
               </span>
             )}

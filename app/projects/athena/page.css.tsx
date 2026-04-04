@@ -17,7 +17,7 @@ export const CaseTitle = styled.h1`
 `
 
 export const CaseOverview = styled.p`
-    max-width: 600px;
+    max-width: 720px;
     font-size: 18px;
     color: #777;
     text-align: center;
@@ -67,11 +67,11 @@ export const ImpactText = styled.p`
 export const SectionContainer = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 60px;
     margin-top: 60px;
     padding-left: 40px;
     padding-right: 40px;
-    max-width: 800px;
+    max-width: 960px;
 
     @media (max-width: ${ theme.breakpoints.md}) {
         padding: 20px;
@@ -106,7 +106,6 @@ export const SummaryWrapper = styled.div`
     margin-top: 20px;
     background-color: #407efc1A;
     border-radius: 12px;
-    /* border-left: 2px solid "#407efc"; */
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -146,7 +145,7 @@ export const TabTitle = styled.p`
 
 export const MetricsContainer = styled.div`
     margin-top: 20px;
-    max-width: 800px;
+    max-width: 900px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

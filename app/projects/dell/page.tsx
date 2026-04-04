@@ -9,6 +9,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import { Badge } from "@/components/ui/badge";
 
 
 import * as S from '../shared.css';
@@ -16,75 +17,93 @@ import * as S from '../shared.css';
 export default function Dell(){
     const mainColor = '#0672CB';
     const bgColor = '#ebf0f4';
-    const metricBgColor = '#c2e1fa';
+    const metricBgColor = '#0672CB1A';
     const images = [
-  "/Dell01.png",
-  "/Dell02.png",
-  "/Dell03.png",
-  "/Dell04.png",
-  "/Dell05.png",
-];
+        "/Dell01.png",
+        "/Dell02.png",
+        "/Dell03.png",
+        "/Dell04.png",
+        "/Dell05.png",
+    ];
 
     return(<>
         <Navigation />
         <S.PageWrapper $bgColor={bgColor}>
+            <S.CaseBadgeWrapper>
+                <Badge variant="outline" className="mx-auto mb-4">Capstone</Badge>
+                <Badge variant="outline" className="mx-auto mb-4">3 Months</Badge>
+                <Badge className="mx-auto mb-4 bg-purple-100 text-purple-700 dark:bg-purple-950 dark:text-purple-300">Data Visualization</Badge>
+                <Badge className="mx-auto mb-4 bg-blue-100 text-blue-700 dark:bg-blue-950 dark:text-blue-300">UX Engineering</Badge>
+            </S.CaseBadgeWrapper>
             <S.CaseTitle>Dell Next-Generation Network Graph System</S.CaseTitle>
+            <S.CaseOverview>
+                Replacing manual GraphQL queries with an interactive visual graph explorer — making 60K+ enterprise data nodes accessible to non-technical users.
+            </S.CaseOverview>
+            
+            <S.ImpactContainer>
+                <S.ImpactWrapper>
+                    <S.ImpactText>60K+</S.ImpactText>
+                    <S.ImpactTitle>Dataset nodes</S.ImpactTitle>
+                </S.ImpactWrapper>
+                <S.ImpactWrapper>
+                    <S.ImpactText>70%</S.ImpactText>
+                    <S.ImpactTitle>Faster insight discovery</S.ImpactTitle>
+                </S.ImpactWrapper>
+                <S.ImpactWrapper>
+                    <S.ImpactText>2-3x</S.ImpactText>
+                    <S.ImpactTitle>Relationship-mapping efficiency</S.ImpactTitle>
+                </S.ImpactWrapper>
+                <S.ImpactWrapper>
+                    <S.ImpactText>3 mo</S.ImpactText>
+                    <S.ImpactTitle>Research to production</S.ImpactTitle>
+                </S.ImpactWrapper>
+            </S.ImpactContainer>
             <Image
               src="/Dell.png"
               alt="Dell portfolio image"
-              width={400}
-              height={400}
+              width={600}
+              height={600}
               priority
             />
-            <S.ImpactContainer>
-                <S.ImpactWrapper>
-                    <S.ImpactTitle>Durations</S.ImpactTitle>
-                    <S.ImpactText>3 months</S.ImpactText>
-                </S.ImpactWrapper>
-                <S.ImpactWrapper>
-                    <S.ImpactTitle>Role</S.ImpactTitle>
-                    <S.ImpactText>UX Engineer</S.ImpactText>
-                </S.ImpactWrapper>
-                <S.ImpactWrapper>
-                    <S.ImpactTitle>Tools</S.ImpactTitle>
-                    <S.ImpactText>Figma, React, D3</S.ImpactText>
-                </S.ImpactWrapper>
-                <S.ImpactWrapper>
-                    <S.ImpactTitle>Date nodes</S.ImpactTitle>
-                    <S.ImpactText>60K ↑</S.ImpactText>
-                </S.ImpactWrapper>
-            </S.ImpactContainer>
 
             <S.SectionContainer>
                 <S.SectionWrapper>
-                    <S.SectionSubTitle $mainColor={mainColor}>01</S.SectionSubTitle>
-                    <S.SectionTitle>Intro Summary</S.SectionTitle>
-                    <S.SectionText>At Dell, the data science team maintained a GraphQL database containing over 60,000 interconnected nodes. While rich in information, it lacked a visual interface, forcing users to manually construct GraphQL queries to explore relationships.</S.SectionText>
-                    <S.SectionText> I led the end-to-end design and development of an interactive graph explorer using React and D3.js. The tool allowed non-technical users to search, navigate, and understand complex data networks visually — making hidden patterns instantly discoverable.</S.SectionText>
-
-                </S.SectionWrapper>
-
-                 <S.SectionWrapper>
-                    <S.SectionSubTitle $mainColor={mainColor}>02</S.SectionSubTitle>
-                    <S.SectionTitle>Problem & Research</S.SectionTitle>
-                    <S.SectionText>When I joined the project, our data science team had already built a powerful GraphQL knowledge graph containing more than <b> 60,000 interconnected nodes. </b> But despite its richness, the data remained locked behind text-based queries. Analysts had to write GraphQL requests manually just to discover relationships, and without visualization, validating assumptions or exploring connections became slow and error-prone.</S.SectionText>
-                    <S.SectionText>I began by interviewing the core users — data scientists, PMs, and analytics engineers — to understand how they worked with the graph. Very quickly, a pattern emerged: they weren’t struggling with the data; they were struggling with the interface. They needed a way to visually trace relationships, zoom in and out smoothly, and search for specific nodes instantly. And above all, they needed performance — because any delay broke their analytical flow.</S.SectionText>
-                    <br />
+                    <S.SectionSubTitle $mainColor={mainColor}>01 - Problem & Research</S.SectionSubTitle>
+                    <S.SectionTitle>The data was rich. The interface was nonexistent.</S.SectionTitle>
+                    <S.SectionText>
+                        The data science team had built a powerful GraphQL knowledge graph with 60,000+ interconnected nodes — but the data remained locked behind manual text queries. Analysts couldn&apos;t explore relationships without writing GraphQL requests by hand.
+                    </S.SectionText>
+                    <S.SectionText>
+                        I interviewed data scientists, PMs, and analytics engineers to understand their workflow. The pattern was immediate: they weren&apos;t struggling with the data — they were struggling with the interface.
+                    </S.SectionText>
                     <S.SectionText>From this research, three essential requirements became clear:</S.SectionText>
-                    <ul>
-                        <S.HighLightList>The ability to freely explore the graph through zooming, panning, and intuitive navigation.</S.HighLightList>
-                        <S.HighLightList>A detailed view for each node, revealing metadata, dependencies, and context.</S.HighLightList>
-                        <S.HighLightList>A fast, global search mechanism that allowed them to jump directly to any node.</S.HighLightList>
-                    </ul>
-                    <S.SectionText>These insights became the foundation for the product direction.</S.SectionText>
+                    <div className="grid grid-cols-3 gap-3 my-4">
+                        <div className="border border-blue-500 rounded-lg p-4">
+                            <div className="text-md font-medium">Visual exploration</div>
+                            <div className="text-sm text-gray-700 mt-1">Zoom, pan, and drag to freely navigate the graph structure</div>
+                        </div>
+                        <div className="border border-blue-500 rounded-lg p-4">
+                            <div className="text-md font-medium">Node detail</div>
+                            <div className="text-sm text-gray-700 mt-1">Click any node to reveal metadata, dependencies, and relationships</div>
+                        </div>
+                        <div className="border border-blue-500 rounded-lg p-4">
+                            <div className="text-md font-medium">Global search</div>
+                            <div className="text-sm text-gray-700 mt-1">Jump directly to any node instantly without manual traversal</div>
+                        </div>
+                    </div>
                 </S.SectionWrapper>
 
                 <S.SectionWrapper>
-                    <S.SectionSubTitle $mainColor={mainColor}>03</S.SectionSubTitle>
-                    <S.SectionTitle>Design Process & Iterations</S.SectionTitle>
-                    <S.SectionText>Throughout this project, I explored a wide range of interface layouts and interaction patterns to find the most intuitive way to navigate complex relational data. Early on, I experimented with multiple structural directions—from different search entry points to variations in how nodes, hierarchy, and spatial relationships should be visualized. These iterations helped me gradually refine a balance between visual clarity, information density, and user orientation.</S.SectionText>
-                    <S.SectionText>Functionally, I also tested several interaction mechanisms to support deeper exploration. Features like <b> Node Exploration, Filter, and Degree Count </b> were introduced to let users control the scope of the graph and uncover patterns at their own pace. Meanwhile, the search interface went through its own evolution, eventually becoming a minimal and focused input panel that allows users to quickly type, randomize, and jump directly into the visualization.</S.SectionText>
-                    <S.SectionText>Together, these design and functional explorations shaped the experience from an early, high-complexity prototype into a more structured and discoverable system—one that can handle enterprise-scale datasets while still feeling approachable and easy to explore. My goal was not only to make the interface usable, but to make it inviting—encouraging users to dive deeper, follow connections, and continuously uncover new insights.</S.SectionText>
+                    <S.SectionSubTitle $mainColor={mainColor}>02 - Design process</S.SectionSubTitle>
+                    <S.SectionTitle>Iterating toward clarity at scale</S.SectionTitle>
+                    <S.SectionText>
+                        I explored multiple layout directions and interaction patterns — from different search entry points to variations in how nodes and spatial relationships should be visualized. Each iteration brought the interface closer to feeling approachable despite the dataset&apos;s complexity.
+                    </S.SectionText>
+                    <S.SummaryWrapper $bgColor={metricBgColor} className="mb-4">
+                        <S.SummaryContent $mainColor={mainColor}>
+                            Key features introduced through iteration: neighbor highlighting to trace relationships, filter and degree count to control graph scope, and a minimal search panel with randomize and jump-to-node.
+                        </S.SummaryContent>
+                    </S.SummaryWrapper>
                      <Carousel className="w-full">
                         <CarouselContent>
                             {images.map((src, index) => (
@@ -105,28 +124,25 @@ export default function Dell(){
                         <CarouselPrevious />
                         <CarouselNext />
                     </Carousel>
-
-
-
                 </S.SectionWrapper>
 
                 <S.SectionWrapper>
-                    <S.SectionSubTitle $mainColor={mainColor}>04</S.SectionSubTitle>
-                    <S.SectionTitle>Solution & UI Design</S.SectionTitle>
-                    <S.SectionText> The final solution took shape as a clean, highly interactive interface composed of three core components.</S.SectionText>
-
-                    <S.SectionTitle2>Graph Visualization Panel</S.SectionTitle2>
-                    <S.SectionText>This was the heart of the experience. The force-directed D3 graph supported smooth zooming, panning, and dragging, while dynamic highlighting made it easy to follow relational paths. Animated transitions helped users maintain orientation as they explored different clusters of data.</S.SectionText>
-
-                    <S.SectionTitle2>Node Detail Table</S.SectionTitle2>
-                    <S.SectionText>When a user clicked a node, the pop-up table revealed everything they needed:
-                                    attributes, dependencies, parent/child relationships, and adjacent paths.
-                                    This allowed analysts to inspect the graph deeply without losing their place.</S.SectionText>
-
-                    <S.SectionTitle2>Global Search & Jump-to-Node</S.SectionTitle2>
-                    <S.SectionText>To support fast entry points, I implemented an autocomplete search bar that instantly zoomed the canvas to the selected node. This feature dramatically reduced the time needed to begin an investigation, especially in such a large network.</S.SectionText>
-                    <S.SectionText>All UI elements were designed to handle tens of thousands of nodes gracefully, keeping the interface clean, readable, and approachable.</S.SectionText>
-
+                    <S.SectionSubTitle $mainColor={mainColor}>03 - Solution</S.SectionSubTitle>
+                    <S.SectionTitle>Three components, one coherent experience</S.SectionTitle>
+                    <div className="grid grid-cols-3 gap-3 my-4">
+                        <div className="border border-blue-500 rounded-lg p-4">
+                            <div className="text-md font-medium">Graph Visualization Panel</div>
+                            <div className="text-sm text-gray-700 mt-1">Force-directed D3 graph with zoom, pan, drag, and animated transitions for orientation</div>
+                        </div>
+                        <div className="border border-blue-500 rounded-lg p-4">
+                            <div className="text-md font-medium">Node Detail Table</div>
+                            <div className="text-sm text-gray-700 mt-1">Click to reveal attributes, dependencies, parent/child relationships, and adjacent paths</div>
+                        </div>
+                        <div className="border border-blue-500 rounded-lg p-4">
+                            <div className="text-md font-medium">Global search</div>
+                            <div className="text-sm text-gray-700 mt-1">Autocomplete that instantly zooms the canvas to the selected node</div>
+                        </div>
+                    </div>
                     <S.IframeContainer>
                         <S.ResponsiveIframe src="https://embed.figma.com/proto/C092QedLPB4S7uNfxRtPFE/Dell-Graph-Data-System?node-id=410-11471&scaling=contain&content-scaling=fixed&page-id=408%3A0&starting-point-node-id=410%3A11471&embed-host=share" allowFullScreen />
                     </S.IframeContainer>
@@ -134,37 +150,41 @@ export default function Dell(){
                 </S.SectionWrapper>
 
                 <S.SectionWrapper>
-                    <S.SectionSubTitle $mainColor={mainColor}>05</S.SectionSubTitle>
-                    <S.SectionTitle>Tech Implementation</S.SectionTitle>
-                    <S.SectionText>Although I used <i> react-d3-graph </i> as a starting point, the default library wasn’t built for datasets of our scale — so I customized much of its internal logic.</S.SectionText>
-                    <br />
-                    <S.SectionText>To keep the graph responsive with over 60,000 nodes, I implemented multiple layers of optimization:</S.SectionText>
-                    <ul>
-                        <S.HighLightList>Selective rendering ensured only visible nodes were updated.</S.HighLightList>
-                        <S.HighLightList>Custom D3 tick logic reduced unnecessary React re-renders.</S.HighLightList>
-                        <S.HighLightList>Virtualization techniques made the UI feel lightweight despite the dataset’s size.</S.HighLightList>
+                    <S.SectionSubTitle $mainColor={mainColor}>04 - Tech Implementation</S.SectionSubTitle>
+                    <S.SectionTitle>Customizing D3 for enterprise-scale data</S.SectionTitle>
+                    <S.SectionText>
+                        The default react-d3-graph library wasn&apos;t built for 60K+ nodes — so I customized much of its internal logic to maintain performance at this scale.
+                    </S.SectionText>
+                    <div className="grid grid-cols-3 gap-3 my-4">
+                        <div className="border border-blue-500 rounded-lg p-4">
+                            <div className="text-sm text-blue-500 font-medium">RENDERING</div>
+                            <div className="text-sm text-gray-800 mt-1">Selective rendering — only visible nodes updated on each tick</div>
+                        </div>
+                        <div className="border border-blue-500 rounded-lg p-4">
+                            <div className="text-sm text-blue-500 font-medium">PERFORMANCE</div>
+                            <div className="text-sm text-gray-800 mt-1">Custom D3 tick logic to reduce unnecessary React re-renders</div>
+                        </div>
+                        <div className="border border-blue-500 rounded-lg p-4">
+                            <div className="text-sm text-blue-500 font-medium">SCALE</div>
+                            <div className="text-sm text-gray-800 mt-1">Virtualization techniques to keep UI lightweight at 60K+ nodes</div>
+                        </div>
+                    </div>
+                    <ul className="mb-4">
+                        <S.HighLightList>Neighbor highlighting and dynamic tooltips for relational tracing</S.HighLightList>
+                        <S.HighLightList>Animation sequencing for smooth zoom-to-node transitions</S.HighLightList>
+                        
                     </ul>
-                    <S.SectionText>Beyond performance improvements, I added interaction logic such as neighbor highlighting, dynamic tooltips, and animation sequencing for zoom-to-node transitions. In the end, the graph felt fluid and responsive — even with data volumes that would normally overwhelm browser-based tools.</S.SectionText>
-                    <br />
                     <video
                         src="/Dell_video.mp4"
                         controls
                         autoPlay={true}
                         loop={false}
                     />
-                   
-                    
                 </S.SectionWrapper>
 
                 <S.SectionWrapper>
-                    <S.SectionSubTitle $mainColor={mainColor}>06</S.SectionSubTitle>
-                    <S.SectionTitle>Outcome & Impact</S.SectionTitle>
-                    <S.SectionText> The tool quickly became the default interface for the analytics team.</S.SectionText>
-                    <ul>
-                        <S.HighLightList>Recommended as a reusable visualization module for other enterprise products</S.HighLightList>
-                        <S.HighLightList>Made complex datasets accessible to non-technical users</S.HighLightList>
-                        <S.HighLightList>Accelerated decision-making for data science and PM teams</S.HighLightList>
-                    </ul>
+                    <S.SectionSubTitle $mainColor={mainColor}>05 - Outcome & Impact</S.SectionSubTitle>
+                    <S.SectionTitle>Default tool for the analytics team</S.SectionTitle>
 
                     <S.MetricsContainer>
                         <S.MetricWrapper $bgColor={metricBgColor}>
@@ -187,13 +207,16 @@ that she needed to do some self-exploration and learning. Despite her other comm
 has been a quick learner and great contributor to our project.&quot;</S.QuoteContent>
                         <S.QuoteName> --- Michael Shepherd, Sr Distinguished Engineer, Dell Technologies</S.QuoteName>
                     </S.QuoteWrapper>
-
-
+                    
+                    <ul className="mt-4">
+                        <S.HighLightList>Recommended as a reusable visualization module for other enterprise products</S.HighLightList>
+                        <S.HighLightList>Made complex datasets accessible to non-technical stakeholders</S.HighLightList>
+                    </ul>
                 </S.SectionWrapper>
 
                 <S.SectionWrapper>
-                    <S.SectionSubTitle $mainColor={mainColor}>07</S.SectionSubTitle>
-                    <S.SectionTitle>Reflection </S.SectionTitle>
+                    <S.SectionSubTitle $mainColor={mainColor}>06 - Reflection</S.SectionSubTitle>
+                    <S.SectionTitle>Research and engineering are inseparable </S.SectionTitle>
                     <S.SectionText>This project pushed me to <b> integrate user-centered thinking with advanced technical visualization work. </b> I learned how to bridge the gap between what users say they need and what complex data systems actually require. Through interviews and continuous feedback loops, I translated vague, evolving requests into concrete interaction models that analysts could adopt immediately.</S.SectionText>
                     <S.SectionText>Throughout the project, I collaborated closely with data scientists, product managers, backend engineers, and designers. Our iterative approach — weekly design–dev reviews, rapid prototyping, and technical feasibility discussions — helped refine both the UX and performance over time. This process taught me how to align cross-functional teams around a shared problem and guide a complex technical feature from concept to production.</S.SectionText>
                 </S.SectionWrapper>

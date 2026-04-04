@@ -70,6 +70,12 @@ export default function Home() {
           <S.FeatureWorkTextTitle>
             Dell Network Graph
           </S.FeatureWorkTextTitle>
+          <S.CaseBadgeWrapper>
+            <Badge variant="outline" className="mx-auto mb-4">Capstone</Badge>
+            <Badge variant="outline" className="mx-auto mb-4">3 Months</Badge>
+            <Badge className="mx-auto mb-4 bg-purple-100 text-purple-700 dark:bg-purple-950 dark:text-purple-300">Data Visualization</Badge>
+            <Badge className="mx-auto mb-4 bg-blue-100 text-blue-700 dark:bg-blue-950 dark:text-blue-300">UX Engineering</Badge>
+          </S.CaseBadgeWrapper>
           <S.HeroContent>
             Dell Network Graph is an interactive network graphs with React for their next-generation enterprise visualization platform.
           </S.HeroContent>
@@ -99,10 +105,18 @@ export default function Home() {
           <S.FeatureWorkTextTitle>
             LifeLong Medical Care 
           </S.FeatureWorkTextTitle>
+          <S.CaseBadgeWrapper>
+            <Badge variant="outline" className="mx-auto mb-4">Healthcare</Badge>
+            <Badge className="mx-auto mb-4 bg-blue-100 text-blue-700 dark:bg-blue-950 dark:text-blue-300">Accessibility</Badge>
+            <Badge className="mx-auto mb-4 bg-orange-100 text-orange-700 dark:bg-orange-950 dark:text-orange-300">1st Place — AIR-U Competition 🎉</Badge>
+            
+          </S.CaseBadgeWrapper>
           <S.HeroContent>
             Joined AirU Accessibility Competition and help LifeLong Medical Care redesigned their website and won the first place of the competition.
           </S.HeroContent>
-          <Button className="mt-4">View case study</Button>
+          <Link href="/projects/lifelong" scroll={true}>
+            <Button className="mt-4">View case study</Button>
+          </Link>
         </S.FeatureWorkTextWrapper>
       </S.FeatureWorkWrapper>
 
