@@ -108,8 +108,7 @@ export default function Home() {
           <S.CaseBadgeWrapper>
             <Badge variant="outline" className="mx-auto mb-4">Healthcare</Badge>
             <Badge className="mx-auto mb-4 bg-blue-100 text-blue-700 dark:bg-blue-950 dark:text-blue-300">Accessibility</Badge>
-            <Badge className="mx-auto mb-4 bg-orange-100 text-orange-700 dark:bg-orange-950 dark:text-orange-300">1st Place — AIR-U Competition 🎉</Badge>
-            
+            <Badge className="mx-auto mb-4 bg-orange-100 text-orange-700 dark:bg-orange-950 dark:text-orange-300">1st Place — AIR-U Competition 🎉</Badge>  
           </S.CaseBadgeWrapper>
           <S.HeroContent>
             Joined AirU Accessibility Competition and help LifeLong Medical Care redesigned their website and won the first place of the competition.

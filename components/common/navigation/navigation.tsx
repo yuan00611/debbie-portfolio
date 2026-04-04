@@ -11,7 +11,7 @@ export function Navigation() {
   // const isMobile = useIsMobile()
   // viewport={isMobile}
   return (
-    <NavigationMenu >
+    <NavigationMenu className="fixed bg-white/80 backdrop-blur-sm z-50 w-full border-b border-gray-200 mt-0 py-2">
       <NavigationMenuList className="flex-wrap">
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>

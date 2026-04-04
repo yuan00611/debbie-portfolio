@@ -31,6 +31,7 @@ export const CaseBadgeWrapper = styled.div`
     flex-direction: row;
     gap: 4px;
     justify-content: center;
+    margin-top: 8px;
 `
 
 // Small impact cards
@@ -39,7 +40,7 @@ export const ImpactContainer = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
     gap: 12px;
-
+    justify-content: center;
 `
 
 export const ImpactWrapper = styled.div`
