@@ -15,7 +15,11 @@ export const CaseTitle = styled.h1`
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 40px;
     font-weight: 500;
+`
 
+export const CaseOverview = styled.p`
+    font-size: 18px;
+    color: #777;
 `
 
 // Small impact cards

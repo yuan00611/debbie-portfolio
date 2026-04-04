@@ -13,7 +13,7 @@ import {
 
 import * as S from '../shared.css';
 
-export default function Athena(){
+export default function Dell(){
     const mainColor = '#0672CB';
     const bgColor = '#ebf0f4';
     const metricBgColor = '#c2e1fa';

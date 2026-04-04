@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Brush } from "@/components/animate-ui/icons/brush";
 import { Navigation } from "@/components/common/navigation/navigation";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 
 import * as S from './page.css';
 
@@ -16,7 +17,7 @@ export default function Home() {
    <S.HeroWrapper>
     <S.HeroTextWrapper>
       <S.HeroText>Debbie Chen</S.HeroText>
-      <S.HeroSubtext>UX Engineer</S.HeroSubtext>
+      <S.HeroSubtext>Senior Front-End Engineer</S.HeroSubtext>
       <S.HeroContent>I design and build interfaces that feel intuitive, scalable and accessible.</S.HeroContent>
     </S.HeroTextWrapper>
     
@@ -47,6 +48,12 @@ export default function Home() {
           <S.FeatureWorkTextTitle>
             Athena Advisory
           </S.FeatureWorkTextTitle>
+          <S.CaseBadgeWrapper>
+            <Badge variant="outline" className="mx-auto mb-4">Startup</Badge>
+            <Badge variant="outline" className="mx-auto mb-4">From 0 to 1</Badge>
+            <Badge className="mx-auto mb-4 bg-green-100 text-green-700 dark:bg-green-950 dark:text-green-300">Fintech</Badge>
+            <Badge className="mx-auto mb-4 bg-blue-100 text-blue-700 dark:bg-blue-950 dark:text-blue-300">Senior FE Lead</Badge>
+          </S.CaseBadgeWrapper>
           <S.HeroContent>
             Athena Advisory built a Financial Agentic AI that can help clients manage their financial situation.
           </S.HeroContent>

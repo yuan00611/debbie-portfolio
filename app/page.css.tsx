@@ -24,7 +24,6 @@ export const HeroTextWrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-
 `
 
 export const HeroText = styled.h1`
@@ -39,7 +38,6 @@ export const HeroSubtext = styled.h2`
 `
 
 export const HeroContent = styled.p`
-    margin-top: 4px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 18px;
     color: gray;
@@ -92,7 +90,6 @@ export const FeatureWorkTextWrapper = styled.div`
     width: 360px;
     display: flex;
     flex-direction: column;
-    gap: 12px;
     align-items: left;
     justify-content: center;
 `
@@ -105,4 +102,12 @@ export const FeatureWorkTextTitle = styled.h4`
     margin: 0;
     padding: 0;
 
+`
+
+export const CaseBadgeWrapper = styled.div`
+    margin-top: 8px;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    width: fit-content;
 `

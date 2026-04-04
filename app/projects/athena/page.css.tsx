@@ -13,7 +13,23 @@ export const CaseTitle = styled.h1`
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 40px;
     font-weight: 500;
+    text-align: center;
+`
 
+export const CaseOverview = styled.p`
+    max-width: 600px;
+    font-size: 18px;
+    color: #777;
+    text-align: center;
+    margin-top: 12px;
+    margin-bottom: 20px;
+`
+
+export const CaseBadgeWrapper = styled.div`
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    justify-content: center;
 `
 
 export const ImpactContainer = styled.div`
@@ -21,7 +37,8 @@ export const ImpactContainer = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
     gap: 12px;
-
+    justify-content: center;
+    margin-top: 20px;
 `
 
 export const ImpactWrapper = styled.div`
@@ -32,7 +49,7 @@ export const ImpactWrapper = styled.div`
     border: 1px solid #ddd;
     background-color: white;
     padding: 12px 24px;
-    width: 180px;
+    width: 220px;
 `
 
 export const ImpactTitle = styled.h2`
@@ -43,7 +60,7 @@ export const ImpactTitle = styled.h2`
 `
 
 export const ImpactText = styled.p`
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 600;
 `
 
@@ -85,6 +102,24 @@ export const SectionTitle2 = styled.h3`
     font-weight: 500;
 `
 
+export const SummaryWrapper = styled.div`
+    margin-top: 20px;
+    background-color: #407efc1A;
+    border-radius: 12px;
+    /* border-left: 2px solid "#407efc"; */
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 12px;
+`
+
+export const SummaryContent = styled.p`
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    color: #407efc;
+    font-style: italic;
+    font-size: 18px;
+`
+
 export const HighlightTitle = styled.p`
     font-size: 16px;
     font-weight: 600;
@@ -95,12 +130,18 @@ export const HighlightTitle = styled.p`
 export const HighLightList = styled.li`
     list-style-type: circle;
     margin-left: 20px;
-
+    padding-top: 4px;
+    padding-bottom: 4px;
 `
 
 export const SectionText = styled.p`
     font-size: 16px;
     color: #555;
+`
+
+export const TabTitle = styled.p`
+    font-size: 16px;
+    font-weight: 600;
 `
 
 export const MetricsContainer = styled.div`

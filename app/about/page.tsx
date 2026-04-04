@@ -22,13 +22,13 @@ export default function About() {
             <S.SummaryWrapper>
                 <S.SectionTextWrapper>            
                 <S.SectionText>
-                    Transmitting and manipulating information with innovative technologies is the most exciting thing to me. I enjoyed using different media to produce straightforward and intriguing content to convey information. Also, embracing new technologies is my daily life. I can&apos;t help learning and dig into them, like XR, 3D printing, AI, robotic, etc.
+                    I&apos;m a Senior Front-End Engineer with 5+ years building scalable, user-centered interfaces for data-intensive fintech applications. My background in Human-Conputer Interaction shapes how I approach engineering -- I think about systems holistically, prioritize accessibility, and care deeply about the real people using the products I build. 
                 </S.SectionText>
                 <S.SectionText>
-                    Listening is another superpower of mine. My curiosity and empathy for humans drive me to understand their behaviors, contexts, thoughts, and stories. The more I listen, the more I hope to be the bridge between people and technology.
+                    Most recently, I led front-end architecture on a $4B+ AUM AI financial platform, where I built everything from design systems and data visualizations to AI chat interfaces — often in ambiguous, fast-moving environments where I had to bring both technical clarity and product thinking.
                 </S.SectionText>
                 <S.SectionText>
-                    I am passionate about education, the environment, sustainability, healthcare, and accessibility. I hope my love of the world and people can bring everyone a better life.
+                   Outside of work, I care about accessibility, education, and building technology that genuinely improves people&apos;s lives.
                 </S.SectionText>
                 </S.SectionTextWrapper>
                 <Image
@@ -81,6 +81,9 @@ export default function About() {
                 <ScrollIcon color={mainColor} />
                 <S.SectionTitle>Publications</S.SectionTitle>
             </S.SectionTitleWrapper>
+            <S.SectionText>
+                During my HCI graduate studies, I contributed to research across NLP, accessibility, and human factors.
+            </S.SectionText>
             <S.SectionSubtitle>Journal</S.SectionSubtitle>
             <hr />
             <S.PublicationWrapper>

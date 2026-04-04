@@ -2,6 +2,9 @@
 
 import Image from "next/image";
 import { Navigation } from "@/components/common/navigation/navigation";
+import { ImageLightbox } from "@/components/common/image-lightbox/image-lightbox";
+import { Badge } from "@/components/ui/badge";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
 import * as S from './page.css';
 
@@ -10,127 +13,237 @@ export default function Athena(){
     return(<>
         <Navigation />
         <S.PageWrapper>
-            <S.CaseTitle>Athena Advisory Agentic AI Financial Platform</S.CaseTitle>
+            <S.CaseBadgeWrapper>
+                <Badge variant="outline" className="mx-auto mb-4">Startup</Badge>
+                <Badge variant="outline" className="mx-auto mb-4">From 0 to 1</Badge>
+                <Badge className="mx-auto mb-4 bg-green-100 text-green-700 dark:bg-green-950 dark:text-green-300">Fintech</Badge>
+                <Badge className="mx-auto mb-4 bg-blue-100 text-blue-700 dark:bg-blue-950 dark:text-blue-300">Senior FE Lead</Badge>
+            </S.CaseBadgeWrapper>
+            <S.CaseTitle>Athena Advisory - Agentic AI Financial Platform</S.CaseTitle>
+            <S.CaseOverview>Building a $4B+ AUM fintech platform from 0 to 1 — design systems, data visualization, and AI-driven product transformation.</S.CaseOverview>
+            <S.ImpactContainer>
+                <S.ImpactWrapper>
+                    <S.ImpactText>$4B+</S.ImpactText>
+                    <S.ImpactTitle>AUM</S.ImpactTitle>
+                </S.ImpactWrapper>
+                 <S.ImpactWrapper>
+                    <S.ImpactText>50K+</S.ImpactText>
+                    <S.ImpactTitle>Active Users</S.ImpactTitle>
+                </S.ImpactWrapper>
+                <S.ImpactWrapper>
+                    <S.ImpactText>~75%</S.ImpactText>
+                    <S.ImpactTitle>Faster UI build time</S.ImpactTitle>
+                </S.ImpactWrapper>
+                <S.ImpactWrapper>
+                    <S.ImpactText>3-4</S.ImpactText>
+                    <S.ImpactTitle>Enterprise clients signed</S.ImpactTitle>
+                </S.ImpactWrapper>
+            </S.ImpactContainer>
             <Image
               src="/Athena.png"
               alt="Athena portfolio image"
-              width={400}
-              height={400}
+              width={600}
+              height={600}
               priority
             />
-            <S.ImpactContainer>
-                <S.ImpactWrapper>
-                    <S.ImpactTitle>Durations</S.ImpactTitle>
-                    <S.ImpactText>4 Years</S.ImpactText>
-                </S.ImpactWrapper>
-                <S.ImpactWrapper>
-                    <S.ImpactTitle>Features Shipped</S.ImpactTitle>
-                    <S.ImpactText>15 ↑</S.ImpactText>
-                </S.ImpactWrapper>
-                <S.ImpactWrapper>
-                    <S.ImpactTitle>AUM</S.ImpactTitle>
-                    <S.ImpactText>$2B ↑</S.ImpactText>
-                </S.ImpactWrapper>
-                <S.ImpactWrapper>
-                    <S.ImpactTitle>Active Users</S.ImpactTitle>
-                    <S.ImpactText>50K ↑</S.ImpactText>
-                </S.ImpactWrapper>
-            </S.ImpactContainer>
 
             <S.SectionContainer>
                 <S.SectionWrapper>
-                    <S.SectionSubTitle>Introduction</S.SectionSubTitle>
-                    <S.SectionTitle>Building Financial Service Platform from 0 to 1</S.SectionTitle>
-                    <S.SectionText>Over four years, I helped transform a financial product from an early concept into a fully scalable, user-centered platform. I worked across design systems, core product features, performance engineering, and AI integration — often operating in ambiguous space where requirements were unclear and solutions needed to be designed from scratch.
-This journey shaped my identity as an engineer who thrives at bringing clarity to complex systems, creating scalable foundations, and collaborating across disciplines to push products forward.</S.SectionText>
+                    <S.SectionSubTitle>01 - Problem Discovery</S.SectionSubTitle>
+                    <S.SectionTitle>How might we persuade people to save more money?</S.SectionTitle>
+                    <S.SectionText>
+                        When I joined Athena, the product was an early-stage concept. There was no design system, no established patterns, and requirements were often unclear. My first challenge wasn&apos;t to build — it was to understand.
+                    </S.SectionText>
+                    <S.SectionText> 
+                        Working closely with the founder and early stakeholders, I explored the core question: how do you design a financial product that actually changes user behavior? This shaped everything I built afterward.
+                    </S.SectionText>
+                    <S.SummaryWrapper>
+                        <S.SummaryContent>
+                            Decision: Early user research revealed that most financial dashboards overwhelm users with data. We decided to prioritize clarity and progressive disclosure over feature density — a principle that guided the entire design system.
+                        </S.SummaryContent>
+                    </S.SummaryWrapper>
                 </S.SectionWrapper>
 
                  <S.SectionWrapper>
-                    <S.SectionSubTitle>My Role</S.SectionSubTitle>
-                    <S.SectionTitle>UX-oriented frontend engineer</S.SectionTitle>
-                    <S.SectionText>In this long-term, high-ownership environment, my role evolved from interface implementation to system building and product shaping. I contributed as a UX-oriented frontend engineer, design system owner, cross-functional partner, and quality advocate.</S.SectionText>
+                    <S.SectionSubTitle>02 — System Building</S.SectionSubTitle>
+                    <S.SectionTitle>Designing a foundation for scale</S.SectionTitle>
+                    <S.SectionText>Before building features, I focused on building the right foundations — a design system and data visualization layer that would support the product for years.</S.SectionText>
+                    <Tabs className="mt-4" defaultValue="2a">
+                        <TabsList className="grid grid-cols-4 bg-transparent gap-2 h-auto p-0">
+                            <TabsTrigger
+                                value="2a"
+                                className="
+                                    flex flex-col items-start justify-start p-3 rounded-lg border border-border
+                                    bg-background text-left h-[90px] 
+                                    overflow-hidden
+                                    data-[state=active]:border-blue-500
+                                    data-[state=active]:border-2
+                                    data-[state=active]:bg-background
+                                    data-[state=inactive]:opacity-60
+                                    whitespace-normal  
+                                "
+                            >
+                                <span className="text-xs text-muted-foreground mb-1 block">2A</span>
+                                <span className="text-sm font-medium block">Design system + white-label</span>
+                            </TabsTrigger>
+                            <TabsTrigger
+                                value="2b"
+                                className="
+                                    flex flex-col items-start justify-start p-3 rounded-lg border border-border
+                                    bg-background text-left h-[90px] 
+                                    overflow-hidden
+                                    data-[state=active]:border-blue-500
+                                    data-[state=active]:border-2
+                                    data-[state=active]:bg-background
+                                    data-[state=inactive]:opacity-60
+                                    whitespace-normal  
+                                "
+                            >
+                                <span className="text-xs text-muted-foreground mb-1 ">2B</span>
+                                <span className="text-sm font-medium">Data Visualization</span>
+                            </TabsTrigger>
+                            <TabsTrigger
+                                value="2c"
+                                className="
+                                    flex flex-col items-start justify-start p-3 rounded-lg border border-border
+                                    bg-background text-left h-[90px] 
+                                    overflow-hidden
+                                    data-[state=active]:border-blue-500
+                                    data-[state=active]:border-2
+                                    data-[state=active]:bg-background
+                                    data-[state=inactive]:opacity-60
+                                    whitespace-normal  
+                                "
+                            >
+                                <span className="text-xs text-muted-foreground mb-1">2C</span>
+                                <span className="text-sm font-medium">Core Features Shipped</span>
+                            </TabsTrigger>
+                            <TabsTrigger
+                                value="2d"
+                                className="
+                                    flex flex-col items-start justify-start p-3 rounded-lg border border-border
+                                    bg-background text-left h-[90px] 
+                                    overflow-hidden
+                                    data-[state=active]:border-blue-500
+                                    data-[state=active]:border-2
+                                    data-[state=active]:bg-background
+                                    data-[state=inactive]:opacity-60
+                                    whitespace-normal  
+                                "
+                            >
+                                <span className="text-xs text-muted-foreground mb-1">2D</span>
+                                <span className="text-sm font-medium">Engineering quality</span>
+                            </TabsTrigger>
+                            
+                        </TabsList>
+
+                        <TabsContent value="2a" className="mt-3 border border-border rounded-lg p-5">
+                            <S.TabTitle>2A - Design system + white-label architecture</S.TabTitle>
+                            <S.SummaryWrapper>
+                                <S.SummaryContent>
+                                    Why: Multiple enterprise clients meant the UI needed to support different brand identities without duplicating code. I designed a white-label token system from the start.
+                                </S.SummaryContent>
+                            </S.SummaryWrapper>
+                            <ul className="mt-4">
+                                <S.HighLightList>Built modular component library with MUI — reducing redundancy across teams</S.HighLightList>
+                                <S.HighLightList>Introduced Storybook documentation, enabling new engineers to contribute within 1 week</S.HighLightList>
+                                <S.HighLightList>Cut new UI build time from ~2 weeks to 3–4 days (~75% faster)</S.HighLightList>
+                            </ul>
+                        </TabsContent>
+                        <TabsContent value="2b" className="mt-3 border border-border rounded-lg p-5">
+                            <S.TabTitle>2B - Data Visualization Library</S.TabTitle>
+                            <S.SummaryWrapper>
+                                <S.SummaryContent>
+                                    Why: Financial data is complex and often anxiety-inducing. I explored multiple approaches — including designs that were later removed — to find the right balance between information density and clarity.
+                                </S.SummaryContent>
+                            </S.SummaryWrapper>
+                            <ul className="mt-4">
+                                <S.HighLightList>Built interactive financial charts with Victory.js for dashboards and AI agent tools</S.HighLightList>
+                                <S.HighLightList>Explored multiple visualization patterns before settling on progressive disclosure</S.HighLightList>
+                                <S.HighLightList>Enabled real-time portfolio insights for 50K+ users</S.HighLightList>
+                            </ul>
+                        </TabsContent>
+                        <TabsContent value="2c" className="mt-3 border border-border rounded-lg p-5">
+                            <S.TabTitle>2C - Core Financial Features Shipped</S.TabTitle>
+                            <S.SummaryWrapper>
+                                <S.SummaryContent>
+                                  Why: With a stable design system in place, the team could ship features much faster — authentication, onboarding, dashboards, financial calculators, and more.
+                                </S.SummaryContent>
+                            </S.SummaryWrapper>
+                            <ul className="mt-4">
+                                <S.HighLightList>Authentication, onboarding, user profile management</S.HighLightList>
+                                <S.HighLightList>Financial overview dashboards (debt, credit score, investments)</S.HighLightList>
+                                <S.HighLightList>Retirement calculators and asset allocation tools</S.HighLightList>
+                                <S.HighLightList>Mortgage, Account Opening, Increase contribution rate service</S.HighLightList>
+                            </ul>
+                        </TabsContent>
+                        <TabsContent value="2d" className="mt-3 border border-border rounded-lg p-5">
+                            <S.TabTitle>2D - Engineering quality</S.TabTitle>
+                            <S.SummaryWrapper>
+                                <S.SummaryContent>
+                                  Why: As the platform grew in complexity, reliability became critical. Enterprise clients couldn&apos;t afford production bugs in a financial product.
+                                </S.SummaryContent>
+                            </S.SummaryWrapper>
+                            <ul className="mt-4">
+                                <S.HighLightList>Lowered production issues by ~80%</S.HighLightList>
+                                <S.HighLightList>Increased unit test coverage to ~70% with Jest</S.HighLightList>
+                                <S.HighLightList>Reduced QA regression time by ~50% per sprint</S.HighLightList>
+                                <S.HighLightList>Established unified linting, folder structure, and code review guidelines</S.HighLightList>
+                            </ul>
+                        </TabsContent>
+                    </Tabs>
+                    
+
+                
                 </S.SectionWrapper>
 
                 <S.SectionWrapper>
-                    <S.SectionSubTitle>Process & Contribution</S.SectionSubTitle>
-                    <S.SectionTitle>4 Phases Approach To Scaling</S.SectionTitle>
-                    <br /><hr /><br />
-                    <S.SectionTitle2>1. Foundation Development</S.SectionTitle2>
-                    <S.SectionText>A strong foundation was essential for the product&apos;s long-term growth. I built tools and systems that aligned design, product, and engineering.</S.SectionText>
-                    <S.HighlightTitle>Highlights </S.HighlightTitle>
+                    <S.SectionSubTitle>03 -  Product Transformation </S.SectionSubTitle>
+                    <S.SectionTitle>Migrating to an AI-driven, chat-first experience</S.SectionTitle>
+                    <S.SectionText>
+                        The biggest shift in the platform&apos;s history was moving from a multi-page dashboard to a unified AI chat interface. I led the end-to-end frontend display migration.
+                    </S.SectionText>
+                    
+                    <S.SummaryWrapper>
+                        <S.SummaryContent>
+                           Decision: Rather than patching the legacy dashboard, I proposed a full architectural rebuild — a new modular message pipeline with two display panels that could handle AI actions, forms, financial insights, and workflow steps as composable UI templates.
+                        </S.SummaryContent>
+                    </S.SummaryWrapper>
+                    <ImageLightbox
+                        images={[
+                            { src: "/Athena-dashboard.png", alt: "Legacy dashboard", label: "Before" },
+                            { src: "/Athena-chat.png", alt: "AI chat interface", label: "After" },
+                        ]}
+                    />
                     <ul>
-                        <S.HighLightList>Established a full <b> Design System </b> with tokens and layout patterns</S.HighLightList>
-                        <S.HighLightList>Built a modular <b> Component Library </b> with MUI to reduce redundancy and accelerate development</S.HighLightList>
-                        <S.HighLightList>Created a scalable <b> Data Visualization System </b> for financial charts and insights</S.HighLightList>
+                        <S.HighLightList>Built new modular chat architecture replacing the legacy dashboard</S.HighLightList>
+                        <S.HighLightList>Integrated agentic AI logic with personalized financial recommendations</S.HighLightList>
+                        <S.HighLightList>Integrated existing user financial data into AI conversations seamlessly</S.HighLightList>
+                        <S.HighLightList>Designed flexible UI templates handling multiple message types</S.HighLightList>
                     </ul>
 
-                    <br /><hr /><br />
-                    <S.SectionTitle2>2. Main Features Shipped</S.SectionTitle2>
-                    <S.SectionText>As the platform matured, I worked across multiple product areas to develop features that supported complex financial journeys.</S.SectionText>
-                    <S.HighlightTitle>Major Deliverables</S.HighlightTitle>
-                    <ul>
-                        <S.HighLightList>Authentication, onboarding, user profile management(multi-step forms, validations)</S.HighLightList>
-                        <S.HighLightList>Comprehensive user dashboard & financial overview(Debt, Credit Score, Investment)</S.HighLightList>
-                        <S.HighLightList>Financial calculators and analytical tools for retirement</S.HighLightList>
-                        <S.HighLightList>Mortgage, Account Opening, Increase contribution rate service</S.HighLightList>
-                        <S.HighLightList>Financial recommendation system & asset allocation suggestion</S.HighLightList>
-                        <S.HighLightList>Subscription, and Plaid system integration</S.HighLightList>
-                    </ul>
-                    <S.SectionText>I collaborated closely with backend engineers, PMs, designers, and data teams to refine requirements and deliver complete, high-quality user experiences.</S.SectionText>
-                    
-                    <br /><hr /><br />
-                    <S.SectionTitle2>3. Performance, Reliability & Documentation</S.SectionTitle2>
-                    <S.SectionText>As product complexity increased, I focused on elevating the overall engineering quality.</S.SectionText>
-                    <S.HighlightTitle>Improvements</S.HighlightTitle>
-                    <ul>
-                        <S.HighLightList>Set up CI/CD pipelines to streamline deployments</S.HighLightList>
-                        <S.HighLightList>Added Playwright + Jest testing for stable financial logic and form flows</S.HighLightList>
-                        <S.HighLightList>Implemented accessibility standards for compliance and usability</S.HighLightList>
-                        <S.HighLightList>Established unified linting, folder structure, and code review guidelines</S.HighLightList>
-                    </ul>
-                    <S.SectionText>These improvements strengthened system reliability and made the codebase more maintainable for future growth.</S.SectionText>
-                    
-                    <br /><hr /><br />
-                    <S.SectionTitle2>4. AI Chat Panel Migration and Integration</S.SectionTitle2>
-                    <S.SectionText>I led the end-to-end frontend migration to build a next-generation AI chat platform, replacing the legacy system and enabling intelligent, agent-powered financial workflows.</S.SectionText>
-                    <S.HighlightTitle>Key Contributions</S.HighlightTitle>
-                    <ul>
-                        <S.HighLightList>Built a new modular chat architecture to replace the legacy panel, supporting scalable features, message pipelines, and future extensions.</S.HighLightList>
-                        <S.HighLightList>Integrated ChatGPT and agentic logic, enabling AI-powered financial recommendations, dynamic follow-up questions, and contextual guidance.</S.HighLightList>
-                        <S.HighLightList>Designed highly flexible UI templates that handle multiple message types (AI actions, forms, alerts, financial insights, workflow steps, etc).</S.HighLightList>
-                        <S.HighLightList>Led the migration of platform features into the chat system, helping the team transition from a multi-page product to a unified chat-first experience.</S.HighLightList>
-                        <S.HighLightList>Integrated existing user data and financial history into AI conversations, enabling personalized responses and seamless workflow continuity.</S.HighLightList>
-                    </ul>
-                    <S.SectionText>This project represented a major shift in product direction—moving from static dashboards to an <b> AI-driven, agentic financial assistant </b> that acts, reasons, and guides users through complex decisions in real time.</S.SectionText>
-                    <br /><hr />
                 </S.SectionWrapper>
 
-                <S.SectionWrapper>
-                    <S.SectionSubTitle>Outcome & Impact</S.SectionSubTitle>
-                    <S.SectionTitle>Financial Enterprise Platform for 50K users</S.SectionTitle>
-                    <S.SectionText> My contributions helped the platform evolve into a:</S.SectionText>
-                    <ul>
-                        <S.HighLightList>Reliable, scalable, and visually consistent financial product</S.HighLightList>
-                        <S.HighLightList>Faster and more predictable engineering environment</S.HighLightList>
-                        <S.HighLightList>System capable of supporting complex financial computations and AI guidance</S.HighLightList>
-                    </ul>
 
+                <S.SectionWrapper>
+                    <S.SectionSubTitle>04 - Outcome & Impact</S.SectionSubTitle>
+                    <S.SectionTitle>Enterprise-ready platform that closed deals</S.SectionTitle>
                     <S.MetricsContainer>
                         <S.MetricWrapper>
-                            <S.MetricsNumber>5-7x</S.MetricsNumber>
-                            <S.MetricsText>Expansion in feature coverage </S.MetricsText>
+                            <S.MetricsNumber>~75%</S.MetricsNumber>
+                            <S.MetricsText>Reduction in UI build time — from 2 weeks to 3–4 days </S.MetricsText>
                         </S.MetricWrapper>
                         <S.MetricWrapper>
-                            <S.MetricsNumber>80%</S.MetricsNumber>
-                            <S.MetricsText>Component reuse rate achieved</S.MetricsText>
+                            <S.MetricsNumber>~80%</S.MetricsNumber>
+                            <S.MetricsText>Fewer production issues after improving test coverage to 70%</S.MetricsText>
+                        </S.MetricWrapper>
+                        <S.MetricWrapper>
+                            <S.MetricsNumber>3–4</S.MetricsNumber>
+                            <S.MetricsText>Enterprise clients signed after demos and investor pitches</S.MetricsText>
                         </S.MetricWrapper>
                         <S.MetricWrapper>
                             <S.MetricsNumber>30%</S.MetricsNumber>
-                            <S.MetricsText>Increase in development velocity</S.MetricsText>
-                        </S.MetricWrapper>
-                        <S.MetricWrapper>
-                            <S.MetricsNumber>90%</S.MetricsNumber>
-                            <S.MetricsText>Reduction in production errors</S.MetricsText>
+                            <S.MetricsText>Faster dashboard load time via TanStack Query migration</S.MetricsText>
                         </S.MetricWrapper>
                     </S.MetricsContainer>
 
@@ -138,18 +251,13 @@ This journey shaped my identity as an engineer who thrives at bringing clarity t
                 </S.SectionWrapper>
 
                 <S.SectionWrapper>
-                    <S.SectionSubTitle>What I Learned</S.SectionSubTitle>
-                    <S.SectionTitle>Reflection on a Four-Year Journey</S.SectionTitle>
-                    <S.SectionTitle2>1. Turning complexity into structure</S.SectionTitle2>
-                    <S.SectionText>I learned to identify patterns in ambiguity and build scalable frameworks that support long-term growth.</S.SectionText>
-                    <S.SectionTitle2>2. Leading with clarity in ambiguous environments</S.SectionTitle2>
-                    <S.SectionText>When requirements lacked clarity, I learned to propose solutions, challenge assumptions, and drive alignment.</S.SectionText>
-                    <S.SectionTitle2>3. Building for durability, not just delivery</S.SectionTitle2>
-                    <S.SectionText>Documentation, modular design, testing, and accessibility became core parts of my engineering philosophy.</S.SectionText>
-                    <S.SectionTitle2>4. Cross-functional collaboration as a superpower</S.SectionTitle2>
-                    <S.SectionText>Working with PM, design, backend, compliance, and data teams strengthened my ability to communicate and shape holistic solutions.</S.SectionText>
-                    <S.SectionTitle2>5. Staying consistent in a high-change environment</S.SectionTitle2>
-                    <S.SectionText>Through shifting priorities and evolving constraints, I learned to maintain quality, output, and collaborative energy.</S.SectionText>
+                    <S.SectionSubTitle>05 - Reflection</S.SectionSubTitle>
+                    <S.SectionText>
+                        The most important lesson was knowing when not to build. Early on I wanted to solve every UI inconsistency immediately — but I learned to prioritize ruthlessly, focusing on the systems that would unblock the whole team rather than perfecting individual components.
+                    </S.SectionText>
+                    <S.SectionText>
+                        Working in an ambiguous, fast-moving environment also taught me that clarity is a product in itself. Writing clear component APIs, documentation, and design decisions saved more time than any individual feature I shipped.
+                    </S.SectionText>
                 </S.SectionWrapper>
             </S.SectionContainer>
             
