@@ -149,6 +149,12 @@ export default function Athena(){
                                 <S.HighLightList>Introduced Storybook documentation, enabling new engineers to contribute within 1 week</S.HighLightList>
                                 <S.HighLightList>Cut new UI build time from ~2 weeks to 3–4 days (~75% faster)</S.HighLightList>
                             </ul>
+                            <ImageLightbox
+                                images={[
+                                    { src: "/Athena-whitelabel.svg", alt: "White-label design", label: "White-label architecture" },
+                                    { src: "/Athena-designsystem.png", alt: "Design system", label: "Design system" },
+                                ]}
+                            />
                         </TabsContent>
                         <TabsContent value="2b" className="mt-3 border border-border rounded-lg p-5">
                             <S.TabTitle>2B - Data Visualization Library</S.TabTitle>
@@ -162,6 +168,12 @@ export default function Athena(){
                                 <S.HighLightList>Explored multiple visualization patterns before settling on progressive disclosure</S.HighLightList>
                                 <S.HighLightList>Enabled real-time portfolio insights for 50K+ users</S.HighLightList>
                             </ul>
+                            <ImageLightbox
+                                images={[
+                                    { src: "/Athena-dataviz1.svg", alt: "Athena Data visualization", label: "Data Visualization 01" },
+                                    { src: "/Athena-dataviz2.svg", alt: "Athena Data visualization", label: "Data Visualization 02" },
+                                ]}
+                            />
                         </TabsContent>
                         <TabsContent value="2c" className="mt-3 border border-border rounded-lg p-5">
                             <S.TabTitle>2C - Core Financial Features Shipped</S.TabTitle>
@@ -176,6 +188,12 @@ export default function Athena(){
                                 <S.HighLightList>Retirement calculators and asset allocation tools</S.HighLightList>
                                 <S.HighLightList>Mortgage, Account Opening, Increase contribution rate service</S.HighLightList>
                             </ul>
+                            <ImageLightbox
+                                images={[
+                                    { src: "/Athena-features01.svg", alt: "Athena Features 01", label: "Features 01" },
+                                    { src: "/Athena-features02.png", alt: "Athena Features 02", label: "Features 02" },
+                                ]}
+                            />
                         </TabsContent>
                         <TabsContent value="2d" className="mt-3 border border-border rounded-lg p-5">
                             <S.TabTitle>2D - Engineering quality</S.TabTitle>

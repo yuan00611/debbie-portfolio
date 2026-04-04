@@ -22,7 +22,7 @@ export default function About() {
             <S.SummaryWrapper>
                 <S.SectionTextWrapper>            
                 <S.SectionText>
-                    I&apos;m a Senior Front-End Engineer with 5+ years building scalable, user-centered interfaces for data-intensive fintech applications. My background in Human-Conputer Interaction shapes how I approach engineering -- I think about systems holistically, prioritize accessibility, and care deeply about the real people using the products I build. 
+                    I&apos;m a Senior Front-End Engineer with 5+ years building scalable, user-centered interfaces for data-intensive fintech applications. My background in Human-Computer Interaction shapes how I approach engineering -- I think about systems holistically, prioritize accessibility, and care deeply about the real people using the products I build. 
                 </S.SectionText>
                 <S.SectionText>
                     Most recently, I led front-end architecture on a $4B+ AUM AI financial platform, where I built everything from design systems and data visualizations to AI chat interfaces — often in ambiguous, fast-moving environments where I had to bring both technical clarity and product thinking.
