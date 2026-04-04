@@ -202,12 +202,27 @@ export default function Athena(){
                                   Why: As the platform grew in complexity, reliability became critical. Enterprise clients couldn&apos;t afford production bugs in a financial product.
                                 </S.SummaryContent>
                             </S.SummaryWrapper>
-                            <ul className="mt-4">
-                                <S.HighLightList>Lowered production issues by ~80%</S.HighLightList>
-                                <S.HighLightList>Increased unit test coverage to ~70% with Jest</S.HighLightList>
-                                <S.HighLightList>Reduced QA regression time by ~50% per sprint</S.HighLightList>
-                                <S.HighLightList>Established unified linting, folder structure, and code review guidelines</S.HighLightList>
-                            </ul>
+                            <S.SectionText className="mt-4 mx-2">
+                                As the platform grew in complexity and onboarded enterprise clients, 
+                                reliability became non-negotiable. I shifted focus from shipping new 
+                                features to hardening the foundation — establishing testing practices, 
+                                standardizing code quality, and making the system more maintainable 
+                                for the whole team.
+                            </S.SectionText>
+                            <div className="grid grid-cols-3 gap-3 my-4">
+                                <div className="border border-border rounded-lg p-4">
+                                    <div className="text-2xl font-medium">~70%</div>
+                                    <div className="text-sm text-muted-foreground mt-1">Unit test coverage with Jest</div>
+                                </div>
+                                <div className="border border-border rounded-lg p-4">
+                                    <div className="text-2xl font-medium">~40%</div>
+                                    <div className="text-sm text-muted-foreground mt-1">Reduction in QA regression time per sprint</div>
+                                </div>
+                                <div className="border border-border rounded-lg p-4">
+                                    <div className="text-2xl font-medium">~80%</div>
+                                    <div className="text-sm text-muted-foreground mt-1">Fewer release-related production issues</div>
+                                </div>
+                            </div>
                         </TabsContent>
                     </Tabs>
                     
