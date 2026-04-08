@@ -296,8 +296,6 @@ export default function Athena(){
                         </TabsContent>
                     </Tabs>
                     
-
-                
                 </S.SectionWrapper>
 
                 <S.SectionWrapper>
@@ -324,7 +322,14 @@ export default function Athena(){
                         <S.HighLightList>Integrated existing user financial data into AI conversations seamlessly</S.HighLightList>
                         <S.HighLightList>Designed flexible UI templates handling multiple message types</S.HighLightList>
                     </ul>
-
+                    <p className="text-lg mt-2 font-medium">Bridging AI capability and user behavior</p>
+                    <S.SectionText>
+                       Migrating to chat-first introduced a product risk: users unfamiliar with AI wouldn&apos;t know what to ask, leading to blank-input paralysis. We addressed this with two mechanisms:
+                    </S.SectionText>
+                    <ul>
+                        <S.HighLightList><b>Quick Queries</b> — a curated question list covering each service area (debt, credit, investments, retirement), giving users a path in without requiring financial expertise</S.HighLightList>
+                        <S.HighLightList><b>Personalized recommendations</b> — surfacing the most contextually relevant question based on each user&apos;s financial profile and roadmap data. A user with high debt-to-income ratio would see &quot;How can I reduce my monthly payments?&quot; rather than a generic list</S.HighLightList>
+                    </ul>
                 </S.SectionWrapper>
 
 
