@@ -205,6 +205,69 @@ export const SummaryContent = styled.p<{$mainColor: string}>`
     font-size: 18px;
 `
 
+// Trade-off section
+export const TradeoffTitle = styled.p`
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    margin-top: 12px;
+`
+
+export const TradeoffItems = styled.p`
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500; 
+`
+
+export const TradeOffContainer = styled.div`
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 12px;
+    justify-content: space-between;
+
+    @media (max-width: ${ theme.breakpoints.md}) {
+        flex-direction: column;
+    }
+`
+
+export const TradeOffWrapper = styled.div<{type: 'why' | 'tradeoff' | 'mitigate'}>`
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: ${props => {
+        if (props.type === 'why') return '#E6F1FB';
+        if (props.type === 'tradeoff') return '#FAEEDA';
+        if (props.type === 'mitigate') return '#dbfae7';
+        return '#ddd';
+    }};
+
+    @media (max-width: ${ theme.breakpoints.md}) {
+        width: 100%;
+    }
+`
+
+export const TradeOffTitle = styled.p<{type: 'why' | 'tradeoff' | 'mitigate'}>`
+    font-size: 16px;
+    font-weight: 600;
+    color: ${props => {
+        if (props.type === 'why') return '#185FA5';
+        if (props.type === 'tradeoff') return '#854F0B';
+        if (props.type === 'mitigate') return '#3B6D11';
+        return '#333';
+    }};
+`
+
+export const TradeOffText = styled.p`
+    font-size: 14px;
+    color: #555;
+`
+
 //Iframe
 export const IframeContainer = styled.div`
   position: relative;

@@ -2,11 +2,10 @@
 
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { Navigation } from "@/components/common/navigation/navigation";
-import { ImageLightbox } from "@/components/common/image-lightbox/image-lightbox";
 
 import * as S from '../shared.css';
-import { Button } from "@/components/ui/button";
 
 const cardSortData = [
   { category: "Locations", items: "Health Center Locations, Dental Care Locations, Immediate/Urgent Care Centers" },

@@ -60,6 +60,9 @@ export default function Home() {
            <Link href="/projects/athena" scroll={true}>
             <Button className="mt-4" >View case study</Button>
            </Link>
+           <Link href="/projects/athena-ai" scroll={true}>
+            <Button className="mt-4" >Deep dive AI chat</Button>
+           </Link>
           
         </S.FeatureWorkTextWrapper>
       </S.FeatureWorkWrapper>

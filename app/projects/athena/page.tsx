@@ -1,6 +1,8 @@
 "use client"
 
+import Link from "next/link";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
 import { Navigation } from "@/components/common/navigation/navigation";
 import { ImageLightbox } from "@/components/common/image-lightbox/image-lightbox";
 import { Badge } from "@/components/ui/badge";
@@ -330,6 +332,11 @@ export default function Athena(){
                         <S.HighLightList><b>Quick Queries</b> — a curated question list covering each service area (debt, credit, investments, retirement), giving users a path in without requiring financial expertise</S.HighLightList>
                         <S.HighLightList><b>Personalized recommendations</b> — surfacing the most contextually relevant question based on each user&apos;s financial profile and roadmap data. A user with high debt-to-income ratio would see &quot;How can I reduce my monthly payments?&quot; rather than a generic list</S.HighLightList>
                     </ul>
+                    <div className="flex justify-center">
+                    <Link href="/projects/athena-ai" scroll={true}>
+                        <Button className="mt-4" >Deep dive AI chat</Button>
+                    </Link>
+                    </div>
                 </S.SectionWrapper>
 
 
