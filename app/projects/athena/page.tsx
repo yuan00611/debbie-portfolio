@@ -73,6 +73,7 @@ export default function Athena(){
                             <TabsTrigger
                                 value="2a"
                                 className="
+                                    cursor-pointer
                                     flex flex-col items-start justify-start p-3 rounded-lg border border-border
                                     bg-background text-left h-[90px] 
                                     overflow-hidden
@@ -90,6 +91,7 @@ export default function Athena(){
                             <TabsTrigger
                                 value="2b"
                                 className="
+                                    cursor-pointer
                                     flex flex-col items-start justify-start p-3 rounded-lg border border-border
                                     bg-background text-left h-[90px] 
                                     overflow-hidden
@@ -106,6 +108,7 @@ export default function Athena(){
                             <TabsTrigger
                                 value="2c"
                                 className="
+                                    cursor-pointer
                                     flex flex-col items-start justify-start p-3 rounded-lg border border-border
                                     bg-background text-left h-[90px] 
                                     overflow-hidden
@@ -122,6 +125,7 @@ export default function Athena(){
                             <TabsTrigger
                                 value="2d"
                                 className="
+                                    cursor-pointer
                                     flex flex-col items-start justify-start p-3 rounded-lg border border-border
                                     bg-background text-left h-[90px] 
                                     overflow-hidden
@@ -156,6 +160,22 @@ export default function Athena(){
                                     { src: "/Athena-designsystem.png", alt: "Design system", label: "Design system" },
                                 ]}
                             />
+                            <S.TradeoffTitle> Trade Offs</S.TradeoffTitle>
+                            <S.TradeoffItems> <Badge className="bg-blue-100 text-blue-700"> Token system </Badge> vs Per-client codebase + <Badge className="bg-blue-100 text-blue-700"> Styled-components </Badge> vs Tailwind</S.TradeoffItems>
+                            <S.TradeOffContainer>
+                                <S.TradeOffWrapper type="why">
+                                    <S.TradeOffTitle type="why">Why we chose this</S.TradeOffTitle>
+                                    <S.TradeOffText> Per-client codebases would cause features to diverge across 3–4 enterprise accounts shipping simultaneously. </S.TradeOffText>
+                                </S.TradeOffWrapper>
+                                <S.TradeOffWrapper type='tradeoff'>
+                                    <S.TradeOffTitle type="tradeoff">Trade-offs</S.TradeOffTitle>
+                                    <S.TradeOffText> Stricter component API design + styled-components runtime CSS-in-JS cost and React 19 compatibility risk. </S.TradeOffText>
+                                </S.TradeOffWrapper>
+                                <S.TradeOffWrapper type="mitigate">
+                                    <S.TradeOffTitle type="mitigate">How we mitigated</S.TradeOffTitle>
+                                    <S.TradeOffText> Storybook documentation gave engineers confidence to work within the system without breaking brand contracts. </S.TradeOffText>
+                                </S.TradeOffWrapper>
+                            </S.TradeOffContainer>
                         </TabsContent>
                         <TabsContent value="2b" className="mt-3 border border-border rounded-lg p-5">
                             <S.TabTitle>2B - Data Visualization Library</S.TabTitle>
@@ -175,6 +195,22 @@ export default function Athena(){
                                     { src: "/Athena-dataviz2.svg", alt: "Athena Data visualization", label: "Data Visualization 02" },
                                 ]}
                             />
+                            <S.TradeoffTitle> Trade Offs</S.TradeoffTitle>
+                            <S.TradeoffItems> <Badge className="bg-blue-100 text-blue-700"> Victory.js (SVG) </Badge> vs Canvas (Chart.js) vs D3.js</S.TradeoffItems>
+                            <S.TradeOffContainer>
+                                <S.TradeOffWrapper type="why">
+                                    <S.TradeOffTitle type="why">Why SVG</S.TradeOffTitle>
+                                    <S.TradeOffText> Declarative and React-friendly. Financial dashboards rarely exceed 1,000 data points — well within SVG&apos;s performance range.</S.TradeOffText>
+                                </S.TradeOffWrapper>
+                                <S.TradeOffWrapper type='tradeoff'>
+                                    <S.TradeOffTitle type="tradeoff">Trade-offs</S.TradeOffTitle>
+                                    <S.TradeOffText> SVG degrades with large datasets. Canvas would be necessary for real-time tick data or 10K+ data points. </S.TradeOffText>
+                                </S.TradeOffWrapper>
+                                <S.TradeOffWrapper type="mitigate">
+                                    <S.TradeOffTitle type="mitigate">If we needed more</S.TradeOffTitle>
+                                    <S.TradeOffText> Would migrate chart-heavy pages to Canvas or WebGL — but this threshold was never reached in production. </S.TradeOffText>
+                                </S.TradeOffWrapper>
+                            </S.TradeOffContainer>
                         </TabsContent>
                         <TabsContent value="2c" className="mt-3 border border-border rounded-lg p-5">
                             <S.TabTitle>2C - Core Financial Features Shipped</S.TabTitle>
@@ -195,6 +231,23 @@ export default function Athena(){
                                     { src: "/Athena-features02.png", alt: "Athena Features 02", label: "Features 02" },
                                 ]}
                             />
+                            <S.TradeoffTitle> Trade Offs</S.TradeoffTitle>
+                            <S.TradeoffItems> <Badge className="bg-blue-100 text-blue-700"> TanStack Query + Redux </Badge> vs Redux only</S.TradeoffItems>
+                            <S.TradeOffContainer>
+                                <S.TradeOffWrapper type="why">
+                                    <S.TradeOffTitle type="why">Why two systems</S.TradeOffTitle>
+                                    <S.TradeOffText> Redux alone required manual loading/error state management for every API call — creating inconsistent patterns across features. </S.TradeOffText>
+                                </S.TradeOffWrapper>
+                                <S.TradeOffWrapper type='tradeoff'>
+                                    <S.TradeOffTitle type="tradeoff">Trade-offs</S.TradeOffTitle>
+                                    <S.TradeOffText> Two coexisting state systems new engineers need to learn, with a boundary that isn&apos;t always obvious. </S.TradeOffText>
+                                </S.TradeOffWrapper>
+                                <S.TradeOffWrapper type="mitigate">
+                                    <S.TradeOffTitle type="mitigate">How we mitigated</S.TradeOffTitle>
+                                    <S.TradeOffText> Clear rule: RQ owns anything from the API, Redux owns ephemeral client-side state only (form drafts, UI flows). </S.TradeOffText>
+                                </S.TradeOffWrapper>
+                            </S.TradeOffContainer>
+
                         </TabsContent>
                         <TabsContent value="2d" className="mt-3 border border-border rounded-lg p-5">
                             <S.TabTitle>2D - Engineering quality</S.TabTitle>
@@ -224,6 +277,22 @@ export default function Athena(){
                                     <div className="text-sm text-muted-foreground mt-1">Fewer release-related production issues</div>
                                 </div>
                             </div>
+                            <S.TradeoffTitle> Trade Offs</S.TradeoffTitle>
+                            <S.TradeoffItems> <Badge className="bg-blue-100 text-blue-700"> Unit tests (Jest ~70%) </Badge> Full E2E coverage</S.TradeoffItems>
+                            <S.TradeOffContainer>
+                                <S.TradeOffWrapper type="why">
+                                    <S.TradeOffTitle type="why">Why unit first</S.TradeOffTitle>
+                                    <S.TradeOffText> E2E tests broke constantly with UI changes and were too slow to maintain during rapid feature iteration. </S.TradeOffText>
+                                </S.TradeOffWrapper>
+                                <S.TradeOffWrapper type='tradeoff'>
+                                    <S.TradeOffTitle type="tradeoff">Trade-offs</S.TradeOffTitle>
+                                    <S.TradeOffText> Less confidence in full user flows. Some integration bugs only caught in QA rather than automated testing. </S.TradeOffText>
+                                </S.TradeOffWrapper>
+                                <S.TradeOffWrapper type="mitigate">
+                                    <S.TradeOffTitle type="mitigate">How we mitigated</S.TradeOffTitle>
+                                    <S.TradeOffText> Focused coverage on critical financial logic (calculators, form validation) where bugs carry the highest user impact. </S.TradeOffText>
+                                </S.TradeOffWrapper>
+                            </S.TradeOffContainer>
                         </TabsContent>
                     </Tabs>
                     
