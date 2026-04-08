@@ -19,7 +19,7 @@ const afterEndpoints = [
 
 export function BeforeAfterAPI() {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 bg-white">
       {/* Before */}
       <div className="border border-red-900 rounded-xl overflow-hidden">
         <div className="px-4 py-2.5 bg-red-100 text-sm font-medium text-red-600">

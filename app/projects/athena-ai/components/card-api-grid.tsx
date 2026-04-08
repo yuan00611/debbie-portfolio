@@ -19,7 +19,7 @@ export function CreditCardGrid() {
         {creditCards.map((card) => (
           <div
             key={card.endpoint}
-            className={`border border-border rounded-xl p-4 ${card.isPlaceholder ? "opacity-40" : ""}`}
+            className={`border border-border rounded-xl bg-white p-4 ${card.isPlaceholder ? "opacity-40" : ""}`}
           >
             <span className={`inline-block text-xs font-mono px-2.5 py-1 rounded-md mb-3 ${card.isPlaceholder ? "bg-muted text-muted-foreground" : "bg-blue-100 text-blue-700"}`}>
               {card.endpoint}

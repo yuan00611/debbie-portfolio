@@ -37,7 +37,7 @@ function TreeItem({ text, level = 0, prefix }: { text: string; level?: number; p
 
 export function ArchDiagram() {
   return (
-    <div className="border border-border rounded-xl overflow-hidden mt-4">
+    <div className="border border-border rounded-xl overflow-hidden mt-4 bg-white">
       {/* Header */}
       <div className="bg-muted px-4 py-2 text-xs text-muted-foreground font-medium">
         twoPanel.tsx — top-level layout
