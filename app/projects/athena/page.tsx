@@ -69,7 +69,7 @@ export default function Athena(){
                     <S.SectionTitle>Designing a foundation for scale</S.SectionTitle>
                     <S.SectionText>Before building features, I focused on building the right foundations — a design system and data visualization layer that would support the product for years.</S.SectionText>
                     <Tabs className="mt-4" defaultValue="2a">
-                        <TabsList className="grid grid-cols-4 bg-transparent gap-2 h-auto p-0">
+                        <TabsList className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 bg-transparent gap-2 h-auto p-0">
                             <TabsTrigger
                                 value="2a"
                                 className="
@@ -81,6 +81,7 @@ export default function Athena(){
                                     data-[state=active]:bg-background
                                     data-[state=inactive]:opacity-60
                                     whitespace-normal  
+
                                 "
                             >
                                 <span className="text-xs text-muted-foreground mb-1 block">2A</span>
@@ -209,7 +210,7 @@ export default function Athena(){
                                 standardizing code quality, and making the system more maintainable 
                                 for the whole team.
                             </S.SectionText>
-                            <div className="grid grid-cols-3 gap-3 my-4">
+                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 my-4">
                                 <div className="border border-border rounded-lg p-4">
                                     <div className="text-2xl font-medium">~70%</div>
                                     <div className="text-sm text-muted-foreground mt-1">Unit test coverage with Jest</div>

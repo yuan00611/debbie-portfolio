@@ -30,10 +30,10 @@ export default function Dell(){
         <Navigation />
         <S.PageWrapper $bgColor={bgColor}>
             <S.CaseBadgeWrapper>
-                <Badge variant="outline" className="mx-auto mb-4">Capstone</Badge>
-                <Badge variant="outline" className="mx-auto mb-4">3 Months</Badge>
-                <Badge className="mx-auto mb-4 bg-purple-100 text-purple-700 dark:bg-purple-950 dark:text-purple-300">Data Visualization</Badge>
-                <Badge className="mx-auto mb-4 bg-blue-100 text-blue-700 dark:bg-blue-950 dark:text-blue-300">UX Engineering</Badge>
+                <Badge variant="outline" className="mx-auto mb-0 sm:mb-4">Capstone</Badge>
+                <Badge variant="outline" className="mx-auto mb-0 sm:mb-4">3 Months</Badge>
+                <Badge className="mx-auto mb-0 sm:mb-4 bg-purple-100 text-purple-700 dark:bg-purple-950 dark:text-purple-300">Data Visualization</Badge>
+                <Badge className="mx-auto mb-0 sm:mb-4 bg-blue-100 text-blue-700 dark:bg-blue-950 dark:text-blue-300">UX Engineering</Badge>
             </S.CaseBadgeWrapper>
             <S.CaseTitle>Dell Next-Generation Network Graph System</S.CaseTitle>
             <S.CaseOverview>
@@ -77,7 +77,7 @@ export default function Dell(){
                         I interviewed data scientists, PMs, and analytics engineers to understand their workflow. The pattern was immediate: they weren&apos;t struggling with the data — they were struggling with the interface.
                     </S.SectionText>
                     <S.SectionText>From this research, three essential requirements became clear:</S.SectionText>
-                    <div className="grid grid-cols-3 gap-3 my-4">
+                    <div className="grid  grid-cols-1 sm:grid-cols-3 gap-3 my-4">
                         <div className="border border-blue-500 rounded-lg p-4">
                             <div className="text-md font-medium">Visual exploration</div>
                             <div className="text-sm text-gray-700 mt-1">Zoom, pan, and drag to freely navigate the graph structure</div>
@@ -129,7 +129,7 @@ export default function Dell(){
                 <S.SectionWrapper>
                     <S.SectionSubTitle $mainColor={mainColor}>03 - Solution</S.SectionSubTitle>
                     <S.SectionTitle>Three components, one coherent experience</S.SectionTitle>
-                    <div className="grid grid-cols-3 gap-3 my-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 my-4">
                         <div className="border border-blue-500 rounded-lg p-4">
                             <div className="text-md font-medium">Graph Visualization Panel</div>
                             <div className="text-sm text-gray-700 mt-1">Force-directed D3 graph with zoom, pan, drag, and animated transitions for orientation</div>
@@ -155,7 +155,7 @@ export default function Dell(){
                     <S.SectionText>
                         The default react-d3-graph library wasn&apos;t built for 60K+ nodes — so I customized much of its internal logic to maintain performance at this scale.
                     </S.SectionText>
-                    <div className="grid grid-cols-3 gap-3 my-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 my-4">
                         <div className="border border-blue-500 rounded-lg p-4">
                             <div className="text-sm text-blue-500 font-medium">RENDERING</div>
                             <div className="text-sm text-gray-800 mt-1">Selective rendering — only visible nodes updated on each tick</div>

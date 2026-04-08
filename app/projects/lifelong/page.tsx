@@ -164,7 +164,7 @@ export default function Lifelong() {
                         View interview details
                     </Button>
                     <S.SectionSubTitle className="text-center" $mainColor={mainColor}>Key Insights</S.SectionSubTitle>
-                    <div className="grid grid-cols-3 gap-3 my-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 my-4">
                         <div className="border border-sky-700 rounded-lg p-4">
                             <div className="text-md text-sky-900 font-medium">Finding a clinic</div>
                             <div className="text-sm text-gray-700 mt-1">Users&apos; #1 goal. They expected location + insurance info on the same page — not split across sections.</div>
@@ -251,14 +251,14 @@ export default function Lifelong() {
                        We built a shared spreadsheet to audit every WCAG 2.0 AA criterion — making accessibility a team-wide responsibility, not just a developer task.
                     </S.SectionText>
                     <div className="rounded-lg border border-border overflow-hidden mt-4">
-                        <div className="grid grid-cols-[2fr_0.6fr_0.8fr_1.5fr] px-4 py-2 bg-muted text-xs text-muted-foreground font-medium">
+                        <div className="grid grid-cols-[1.8fr_0.8fr_0.8fr] sm:grid-cols-[2fr_0.6fr_0.8fr_1.5fr] px-4 py-2 bg-muted text-xs text-muted-foreground font-medium">
                             <span>Criterion</span>
                             <span>Level</span>
                             <span>Status</span>
-                            <span>Notes</span>
+                            <span className="hidden sm:block">Notes</span>
                         </div>
                         {wcagData.map((row, i) => (
-                            <div key={row.criterion} className={`grid grid-cols-[2fr_0.6fr_0.8fr_1.5fr] px-4 py-3 text-sm items-center bg-white ${i !== 0 ? "border-t border-border" : ""}`}>
+                            <div key={row.criterion} className={`grid grid-cols-[2fr_0.6fr_0.8fr] sm:grid-cols-[2fr_0.6fr_0.8fr_1.5fr] px-4 py-3 text-sm items-center bg-white ${i !== 0 ? "border-t border-border" : ""}`}>
                             <span className="text-foreground">{row.criterion}</span>
                             <span className="text-muted-foreground">{row.level}</span>
                             <span>
@@ -266,7 +266,7 @@ export default function Lifelong() {
                                     Pass
                                 </span>
                             </span>
-                            <span className="text-muted-foreground">{row.notes}</span>
+                            <span className="hidden sm:block text-muted-foreground">{row.notes}</span>
                             </div>
                         ))}
                         <div className="px-4 py-3 border-t border-border text-xs text-muted-foreground bg-white  italic">

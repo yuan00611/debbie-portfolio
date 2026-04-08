@@ -32,6 +32,10 @@ export const CaseBadgeWrapper = styled.div`
     gap: 4px;
     justify-content: center;
     margin-top: 8px;
+    
+     @media (max-width: ${ theme.breakpoints.sm}) {
+        flex-wrap: wrap;
+    }
 `
 
 // Small impact cards
@@ -140,6 +144,10 @@ export const MetricWrapper = styled.div<{$bgColor: string}>`
     border-radius: 20px;
     background-color: ${props => props.$bgColor || "#d5e1f9"}; 
     padding: 12px 28px;
+
+    @media (max-width: ${ theme.breakpoints.sm}) {
+        width: 100%;
+    }
 `
 
 export const MetricsNumber = styled.p<{$mainColor: string}>`

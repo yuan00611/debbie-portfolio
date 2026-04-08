@@ -162,6 +162,10 @@ export const MetricWrapper = styled.div`
     border-radius: 20px;
     background-color: #d5e1f9;
     padding: 12px 28px;
+
+    @media (max-width: ${ theme.breakpoints.sm}) {
+        width: 100%;
+    }
 `
 
 export const MetricsNumber = styled.p`

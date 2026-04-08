@@ -67,7 +67,6 @@ export const FeatureWorkWrapper = styled.div`
     justify-content: space-around;
 
     @media (max-width: ${ theme.breakpoints.lg}) {
-        padding: 20px;
         flex-direction: column;
         align-items: center;
     }
@@ -80,14 +79,13 @@ export const FeatureWorkWrapperReverse = styled.div`
     justify-content: space-around;
 
     @media (max-width: ${ theme.breakpoints.lg}) {
-        padding: 20px;
         flex-direction: column-reverse;
         align-items: center;
     }
 `
 
 export const FeatureWorkTextWrapper = styled.div`
-    width: 360px;
+    width: 340px;
     display: flex;
     flex-direction: column;
     align-items: left;
