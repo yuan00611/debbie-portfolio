@@ -8,34 +8,52 @@ import {
 } from "@/components/ui/navigation-menu";
 
 export function Navigation() {
-  // const isMobile = useIsMobile()
-  // viewport={isMobile}
   return (
-    <NavigationMenu className="fixed bg-white/80 backdrop-blur-sm z-50 w-full border-b border-gray-200 mt-0 py-2">
-      <NavigationMenuList className="flex-wrap">
-        <NavigationMenuItem>
-          <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <Link href="/">Home</Link>
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-        {/* <NavigationMenuItem>
-          <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <Link href="/docs">Works</Link>
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-         <NavigationMenuItem>
-         <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <Link href="/docs">Playground</Link>
-          </NavigationMenuLink>
-        </NavigationMenuItem> */}
-          <NavigationMenuItem>
-         <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <Link href="/about">About</Link>
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-       
-       
-      </NavigationMenuList>
-    </NavigationMenu>
+    <header
+      className="fixed z-50 w-full mt-0"
+      style={{
+        backgroundColor: 'oklch(0.985 0.006 172 / 0.92)',
+        borderBottom: '1px solid oklch(0.88 0.015 172)',
+        backdropFilter: 'blur(12px)',
+        WebkitBackdropFilter: 'blur(12px)',
+      }}
+    >
+      <div style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        padding: '0 60px',
+        height: '60px',
+      }}>
+        <Link
+          href="/"
+          style={{
+            fontFamily: 'var(--font-gloock), Georgia, serif',
+            fontSize: '20px',
+            fontWeight: 400,
+            letterSpacing: '-0.01em',
+            color: 'oklch(0.17 0.022 172)',
+            textDecoration: 'none',
+          }}
+        >
+          Debbie Chen
+        </Link>
+
+        <NavigationMenu>
+          <NavigationMenuList>
+            <NavigationMenuItem>
+              <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                <Link href="/" style={{ fontFamily: 'var(--font-onest), system-ui, sans-serif', fontSize: '14px' }}>Work</Link>
+              </NavigationMenuLink>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                <Link href="/about" style={{ fontFamily: 'var(--font-onest), system-ui, sans-serif', fontSize: '14px' }}>About</Link>
+              </NavigationMenuLink>
+            </NavigationMenuItem>
+          </NavigationMenuList>
+        </NavigationMenu>
+      </div>
+    </header>
   )
 }

@@ -25,7 +25,7 @@ export default function AthenaAI() {
                 <S.CaseBadgeWrapper>
                     <Badge variant="outline" className="mx-auto mb-4">Deep Dive</Badge>
                     <Badge variant="outline" className="mx-auto mb-4">System Design</Badge>
-                    <Badge className="mx-auto mb-4 bg-blue-100 text-blue-700 dark:bg-blue-950 dark:text-blue-300">AI Chat</Badge>
+                    <Badge className="mx-auto mb-4" style={{backgroundColor:"oklch(0.93 0.06 255)",color:"oklch(0.42 0.15 256)",border:"none"}}>AI Chat</Badge>
                 </S.CaseBadgeWrapper>
                 <S.CaseTitle>AI Chat — System Design Deep Dive</S.CaseTitle>
                 <S.CaseOverview>A breakdown of the two-panel chat architecture, HTTP streaming pipeline, display registry pattern, and key engineering trade-offs</S.CaseOverview>
@@ -54,14 +54,14 @@ export default function AthenaAI() {
                         <S.SectionTitle>From monolithic responses to per-card endpoints</S.SectionTitle>
                         <S.SectionText>During the chat migration, I collaborated with backend engineers to redesign the API from a monolithic page response to fine-grained, per-card endpoints — each mapped to a specific financial metric.</S.SectionText>
                         <S.SummaryWrapper $bgColor={metricBgColor} className="mb-4">
-                            <S.SummaryContent $mainColor={mainColor}>
+                            <S.SummaryContent>
                                 Decision: Each financial metric gets its own endpoint under /api/card/&#123;metric&#125;/&#123;household_id&#125; — enabling independent loading, caching, and error handling per card. A failing credit utilization API won&apos;t prevent the credit score from rendering.
                             </S.SummaryContent>
                         </S.SummaryWrapper>
                         <BeforeAfterAPI />
                         <CreditCardGrid />
                         <S.SummaryWrapper $bgColor={metricBgColor} className="mb-4">
-                            <S.SummaryContent $mainColor={mainColor}>
+                            <S.SummaryContent>
                                 Why this granularity makes sense <hr />
                                 Each credit metric has a different data source, update frequency, and computational cost on the backend. Splitting them means the backend can optimize each independently — and the frontend can show fast metrics (score) while slow ones (history) are still loading.
                             </S.SummaryContent>
@@ -103,7 +103,7 @@ export default function AthenaAI() {
                         <S.SectionSubTitle $mainColor={mainColor}>05 — Key trade-offs</S.SectionSubTitle>
                         <S.SectionTitle>Engineering decisions that shaped the system</S.SectionTitle>
                         <S.TradeoffTitle> Trade Off 01 - Streaming transport </S.TradeoffTitle>
-                        <S.TradeoffItems> <Badge className="bg-blue-100 text-blue-700"> HTTP Streaming (fetch) </Badge> vs WebSocket vs SSE</S.TradeoffItems>
+                        <S.TradeoffItems> <Badge style={{backgroundColor:"oklch(0.93 0.04 230)",color:"oklch(0.38 0.12 240)",border:"none"}}> HTTP Streaming (fetch) </Badge> vs WebSocket vs SSE</S.TradeoffItems>
                         <S.TradeOffContainer>
                             <S.TradeOffWrapper type="why">
                                 <S.TradeOffTitle type="why">Why fetch streaming</S.TradeOffTitle>
@@ -120,7 +120,7 @@ export default function AthenaAI() {
                         </S.TradeOffContainer>
 
                         <S.TradeoffTitle> Trade Off 02 - TanStack Query cache as streaming buffer </S.TradeoffTitle>
-                        <S.TradeoffItems> <Badge className="bg-blue-100 text-blue-700"> RQ cache for everything </Badge> vs Separate streaming state</S.TradeoffItems>
+                        <S.TradeoffItems> <Badge style={{backgroundColor:"oklch(0.93 0.04 230)",color:"oklch(0.38 0.12 240)",border:"none"}}> RQ cache for everything </Badge> vs Separate streaming state</S.TradeoffItems>
                         <S.TradeOffContainer>
                             <S.TradeOffWrapper type="why">
                                 <S.TradeOffTitle type="why">Why one store</S.TradeOffTitle>
@@ -137,7 +137,7 @@ export default function AthenaAI() {
                         </S.TradeOffContainer>
 
                         <S.TradeoffTitle> Trade Off 03 - Per-token cache updates </S.TradeoffTitle>
-                        <S.TradeoffItems> <Badge className="bg-blue-100 text-blue-700"> setData on every token </Badge> vs rAF-batched updates</S.TradeoffItems>
+                        <S.TradeoffItems> <Badge style={{backgroundColor:"oklch(0.93 0.04 230)",color:"oklch(0.38 0.12 240)",border:"none"}}> setData on every token </Badge> vs rAF-batched updates</S.TradeoffItems>
                         <S.TradeOffContainer>
                             <S.TradeOffWrapper type="why">
                                 <S.TradeOffTitle type="why">Why per-token</S.TradeOffTitle>

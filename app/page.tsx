@@ -8,6 +8,11 @@ import { Badge } from "@/components/ui/badge";
 
 import * as S from './page.css';
 
+// Brand-cohesive badge style helpers (OKLCH, no dark mode needed — site is light-only)
+const badgeTeal = { backgroundColor: 'oklch(0.93 0.05 172)', color: 'oklch(0.38 0.09 165)', border: 'none' };
+const badgeForest = { backgroundColor: 'oklch(0.92 0.04 165)', color: 'oklch(0.32 0.09 165)', border: 'none' };
+const badgeAmber = { backgroundColor: 'oklch(0.94 0.06 82)', color: 'oklch(0.42 0.12 60)', border: 'none' };
+const badgeMuted = { backgroundColor: 'oklch(0.93 0.015 172)', color: 'oklch(0.42 0.022 172)', border: '1px solid oklch(0.88 0.015 172)' };
 
 export default function Home() {
   return (
@@ -20,104 +25,106 @@ export default function Home() {
       <S.HeroSubtext>Senior Front-End Engineer</S.HeroSubtext>
       <S.HeroContent>I design and build interfaces that feel intuitive, scalable and accessible.</S.HeroContent>
     </S.HeroTextWrapper>
-    
+
     <Image
       src="/hiking.svg"
-      alt="Hero logo"
-      width={450}
-      height={450}
+      alt="Illustrated figure hiking in a forest landscape"
+      width={420}
+      height={420}
       priority
     />
    </S.HeroWrapper>
 
    <S.FeatureWorkContainer>
       <S.FeatureWorkTitleWrapper>
-        <Brush size={24} animateOnView loop loopDelay={1000} />
+        <Brush size={18} animateOnView loop loopDelay={1000} />
         <S.FeatureWorkTitle>Featured Works</S.FeatureWorkTitle>
       </S.FeatureWorkTitleWrapper>
 
       <S.FeatureWorkWrapper>
         <Image
           src="/Athena.png"
-          alt="Athena portfolio image"
-          width={700}
-          height={700}
+          alt="Athena Advisory dashboard screenshot"
+          width={640}
+          height={480}
           priority
+          style={{ borderRadius: '8px', maxWidth: '100%', height: 'auto' }}
         />
         <S.FeatureWorkTextWrapper>
           <S.FeatureWorkTextTitle>
             Athena Advisory
           </S.FeatureWorkTextTitle>
           <S.CaseBadgeWrapper>
-            <Badge variant="outline" className="mx-auto mb-4">Startup</Badge>
-            <Badge variant="outline" className="mx-auto mb-4">From 0 to 1</Badge>
-            <Badge className="mx-auto mb-4 bg-green-100 text-green-700 dark:bg-green-950 dark:text-green-300">Fintech</Badge>
-            <Badge className="mx-auto mb-4 bg-blue-100 text-blue-700 dark:bg-blue-950 dark:text-blue-300">Senior FE Lead</Badge>
+            <Badge style={badgeMuted}>Startup</Badge>
+            <Badge style={badgeMuted}>From 0 to 1</Badge>
+            <Badge style={badgeTeal}>Fintech</Badge>
+            <Badge style={badgeForest}>Senior FE Lead</Badge>
           </S.CaseBadgeWrapper>
           <S.HeroContent>
-            Athena Advisory built a Financial Agentic AI that can help clients manage their financial situation.
+            Led front-end architecture for a $4B+ AUM AI financial platform — from design system and data visualizations to an AI chat interface.
           </S.HeroContent>
-           <Link href="/projects/athena" scroll={true}>
-            <Button className="mt-4" >View case study</Button>
-           </Link>
-           <Link href="/projects/athena-ai" scroll={true}>
-            <Button className="mt-4" >Deep dive AI chat</Button>
-           </Link>
-          
+          <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+            <Link href="/projects/athena" scroll={true}>
+              <Button>View case study</Button>
+            </Link>
+            <Link href="/projects/athena-ai" scroll={true}>
+              <Button variant="outline">Deep dive AI chat</Button>
+            </Link>
+          </div>
         </S.FeatureWorkTextWrapper>
       </S.FeatureWorkWrapper>
 
       <S.FeatureWorkWrapperReverse>
-        
         <S.FeatureWorkTextWrapper>
           <S.FeatureWorkTextTitle>
             Dell Network Graph
           </S.FeatureWorkTextTitle>
           <S.CaseBadgeWrapper>
-            <Badge variant="outline" className="mx-auto mb-4">Capstone</Badge>
-            <Badge variant="outline" className="mx-auto mb-4">3 Months</Badge>
-            <Badge className="mx-auto mb-4 bg-purple-100 text-purple-700 dark:bg-purple-950 dark:text-purple-300">Data Visualization</Badge>
-            <Badge className="mx-auto mb-4 bg-blue-100 text-blue-700 dark:bg-blue-950 dark:text-blue-300">UX Engineering</Badge>
+            <Badge style={badgeMuted}>Capstone</Badge>
+            <Badge style={badgeMuted}>3 Months</Badge>
+            <Badge style={badgeTeal}>Data Visualization</Badge>
+            <Badge style={badgeForest}>UX Engineering</Badge>
           </S.CaseBadgeWrapper>
           <S.HeroContent>
-            Dell Network Graph is an interactive network graphs with React for their next-generation enterprise visualization platform.
+            Built interactive network graphs with React for Dell&apos;s next-generation enterprise visualization platform.
           </S.HeroContent>
           <Link href="/projects/dell" scroll={true}>
-            <Button className="mt-4">View case study</Button>
+            <Button>View case study</Button>
           </Link>
-          
         </S.FeatureWorkTextWrapper>
         <Image
           src="/Dell.png"
-          alt="Dell portfolio image"
-          width={700}
-          height={700}
+          alt="Dell network graph visualization screenshot"
+          width={640}
+          height={480}
           priority
+          style={{ borderRadius: '8px', maxWidth: '100%', height: 'auto' }}
         />
       </S.FeatureWorkWrapperReverse>
 
       <S.FeatureWorkWrapper>
         <Image
           src="/LifeLong.png"
-          alt="LifeLong portfolio image"
-          width={700}
-          height={700}
+          alt="LifeLong Medical Care website redesign screenshot"
+          width={640}
+          height={480}
           priority
+          style={{ borderRadius: '8px', maxWidth: '100%', height: 'auto' }}
         />
         <S.FeatureWorkTextWrapper>
           <S.FeatureWorkTextTitle>
-            LifeLong Medical Care 
+            LifeLong Medical Care
           </S.FeatureWorkTextTitle>
           <S.CaseBadgeWrapper>
-            <Badge variant="outline" className="mx-auto mb-4">Healthcare</Badge>
-            <Badge className="mx-auto mb-4 bg-blue-100 text-blue-700 dark:bg-blue-950 dark:text-blue-300">Accessibility</Badge>
-            <Badge className="mx-auto mb-4 bg-orange-100 text-orange-700 dark:bg-orange-950 dark:text-orange-300">1st Place — AIR-U Competition 🎉</Badge>  
+            <Badge style={badgeMuted}>Healthcare</Badge>
+            <Badge style={badgeTeal}>Accessibility</Badge>
+            <Badge style={badgeAmber}>1st Place — AIR-U Competition</Badge>
           </S.CaseBadgeWrapper>
           <S.HeroContent>
-            Joined AirU Accessibility Competition and help LifeLong Medical Care redesigned their website and won the first place of the competition.
+            Redesigned LifeLong Medical Care&apos;s website for the AirU Accessibility Competition — and won first place.
           </S.HeroContent>
           <Link href="/projects/lifelong" scroll={true}>
-            <Button className="mt-4">View case study</Button>
+            <Button>View case study</Button>
           </Link>
         </S.FeatureWorkTextWrapper>
       </S.FeatureWorkWrapper>
@@ -125,8 +132,6 @@ export default function Home() {
    </S.FeatureWorkContainer>
 
     </S.HomePageLayout>
-
-
   </>
   );
 }

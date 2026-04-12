@@ -15,9 +15,9 @@ import { Badge } from "@/components/ui/badge";
 import * as S from '../shared.css';
 
 export default function Dell(){
-    const mainColor = '#0672CB';
-    const bgColor = '#ebf0f4';
-    const metricBgColor = '#0672CB1A';
+    const mainColor = 'oklch(0.54 0.16 256)';
+    const bgColor = 'oklch(0.978 0.010 225)';
+    const metricBgColor = 'oklch(0.93 0.05 225)';
     const images = [
         "/Dell01.png",
         "/Dell02.png",
@@ -32,8 +32,8 @@ export default function Dell(){
             <S.CaseBadgeWrapper>
                 <Badge variant="outline" className="mx-auto mb-0 sm:mb-4">Capstone</Badge>
                 <Badge variant="outline" className="mx-auto mb-0 sm:mb-4">3 Months</Badge>
-                <Badge className="mx-auto mb-0 sm:mb-4 bg-purple-100 text-purple-700 dark:bg-purple-950 dark:text-purple-300">Data Visualization</Badge>
-                <Badge className="mx-auto mb-0 sm:mb-4 bg-blue-100 text-blue-700 dark:bg-blue-950 dark:text-blue-300">UX Engineering</Badge>
+                <Badge className="mx-auto mb-0 sm:mb-4" style={{backgroundColor:"oklch(0.93 0.045 172)",color:"oklch(0.35 0.09 165)",border:"none"}}>Data Visualization</Badge>
+                <Badge className="mx-auto mb-0 sm:mb-4" style={{backgroundColor:"oklch(0.93 0.06 255)",color:"oklch(0.42 0.15 256)",border:"none"}}>UX Engineering</Badge>
             </S.CaseBadgeWrapper>
             <S.CaseTitle>Dell Next-Generation Network Graph System</S.CaseTitle>
             <S.CaseOverview>
@@ -100,7 +100,7 @@ export default function Dell(){
                         I explored multiple layout directions and interaction patterns — from different search entry points to variations in how nodes and spatial relationships should be visualized. Each iteration brought the interface closer to feeling approachable despite the dataset&apos;s complexity.
                     </S.SectionText>
                     <S.SummaryWrapper $bgColor={metricBgColor} className="mb-4">
-                        <S.SummaryContent $mainColor={mainColor}>
+                        <S.SummaryContent>
                             Key features introduced through iteration: neighbor highlighting to trace relationships, filter and degree count to control graph scope, and a minimal search panel with randomize and jump-to-node.
                         </S.SummaryContent>
                     </S.SummaryWrapper>

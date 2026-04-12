@@ -1,20 +1,24 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react"
-import { Geist, Geist_Mono } from "next/font/google";
+import { Gloock, Onest } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const gloock = Gloock({
+  variable: "--font-gloock",
   subsets: ["latin"],
+  weight: "400",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const onest = Onest({
+  variable: "--font-onest",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Debbie Chen - Senior Frontend Engineer",
+  title: "Debbie Chen — Senior Frontend Engineer",
   description: "Debbie Chen's portfolio showcasing her work in designing and building intuitive, scalable, and accessible interfaces.",
 };
 
@@ -26,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${gloock.variable} ${onest.variable} antialiased`}
       >
         {children}
         <Analytics />

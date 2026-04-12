@@ -36,17 +36,17 @@ const outcomes = [
 ]
 
 export default function Lifelong() {
-    const mainColor = '#365072';
-    const bgColor = '#8db9f21a';
-    const metricBgColor = '#3650721A';
+    const mainColor = 'oklch(0.42 0.10 244)';
+    const bgColor = 'oklch(0.978 0.010 240)';
+    const metricBgColor = 'oklch(0.93 0.04 240)';
     return (
         <>
         <Navigation />
         <S.PageWrapper $bgColor={bgColor}>
             <S.CaseBadgeWrapper>
                <Badge variant="outline" className="mx-auto mb-4">Healthcare</Badge>
-                <Badge className="mx-auto mb-4 bg-blue-100 text-blue-700 dark:bg-blue-950 dark:text-blue-300">Accessibility</Badge>
-                <Badge className="mx-auto mb-4 bg-orange-100 text-orange-700 dark:bg-orange-950 dark:text-orange-300">1st Place — AIR-U Competition 🎉</Badge>  
+                <Badge className="mx-auto mb-4" style={{backgroundColor:"oklch(0.93 0.045 172)",color:"oklch(0.35 0.09 165)",border:"none"}}>Accessibility</Badge>
+                <Badge className="mx-auto mb-4" style={{backgroundColor:"oklch(0.94 0.06 82)",color:"oklch(0.42 0.12 60)",border:"none"}}>1st Place — AIR-U Competition 🎉</Badge>  
             </S.CaseBadgeWrapper>
             <S.CaseTitle>Lifelong Medical Care - Accessibility Website Redesign</S.CaseTitle>
             <S.CaseOverview>Led user research and front-end implementation for a WCAG 2.0 AA-compliant redesign — from user interviews and card sorting to production code.</S.CaseOverview>
@@ -211,7 +211,7 @@ export default function Lifelong() {
                     </div>
 
                     <S.SummaryWrapper $bgColor={metricBgColor} className="mb-4">
-                        <S.SummaryContent $mainColor={mainColor}>
+                        <S.SummaryContent>
                             Result: 8 vague nav items → 5 user-centered labels that matched how participants actually think about healthcare information.
                         </S.SummaryContent>
                     </S.SummaryWrapper>
@@ -226,7 +226,7 @@ export default function Lifelong() {
                     </S.SectionText>
 
                     <S.SummaryWrapper $bgColor={metricBgColor} className="mb-4">
-                        <S.SummaryContent $mainColor={mainColor}>
+                        <S.SummaryContent>
                             Key decision: Designed explicit focus states for every interactive element — a visible orange outline that keyboard users can follow as they navigate the page.
                         </S.SummaryContent>
                     </S.SummaryWrapper>

@@ -18,8 +18,8 @@ export default function Athena(){
             <S.CaseBadgeWrapper>
                 <Badge variant="outline" className="mx-auto mb-4">Startup</Badge>
                 <Badge variant="outline" className="mx-auto mb-4">From 0 to 1</Badge>
-                <Badge className="mx-auto mb-4 bg-green-100 text-green-700 dark:bg-green-950 dark:text-green-300">Fintech</Badge>
-                <Badge className="mx-auto mb-4 bg-blue-100 text-blue-700 dark:bg-blue-950 dark:text-blue-300">Senior FE Lead</Badge>
+                <Badge className="mx-auto mb-4" style={{backgroundColor:"oklch(0.92 0.04 165)",color:"oklch(0.32 0.09 165)",border:"none"}}>Fintech</Badge>
+                <Badge className="mx-auto mb-4" style={{backgroundColor:"oklch(0.93 0.06 255)",color:"oklch(0.42 0.15 256)",border:"none"}}>Senior FE Lead</Badge>
             </S.CaseBadgeWrapper>
             <S.CaseTitle>Athena Advisory - Agentic AI Financial Platform</S.CaseTitle>
             <S.CaseOverview>Building a $4B+ AUM fintech platform from 0 to 1 — design systems, data visualization, and AI-driven product transformation.</S.CaseOverview>
@@ -163,7 +163,7 @@ export default function Athena(){
                                 ]}
                             />
                             <S.TradeoffTitle> Trade Offs</S.TradeoffTitle>
-                            <S.TradeoffItems> <Badge className="bg-blue-100 text-blue-700"> Token system </Badge> vs Per-client codebase + <Badge className="bg-blue-100 text-blue-700"> Styled-components </Badge> vs Tailwind</S.TradeoffItems>
+                            <S.TradeoffItems> <Badge style={{backgroundColor:"oklch(0.93 0.04 230)",color:"oklch(0.38 0.12 240)",border:"none"}}> Token system </Badge> vs Per-client codebase + <Badge style={{backgroundColor:"oklch(0.93 0.04 230)",color:"oklch(0.38 0.12 240)",border:"none"}}> Styled-components </Badge> vs Tailwind</S.TradeoffItems>
                             <S.TradeOffContainer>
                                 <S.TradeOffWrapper type="why">
                                     <S.TradeOffTitle type="why">Why we chose this</S.TradeOffTitle>
@@ -198,7 +198,7 @@ export default function Athena(){
                                 ]}
                             />
                             <S.TradeoffTitle> Trade Offs</S.TradeoffTitle>
-                            <S.TradeoffItems> <Badge className="bg-blue-100 text-blue-700"> Victory.js (SVG) </Badge> vs Canvas (Chart.js) vs D3.js</S.TradeoffItems>
+                            <S.TradeoffItems> <Badge style={{backgroundColor:"oklch(0.93 0.04 230)",color:"oklch(0.38 0.12 240)",border:"none"}}> Victory.js (SVG) </Badge> vs Canvas (Chart.js) vs D3.js</S.TradeoffItems>
                             <S.TradeOffContainer>
                                 <S.TradeOffWrapper type="why">
                                     <S.TradeOffTitle type="why">Why SVG</S.TradeOffTitle>
@@ -234,7 +234,7 @@ export default function Athena(){
                                 ]}
                             />
                             <S.TradeoffTitle> Trade Offs</S.TradeoffTitle>
-                            <S.TradeoffItems> <Badge className="bg-blue-100 text-blue-700"> TanStack Query + Redux </Badge> vs Redux only</S.TradeoffItems>
+                            <S.TradeoffItems> <Badge style={{backgroundColor:"oklch(0.93 0.04 230)",color:"oklch(0.38 0.12 240)",border:"none"}}> TanStack Query + Redux </Badge> vs Redux only</S.TradeoffItems>
                             <S.TradeOffContainer>
                                 <S.TradeOffWrapper type="why">
                                     <S.TradeOffTitle type="why">Why two systems</S.TradeOffTitle>
@@ -280,7 +280,7 @@ export default function Athena(){
                                 </div>
                             </div>
                             <S.TradeoffTitle> Trade Offs</S.TradeoffTitle>
-                            <S.TradeoffItems> <Badge className="bg-blue-100 text-blue-700"> Unit tests (Jest ~70%) </Badge> Full E2E coverage</S.TradeoffItems>
+                            <S.TradeoffItems> <Badge style={{backgroundColor:"oklch(0.93 0.04 230)",color:"oklch(0.38 0.12 240)",border:"none"}}> Unit tests (Jest ~70%) </Badge> Full E2E coverage</S.TradeoffItems>
                             <S.TradeOffContainer>
                                 <S.TradeOffWrapper type="why">
                                     <S.TradeOffTitle type="why">Why unit first</S.TradeOffTitle>
