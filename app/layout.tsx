@@ -1,19 +1,26 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react"
-import { Gloock, Onest } from "next/font/google";
+import { Fraunces, Inter, JetBrains_Mono } from "next/font/google";
+import StyledComponentsRegistry from "@/lib/styled-components-registry";
 import "./globals.css";
 
-const gloock = Gloock({
-  variable: "--font-gloock",
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
   subsets: ["latin"],
-  weight: "400",
   display: "swap",
 });
 
-const onest = Onest({
-  variable: "--font-onest",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
+  subsets: ["latin"],
+  weight: ["400", "500"],
   display: "swap",
 });
 
@@ -30,9 +37,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${gloock.variable} ${onest.variable} antialiased`}
+        className={`${fraunces.variable} ${inter.variable} ${jetbrainsMono.variable} antialiased`}
       >
-        {children}
+        <StyledComponentsRegistry>
+          {children}
+        </StyledComponentsRegistry>
         <Analytics />
       </body>
     </html>

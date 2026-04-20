@@ -1,0 +1,177 @@
+/* Container — max-width wrapper */
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0 16px;
+  }
+}
+
+/* Hero section top padding */
+.heroSection {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 80px 48px 0;
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    padding: 52px 24px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .heroSection {
+    padding: 40px 16px 0;
+  }
+}
+
+/* Inner content sections */
+.section {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 80px 48px;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 52px 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .section {
+    padding: 40px 16px;
+  }
+}
+
+/* Metrics bar — 4 columns */
+.metricsBar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 768px) {
+  .metricsBar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* remove right border from col 2 on 2-col layout */
+  .metricsBar > *:nth-child(2) {
+    border-right: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .metricsBar {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Metrics bar cell — responsive padding */
+.metricsCell {
+  padding: 28px 32px;
+}
+
+@media (max-width: 768px) {
+  .metricsCell {
+    padding: 20px 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .metricsCell {
+    padding: 16px 16px;
+  }
+}
+
+/* Spectrum zone grid — 3 columns */
+.spectrumGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 26px;
+}
+
+@media (max-width: 768px) {
+  .spectrumGrid {
+    grid-template-columns: 1fr;
+  }
+  .spectrumGrid > * {
+    border-right: none !important;
+    border-bottom: 1px solid var(--line);
+  }
+  .spectrumGrid > *:last-child {
+    border-bottom: none;
+  }
+}
+
+/* 3-column card grid (iteration rounds, principles) */
+.threeColGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 900px) {
+  .threeColGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Reflection card — responsive padding */
+.reflectionCard {
+  border-radius: 16px;
+  padding: 40px 44px;
+}
+
+@media (max-width: 576px) {
+  .reflectionCard {
+    padding: 24px 20px;
+    border-radius: 10px;
+  }
+}
+
+/* Footer 3-column grid */
+.footerGrid {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 48px;
+  margin-bottom: 56px;
+}
+
+@media (max-width: 768px) {
+  .footerGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .footerGrid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+/* Footer bottom bar */
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 576px) {
+  .footerBottom {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

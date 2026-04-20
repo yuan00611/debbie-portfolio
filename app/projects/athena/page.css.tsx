@@ -14,7 +14,7 @@ export const PageWrapper = styled.div`
 `
 
 export const CaseTitle = styled.h1`
-    font-family: var(--font-gloock), Georgia, serif;
+    font-family: var(--font-fraunces), Georgia, serif;
     font-size: clamp(32px, 4.5vw, 52px);
     font-weight: 400;
     letter-spacing: -0.02em;
@@ -25,7 +25,7 @@ export const CaseTitle = styled.h1`
 
 export const CaseOverview = styled.p`
     max-width: 680px;
-    font-family: var(--font-onest), system-ui, sans-serif;
+    font-family: var(--font-inter), system-ui, sans-serif;
     font-size: 17px;
     line-height: 1.65;
     color: oklch(0.44 0.022 172);
@@ -64,7 +64,7 @@ export const ImpactWrapper = styled.div`
 `
 
 export const ImpactTitle = styled.h2`
-    font-family: var(--font-onest), system-ui, sans-serif;
+    font-family: var(--font-inter), system-ui, sans-serif;
     font-size: 13px;
     font-weight: 500;
     letter-spacing: 0.04em;
@@ -72,7 +72,7 @@ export const ImpactTitle = styled.h2`
 `
 
 export const ImpactText = styled.p`
-    font-family: var(--font-onest), system-ui, sans-serif;
+    font-family: var(--font-inter), system-ui, sans-serif;
     font-size: 22px;
     font-weight: 700;
     color: oklch(0.17 0.022 172);
@@ -100,7 +100,7 @@ export const SectionWrapper = styled.div`
 `
 
 export const SectionSubTitle = styled.h2`
-    font-family: var(--font-onest), system-ui, sans-serif;
+    font-family: var(--font-inter), system-ui, sans-serif;
     font-size: 12px;
     font-weight: 600;
     color: oklch(0.58 0.17 264);
@@ -109,7 +109,7 @@ export const SectionSubTitle = styled.h2`
 `
 
 export const SectionTitle = styled.h2`
-    font-family: var(--font-gloock), Georgia, serif;
+    font-family: var(--font-fraunces), Georgia, serif;
     font-size: clamp(22px, 3vw, 30px);
     font-weight: 400;
     letter-spacing: -0.01em;
@@ -117,7 +117,7 @@ export const SectionTitle = styled.h2`
 `
 
 export const SectionTitle2 = styled.h3`
-    font-family: var(--font-onest), system-ui, sans-serif;
+    font-family: var(--font-inter), system-ui, sans-serif;
     font-size: 17px;
     font-weight: 600;
     color: oklch(0.22 0.022 172);
@@ -134,7 +134,7 @@ export const SummaryWrapper = styled.div`
 `
 
 export const SummaryContent = styled.p`
-    font-family: var(--font-onest), system-ui, sans-serif;
+    font-family: var(--font-inter), system-ui, sans-serif;
     color: oklch(0.28 0.022 172);
     font-size: 15px;
     line-height: 1.7;
@@ -142,7 +142,7 @@ export const SummaryContent = styled.p`
 `
 
 export const HighlightTitle = styled.p`
-    font-family: var(--font-onest), system-ui, sans-serif;
+    font-family: var(--font-inter), system-ui, sans-serif;
     font-size: 15px;
     font-weight: 600;
     color: oklch(0.22 0.022 172);
@@ -150,7 +150,7 @@ export const HighlightTitle = styled.p`
 `
 
 export const HighLightList = styled.li`
-    font-family: var(--font-onest), system-ui, sans-serif;
+    font-family: var(--font-inter), system-ui, sans-serif;
     list-style-type: disc;
     margin-left: 20px;
     color: oklch(0.35 0.022 172);
@@ -161,14 +161,14 @@ export const HighLightList = styled.li`
 `
 
 export const SectionText = styled.p`
-    font-family: var(--font-onest), system-ui, sans-serif;
+    font-family: var(--font-inter), system-ui, sans-serif;
     font-size: 15px;
     line-height: 1.7;
     color: oklch(0.35 0.022 172);
 `
 
 export const TabTitle = styled.p`
-    font-family: var(--font-onest), system-ui, sans-serif;
+    font-family: var(--font-inter), system-ui, sans-serif;
     font-size: 15px;
     font-weight: 600;
     color: oklch(0.22 0.022 172);
@@ -198,7 +198,7 @@ export const MetricWrapper = styled.div`
 `
 
 export const MetricsNumber = styled.p`
-    font-family: var(--font-onest), system-ui, sans-serif;
+    font-family: var(--font-inter), system-ui, sans-serif;
     font-size: 28px;
     font-weight: 700;
     color: oklch(0.58 0.17 264);
@@ -206,7 +206,7 @@ export const MetricsNumber = styled.p`
 `
 
 export const MetricsText = styled.p`
-    font-family: var(--font-onest), system-ui, sans-serif;
+    font-family: var(--font-inter), system-ui, sans-serif;
     font-size: 14px;
     font-weight: 400;
     color: oklch(0.40 0.022 172);
@@ -214,7 +214,7 @@ export const MetricsText = styled.p`
 `
 
 export const TradeoffTitle = styled.p`
-    font-family: var(--font-onest), system-ui, sans-serif;
+    font-family: var(--font-inter), system-ui, sans-serif;
     text-transform: uppercase;
     text-align: center;
     font-size: 12px;
@@ -226,7 +226,7 @@ export const TradeoffTitle = styled.p`
 `
 
 export const TradeoffItems = styled.p`
-    font-family: var(--font-onest), system-ui, sans-serif;
+    font-family: var(--font-inter), system-ui, sans-serif;
     text-align: center;
     font-size: 14px;
     font-weight: 500;
@@ -266,7 +266,7 @@ export const TradeOffWrapper = styled.div<{type: 'why' | 'tradeoff' | 'mitigate'
 `
 
 export const TradeOffTitle = styled.p<{type: 'why' | 'tradeoff' | 'mitigate'}>`
-    font-family: var(--font-onest), system-ui, sans-serif;
+    font-family: var(--font-inter), system-ui, sans-serif;
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 0.05em;
@@ -280,8 +280,31 @@ export const TradeOffTitle = styled.p<{type: 'why' | 'tradeoff' | 'mitigate'}>`
 `
 
 export const TradeOffText = styled.p`
-    font-family: var(--font-onest), system-ui, sans-serif;
+    font-family: var(--font-inter), system-ui, sans-serif;
     font-size: 14px;
     line-height: 1.65;
     color: oklch(0.35 0.022 172);
 `
+
+export const HomeFooter = styled.footer`
+  border-top: 1px solid oklch(0.88 0.015 172);
+  padding: 48px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 13px;
+  color: oklch(0.50 0.022 172);
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid oklch(0.88 0.015 172);
+  }
+
+  @media (max-width: ${theme.breakpoints.md}) {
+    flex-direction: column;
+    gap: 12px;
+    padding: 32px 24px;
+  }
+`;

@@ -1,0 +1,178 @@
+/* Container — max-width wrapper */
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0 16px;
+  }
+}
+
+/* Hero section top padding */
+.heroSection {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 80px 48px 0;
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    padding: 52px 24px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .heroSection {
+    padding: 40px 16px 0;
+  }
+}
+
+/* Inner content sections */
+.section {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 80px 48px;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 52px 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .section {
+    padding: 40px 16px;
+  }
+}
+
+/* Metrics bar — 4 columns */
+.metricsBar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 768px) {
+  .metricsBar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .metricsBar > *:nth-child(2) {
+    border-right: none !important;
+  }
+}
+
+/* Metrics bar cell — responsive padding */
+.metricsCell {
+  padding: 28px 32px;
+}
+
+@media (max-width: 768px) {
+  .metricsCell {
+    padding: 20px 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .metricsCell {
+    padding: 16px 16px;
+  }
+}
+
+/* 3-column card grid (features, insights) */
+.threeColGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 900px) {
+  .threeColGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .threeColGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* KANO chart row */
+.kanoRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 0;
+  font-size: 14px;
+}
+
+@media (max-width: 576px) {
+  .kanoRow {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .kanoLabel {
+    flex: 1 1 100%;
+  }
+  .kanoBar {
+    flex: 1;
+  }
+}
+
+/* Reflection card — responsive padding */
+.reflectionCard {
+  border-radius: 16px;
+  padding: 40px 44px;
+}
+
+@media (max-width: 576px) {
+  .reflectionCard {
+    padding: 24px 20px;
+    border-radius: 10px;
+  }
+}
+
+/* Footer 3-column grid */
+.footerGrid {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 48px;
+  margin-bottom: 56px;
+}
+
+@media (max-width: 768px) {
+  .footerGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .footerGrid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+/* Footer bottom bar */
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 576px) {
+  .footerBottom {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

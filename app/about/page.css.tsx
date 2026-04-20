@@ -14,7 +14,7 @@ export const AboutPageLayout = styled.div`
 export const AboutTitle = styled.h1`
     font-size: clamp(40px, 5vw, 60px);
     font-weight: 400;
-    font-family: var(--font-gloock), Georgia, serif;
+    font-family: var(--font-fraunces), Georgia, serif;
     letter-spacing: -0.02em;
     line-height: 1.1;
     color: oklch(0.17 0.022 172);
@@ -56,7 +56,7 @@ export const SummaryWrapper = styled.div`
 export const SectionTitle = styled.h2`
     font-size: 20px;
     font-weight: 600;
-    font-family: var(--font-onest), system-ui, sans-serif;
+    font-family: var(--font-inter), system-ui, sans-serif;
     letter-spacing: -0.01em;
     color: oklch(0.17 0.022 172);
 `
@@ -64,7 +64,7 @@ export const SectionTitle = styled.h2`
 export const SectionSubtitle = styled.h3`
     font-size: 13px;
     font-weight: 600;
-    font-family: var(--font-onest), system-ui, sans-serif;
+    font-family: var(--font-inter), system-ui, sans-serif;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: oklch(0.50 0.022 172);
@@ -84,7 +84,7 @@ export const SectionTextWrapper = styled.div`
 `
 
 export const SectionText = styled.p`
-    font-family: var(--font-onest), system-ui, sans-serif;
+    font-family: var(--font-inter), system-ui, sans-serif;
     font-size: 16px;
     line-height: 1.7;
     margin: 0;
@@ -126,7 +126,7 @@ export const SectionItemContentWrapper = styled.div`
 `
 
 export const SectionItemContent1 = styled.h3`
-    font-family: var(--font-onest), system-ui, sans-serif;
+    font-family: var(--font-inter), system-ui, sans-serif;
     font-size: 16px;
     font-weight: 500;
     color: oklch(0.17 0.022 172);
@@ -135,7 +135,7 @@ export const SectionItemContent1 = styled.h3`
 `
 
 export const SectionItemContent2 = styled.p`
-    font-family: var(--font-onest), system-ui, sans-serif;
+    font-family: var(--font-inter), system-ui, sans-serif;
     font-size: 14px;
     color: oklch(0.50 0.022 172);
     margin: 0;
@@ -149,7 +149,7 @@ export const PublicationWrapper = styled.div`
     border-bottom: 1px solid oklch(0.88 0.015 172);
 
     p {
-        font-family: var(--font-onest), system-ui, sans-serif;
+        font-family: var(--font-inter), system-ui, sans-serif;
         font-size: 15px;
         line-height: 1.65;
         color: oklch(0.28 0.022 172);
@@ -167,7 +167,7 @@ export const PublicationLink = styled.a`
     gap: 4px;
     align-items: center;
     color: oklch(0.62 0.10 172);
-    font-family: var(--font-onest), system-ui, sans-serif;
+    font-family: var(--font-inter), system-ui, sans-serif;
     font-size: 14px;
     font-weight: 500;
     transition: color 0.15s ease;
@@ -176,3 +176,27 @@ export const PublicationLink = styled.a`
         color: oklch(0.73 0.12 172);
     }
 `
+
+export const HomeFooter = styled.footer`
+  /* border-top: 1px solid oklch(0.88 0.015 172); */
+  padding: 48px;
+  padding-top: 0px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+  font-size: 13px;
+  color: oklch(0.50 0.022 172);
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid oklch(0.88 0.015 172);
+  }
+
+  @media (max-width: ${theme.breakpoints.md}) {
+    flex-direction: column;
+    gap: 12px;
+    padding: 32px 24px;
+  }
+`;

@@ -1,0 +1,255 @@
+/* Container */
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0 16px;
+  }
+}
+
+/* Section padding */
+.sectionHero {
+  padding: 88px 0 64px;
+}
+
+.sectionStd {
+  padding: 88px 0;
+}
+
+.sectionLg {
+  padding: 96px 0;
+}
+
+.sectionMd {
+  padding: 80px 0;
+}
+
+.sectionSm {
+  padding: 72px 0;
+}
+
+@media (max-width: 768px) {
+  .sectionHero {
+    padding: 60px 0 40px;
+  }
+  .sectionStd {
+    padding: 56px 0;
+  }
+  .sectionLg {
+    padding: 60px 0;
+  }
+  .sectionMd {
+    padding: 52px 0;
+  }
+  .sectionSm {
+    padding: 48px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .sectionHero {
+    padding: 48px 0 32px;
+  }
+  .sectionStd {
+    padding: 44px 0;
+  }
+  .sectionLg {
+    padding: 48px 0;
+  }
+  .sectionMd {
+    padding: 40px 0;
+  }
+  .sectionSm {
+    padding: 36px 0;
+  }
+}
+
+/* Hero meta grid (4 cols) */
+.heroMeta {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+@media (max-width: 768px) {
+  .heroMeta {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .heroMeta {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+}
+
+/* Hero visual mini-UI grid */
+.heroVisualGrid {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .heroVisualGrid {
+    grid-template-columns: 1fr;
+  }
+  /* hide job list on small screens to reduce clutter */
+  .heroJobList {
+    display: none;
+  }
+}
+
+/* TL;DR 3-column grid */
+.tldr {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 64px;
+}
+
+@media (max-width: 900px) {
+  .tldr {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+/* Pull quote 2-column grid */
+.pullQuote {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .pullQuote {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+/* Stage section header (number + title) */
+.stageHeader {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 32px;
+  margin-bottom: 48px;
+  align-items: baseline;
+}
+
+@media (max-width: 576px) {
+  .stageHeader {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-bottom: 32px;
+  }
+}
+
+/* Stage 01 UI: chat + sidebar */
+.stage01Grid {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  gap: 20px;
+  font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .stage01Grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Stage 04 tab panel story mapping */
+.storyMapRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 8px 0;
+  align-items: center;
+  font-size: 11px;
+}
+
+@media (max-width: 576px) {
+  .storyMapRow {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}
+
+/* Design principles 2x2 grid */
+.principles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px 72px;
+}
+
+@media (max-width: 768px) {
+  .principles {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+/* Footer 3-column grid */
+.footerGrid {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 48px;
+  margin-bottom: 56px;
+}
+
+@media (max-width: 768px) {
+  .footerGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .footerGrid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+/* Footer bottom bar */
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 576px) {
+  .footerBottom {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+/* Auto-fit design-notes grids (Why columns) */
+.whyGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+}
+
+@media (max-width: 576px) {
+  .whyGrid {
+    grid-template-columns: 1fr;
+  }
+}
+

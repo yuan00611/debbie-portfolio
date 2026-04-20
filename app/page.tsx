@@ -1,137 +1,201 @@
 "use client"
 import Link from "next/link";
 import Image from "next/image";
-import { Brush } from "@/components/animate-ui/icons/brush";
 import { Navigation } from "@/components/common/navigation/navigation";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-
 import * as S from './page.css';
-
-// Brand-cohesive badge style helpers (OKLCH, no dark mode needed — site is light-only)
-const badgeTeal = { backgroundColor: 'oklch(0.93 0.05 172)', color: 'oklch(0.38 0.09 165)', border: 'none' };
-const badgeForest = { backgroundColor: 'oklch(0.92 0.04 165)', color: 'oklch(0.32 0.09 165)', border: 'none' };
-const badgeAmber = { backgroundColor: 'oklch(0.94 0.06 82)', color: 'oklch(0.42 0.12 60)', border: 'none' };
-const badgeMuted = { backgroundColor: 'oklch(0.93 0.015 172)', color: 'oklch(0.42 0.022 172)', border: '1px solid oklch(0.88 0.015 172)' };
+import AthenaPng from '../public/Athena.png';
+import DellPng from '../public/Dell.png';
+import LifeLongPng from '../public/LifeLong.png';
 
 export default function Home() {
   return (
-  <>
-   <Navigation />
-   <S.HomePageLayout>
-   <S.HeroWrapper>
-    <S.HeroTextWrapper>
-      <S.HeroText>Debbie Chen</S.HeroText>
-      <S.HeroSubtext>Senior Front-End Engineer</S.HeroSubtext>
-      <S.HeroContent>I design and build interfaces that feel intuitive, scalable and accessible.</S.HeroContent>
-    </S.HeroTextWrapper>
+    <>
+      <Navigation />
+      <S.PageRoot>
 
-    <Image
-      src="/hiking.svg"
-      alt="Illustrated figure hiking in a forest landscape"
-      width={420}
-      height={420}
-      priority
-    />
-   </S.HeroWrapper>
+        {/* ── Hero ─────────────────────────────────────────────────────── */}
+        <S.HeroSection>
+          <S.HeroEye>Frontend &amp; UX engineer · senior · based in austin</S.HeroEye>
+          <S.HeroH1>
+            Frontend &amp; UX engineer building <em>trustworthy</em> AI interfaces.
+          </S.HeroH1>
+          <S.HeroLede>
+            I work at the seam where machine intelligence meets human decisions — designing
+            interfaces people trust to handle their <em>money</em>, their <em>health</em>,
+            and their <em>safety</em>.
+          </S.HeroLede>
+        </S.HeroSection>
 
-   <S.FeatureWorkContainer>
-      <S.FeatureWorkTitleWrapper>
-        <Brush size={18} animateOnView loop loopDelay={1000} />
-        <S.FeatureWorkTitle>Featured Works</S.FeatureWorkTitle>
-      </S.FeatureWorkTitleWrapper>
+        {/* ── Tier 1: Featured work ────────────────────────────────────── */}
+        <S.PageSection>
+          <S.SecHead>
+            <S.SecTitle>Featured work</S.SecTitle>
+            <S.SecMeta>Shipped · at scale</S.SecMeta>
+          </S.SecHead>
 
-      <S.FeatureWorkWrapper>
-        <Image
-          src="/Athena.png"
-          alt="Athena Advisory dashboard screenshot"
-          width={640}
-          height={480}
-          priority
-          style={{ borderRadius: '8px', maxWidth: '100%', height: 'auto' }}
-        />
-        <S.FeatureWorkTextWrapper>
-          <S.FeatureWorkTextTitle>
-            Athena Advisory
-          </S.FeatureWorkTextTitle>
-          <S.CaseBadgeWrapper>
-            <Badge style={badgeMuted}>Startup</Badge>
-            <Badge style={badgeMuted}>From 0 to 1</Badge>
-            <Badge style={badgeTeal}>Fintech</Badge>
-            <Badge style={badgeForest}>Senior FE Lead</Badge>
-          </S.CaseBadgeWrapper>
-          <S.HeroContent>
-            Led front-end architecture for a $4B+ AUM AI financial platform — from design system and data visualizations to an AI chat interface.
-          </S.HeroContent>
-          <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
-            <Link href="/projects/athena" scroll={true}>
-              <Button>View case study</Button>
-            </Link>
-            <Link href="/projects/athena-ai" scroll={true}>
-              <Button variant="outline">Deep dive AI chat</Button>
-            </Link>
+          <S.FeaturedGrid>
+            {/* Athena — wide: WideCardWrapper is the grid item with grid-column: 1/-1 */}
+            <S.WideCardWrapper>
+              <Link href="/projects/athena">
+                <S.FeaturedCardWide>
+                  <div style={{ aspectRatio: '21/9', borderRadius: '8px', marginBottom: '22px', overflow: 'hidden', background: 'oklch(0.93 0.015 172)', padding: '24px' }}>
+                    <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+                      <Image
+                        src={AthenaPng}
+                        alt="Athena Advisory dashboard"
+                        fill
+                        placeholder="blur"
+                        style={{ objectFit: 'contain' }}
+                        sizes="(max-width: 820px) 100vw, 1024px"
+                        priority
+                      />
+                    </div>
+                  </div>
+                  <S.CardTags>
+                    <S.CardTag>Fintech · AI</S.CardTag>
+                    <S.CardTag $neutral>Startup · 0 to 1</S.CardTag>
+                    <S.CardTag $neutral>Senior FE lead</S.CardTag>
+                  </S.CardTags>
+                  <S.CardName>Athena Advisory</S.CardName>
+                  <S.CardDesc>
+                    Led front-end architecture for a $4B+ AUM AI financial platform — from design
+                    system and data visualizations to a conversational AI chat interface.
+                  </S.CardDesc>
+                  <S.CardLink>View case study →</S.CardLink>
+                </S.FeaturedCardWide>
+              </Link>
+            </S.WideCardWrapper>
+
+            {/* Dell — half */}
+            <S.HalfCardWrapper>
+              <Link href="/projects/dell">
+                <S.FeaturedCard>
+                  <div style={{ aspectRatio: '4/3', borderRadius: '8px', marginBottom: '22px', overflow: 'hidden', background: 'oklch(0.93 0.015 172)', padding: '24px' }}>
+                    <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+                      <Image
+                        src={DellPng}
+                        alt="Dell network graph visualization"
+                        fill
+                        placeholder="blur"
+                        style={{ objectFit: 'contain' }}
+                        sizes="(max-width: 820px) 100vw, 512px"
+                        priority
+                      />
+                    </div>
+                  </div>
+                  <S.CardTags>
+                    <S.CardTag>Data viz</S.CardTag>
+                    <S.CardTag $neutral>UX engineering</S.CardTag>
+                  </S.CardTags>
+                  <S.CardName>Dell Network Graph</S.CardName>
+                  <S.CardDesc>
+                    Interactive network graphs built in React for Dell&apos;s next-gen enterprise
+                    visualization platform.
+                  </S.CardDesc>
+                  <S.CardLink>View case study →</S.CardLink>
+                </S.FeaturedCard>
+              </Link>
+            </S.HalfCardWrapper>
+
+            {/* LifeLong — half */}
+            <S.HalfCardWrapper>
+              <Link href="/projects/lifelong">
+                <S.FeaturedCard>
+                  <div style={{ aspectRatio: '4/3', borderRadius: '8px', marginBottom: '22px', overflow: 'hidden', background: 'oklch(0.93 0.015 172)', padding: '24px' }}>
+                    <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+                      <Image
+                        src={LifeLongPng}
+                        alt="LifeLong Medical Care website redesign"
+                        fill
+                        placeholder="blur"
+                        style={{ objectFit: 'contain' }}
+                        sizes="(max-width: 820px) 100vw, 512px"
+                        priority
+                      />
+                    </div>
+                  </div>
+                  <S.CardTags>
+                    <S.CardTag>Healthcare</S.CardTag>
+                    <S.CardTag $neutral>Accessibility · 1st place</S.CardTag>
+                  </S.CardTags>
+                  <S.CardName>LifeLong Medical Care</S.CardName>
+                  <S.CardDesc>
+                    WCAG 2.0 AA redesign — from user interviews and card sorting to production
+                    code. 1st place at AIR-U.
+                  </S.CardDesc>
+                  <S.CardLink>View case study →</S.CardLink>
+                </S.FeaturedCard>
+              </Link>
+            </S.HalfCardWrapper>
+          </S.FeaturedGrid>
+        </S.PageSection>
+
+        {/* ── Tier 2: A point of view ──────────────────────────────────── */}
+        <S.PageSection>
+          <S.SecHead>
+            <S.SecTitle>A point of view</S.SecTitle>
+            <S.SecMeta>Thesis · research · exploration</S.SecMeta>
+          </S.SecHead>
+
+          <S.ThesisBlock>
+            <S.ThesisEye>Trust in AI — three explorations</S.ThesisEye>
+            <S.ThesisTitle>
+              What does a <em>trustworthy</em> AI interface actually look like?
+            </S.ThesisTitle>
+            <S.ThesisLede>
+              Three projects, three versions of the same question — each testing a different
+              aspect of how humans learn to trust systems that think for them.
+            </S.ThesisLede>
+
+            <S.PillarGrid>
+              <Link href="/projects/career-copilot" style={{ textDecoration: 'none' }}>
+                <S.PillarCard>
+                  <S.PillarAngle>REASONING</S.PillarAngle>
+                  <S.PillarName>Career Copilot</S.PillarName>
+                  <S.PillarQ>
+                    When AI gives you a score, how do you earn the right to be believed?
+                  </S.PillarQ>
+                </S.PillarCard>
+              </Link>
+
+              <Link href="/projects/tesla" style={{ textDecoration: 'none' }}>
+                <S.PillarCard>
+                  <S.PillarAngle>CALIBRATION</S.PillarAngle>
+                  <S.PillarName>Tesla Autonomous</S.PillarName>
+                  <S.PillarQ>
+                    When should the AI lead, and when does the human need to take over?
+                  </S.PillarQ>
+                </S.PillarCard>
+              </Link>
+
+              <Link href="/projects/eldercare" style={{ textDecoration: 'none' }}>
+                <S.PillarCard>
+                  <S.PillarAngle>INVISIBILITY</S.PillarAngle>
+                  <S.PillarName>Eldercare Smart Home</S.PillarName>
+                  <S.PillarQ>
+                    Can an 80-year-old trust a system they never see until it saves them?
+                  </S.PillarQ>
+                </S.PillarCard>
+              </Link>
+            </S.PillarGrid>
+          </S.ThesisBlock>
+        </S.PageSection>
+
+        {/* ── Tier 3: Archive — hidden for now ─────────────────────────── */}
+
+        {/* ── Footer ───────────────────────────────────────────────────── */}
+        <S.HomeFooter>
+          <div>© 2026 Debbie Chen</div>
+          <div>
+            <a href="mailto:yuan0061@gmail.com">yuan0061@gmail.com</a>
+            {' · '}
+            <a href="https://www.linkedin.com/in/te-yuan-debbie-chen/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            {' · '}
+            <a href="https://github.com/yuan00611" target="_blank" rel="noopener noreferrer">GitHub</a>
           </div>
-        </S.FeatureWorkTextWrapper>
-      </S.FeatureWorkWrapper>
+        </S.HomeFooter>
 
-      <S.FeatureWorkWrapperReverse>
-        <S.FeatureWorkTextWrapper>
-          <S.FeatureWorkTextTitle>
-            Dell Network Graph
-          </S.FeatureWorkTextTitle>
-          <S.CaseBadgeWrapper>
-            <Badge style={badgeMuted}>Capstone</Badge>
-            <Badge style={badgeMuted}>3 Months</Badge>
-            <Badge style={badgeTeal}>Data Visualization</Badge>
-            <Badge style={badgeForest}>UX Engineering</Badge>
-          </S.CaseBadgeWrapper>
-          <S.HeroContent>
-            Built interactive network graphs with React for Dell&apos;s next-generation enterprise visualization platform.
-          </S.HeroContent>
-          <Link href="/projects/dell" scroll={true}>
-            <Button>View case study</Button>
-          </Link>
-        </S.FeatureWorkTextWrapper>
-        <Image
-          src="/Dell.png"
-          alt="Dell network graph visualization screenshot"
-          width={640}
-          height={480}
-          priority
-          style={{ borderRadius: '8px', maxWidth: '100%', height: 'auto' }}
-        />
-      </S.FeatureWorkWrapperReverse>
-
-      <S.FeatureWorkWrapper>
-        <Image
-          src="/LifeLong.png"
-          alt="LifeLong Medical Care website redesign screenshot"
-          width={640}
-          height={480}
-          priority
-          style={{ borderRadius: '8px', maxWidth: '100%', height: 'auto' }}
-        />
-        <S.FeatureWorkTextWrapper>
-          <S.FeatureWorkTextTitle>
-            LifeLong Medical Care
-          </S.FeatureWorkTextTitle>
-          <S.CaseBadgeWrapper>
-            <Badge style={badgeMuted}>Healthcare</Badge>
-            <Badge style={badgeTeal}>Accessibility</Badge>
-            <Badge style={badgeAmber}>1st Place — AIR-U Competition</Badge>
-          </S.CaseBadgeWrapper>
-          <S.HeroContent>
-            Redesigned LifeLong Medical Care&apos;s website for the AirU Accessibility Competition — and won first place.
-          </S.HeroContent>
-          <Link href="/projects/lifelong" scroll={true}>
-            <Button>View case study</Button>
-          </Link>
-        </S.FeatureWorkTextWrapper>
-      </S.FeatureWorkWrapper>
-
-   </S.FeatureWorkContainer>
-
-    </S.HomePageLayout>
-  </>
+      </S.PageRoot>
+    </>
   );
 }

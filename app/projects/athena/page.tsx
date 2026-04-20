@@ -377,6 +377,16 @@ export default function Athena(){
             </S.SectionContainer>
             
         </S.PageWrapper>
+        <S.HomeFooter>
+            <div>© 2026 Debbie Chen</div>
+            <div>
+            <a href="mailto:yuan0061@gmail.com">yuan0061@gmail.com</a>
+            {' · '}
+            <a href="https://www.linkedin.com/in/te-yuan-debbie-chen/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            {' · '}
+            <a href="https://github.com/yuan00611" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </S.HomeFooter>
         </>
     )
 }

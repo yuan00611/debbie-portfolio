@@ -28,8 +28,9 @@ export function Navigation() {
         <Link
           href="/"
           style={{
-            fontFamily: 'var(--font-gloock), Georgia, serif',
-            fontSize: '20px',
+            fontFamily: 'var(--font-fraunces), Georgia, serif',
+            fontStyle: 'italic',
+            fontSize: '18px',
             fontWeight: 400,
             letterSpacing: '-0.01em',
             color: 'oklch(0.17 0.022 172)',
@@ -43,12 +44,12 @@ export function Navigation() {
           <NavigationMenuList>
             <NavigationMenuItem>
               <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                <Link href="/" style={{ fontFamily: 'var(--font-onest), system-ui, sans-serif', fontSize: '14px' }}>Work</Link>
+                <Link href="/" style={{ fontFamily: 'var(--font-inter), system-ui, sans-serif', fontSize: '14px' }}>Work</Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                <Link href="/about" style={{ fontFamily: 'var(--font-onest), system-ui, sans-serif', fontSize: '14px' }}>About</Link>
+                <Link href="/about" style={{ fontFamily: 'var(--font-inter), system-ui, sans-serif', fontSize: '14px' }}>About</Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
           </NavigationMenuList>

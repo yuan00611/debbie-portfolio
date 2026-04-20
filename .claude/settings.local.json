@@ -4,7 +4,14 @@
       "Bash(node .agents/skills/impeccable/scripts/cleanup-deprecated.mjs)",
       "Bash(pnpm dev:*)",
       "Bash(curl -s http://localhost:3000)",
-      "Bash(curl -s http://localhost:3000/about)"
+      "Bash(curl -s http://localhost:3000/about)",
+      "Bash(npm run *)",
+      "Bash(curl -s \"http://localhost:3000/_next/static/css/\")",
+      "Bash(node -e \"const {Fraunces} = require\\('next/font/google'\\); console.log\\('ok'\\)\")",
+      "Bash(curl -sI http://localhost:3000)",
+      "Bash(curl -s http://localhost:3002)",
+      "Bash(curl -sv http://localhost:3002/)",
+      "Bash(curl -sI http://localhost:3002)"
     ]
   }
 }
