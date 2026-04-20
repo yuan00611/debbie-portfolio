@@ -20,16 +20,36 @@ export default function About() {
                 <S.SectionTitle>Summary</S.SectionTitle>
             </S.SectionTitleWrapper>
             <S.SummaryWrapper>
-                <S.SectionTextWrapper>            
-                <S.SectionText>
-                    I&apos;m a Senior Front-End Engineer with 5+ years building scalable, user-centered interfaces for data-intensive fintech applications. My background in Human-Computer Interaction shapes how I approach engineering -- I think about systems holistically, prioritize accessibility, and care deeply about the real people using the products I build. 
-                </S.SectionText>
-                <S.SectionText>
-                    Most recently, I led front-end architecture on a $4B+ AUM AI financial platform, where I built everything from design systems and data visualizations to AI chat interfaces — often in ambiguous, fast-moving environments where I had to bring both technical clarity and product thinking.
-                </S.SectionText>
-                <S.SectionText>
-                   Outside of work, I care about accessibility, education, and building technology that genuinely improves people&apos;s lives.
-                </S.SectionText>
+                <S.SectionTextWrapper> 
+                    <S.SectionText>
+                        I build AI-native interfaces that help people understand, trust, and interact with complex systems.
+                        With a background in frontend engineering and Human-Computer Interaction, I focus on designing experiences that go beyond static UI — toward more dynamic, conversational, and human-centered interactions.
+                    </S.SectionText> 
+                    <S.SectionText>
+                        What I care about most:
+                    </S.SectionText>
+                    <S.SectionText>
+                        🧠 𝗔𝗜-𝗡𝗮𝘁𝗶𝘃𝗲 𝗜𝗻𝘁𝗲𝗿𝗳𝗮𝗰𝗲𝘀: Designing interactive, AI-first experiences, from streaming UI to multi-panel data interactions
+                    </S.SectionText>
+                    <S.SectionText>
+                        🔍 𝗖𝗹𝗮𝗿𝗶𝘁𝘆: Turning complex systems (financial data, AI outputs) into intuitive, understandable interfaces
+                    </S.SectionText>
+                    <S.SectionText>
+                        🛡️ 𝗧𝗿𝘂𝘀𝘁: Building transparent, predictable systems through thoughtful feedback, error handling, and UX decisions
+                    </S.SectionText>
+                    <S.SectionText>
+                        ⚙️ 𝗦𝘆𝘀𝘁𝗲𝗺𝘀 & 𝗦𝗰𝗮𝗹𝗲: Creating scalable, maintainable frontend architectures and design systems
+                    </S.SectionText>
+                    <S.SectionText>
+                        🌿 𝗛𝘂𝗺𝗮𝗻-𝗖𝗲𝗻𝘁𝗲𝗿𝗲𝗱 𝗗𝗲𝘀𝗶𝗴𝗻: Grounding technical decisions in how people perceive, understand, and use systems
+                    </S.SectionText>
+                    <S.SectionText>
+                        Most recently at Athena Advisory, I helped transform a traditional financial platform into an AI-first experience, working on real-time interfaces, streaming responses, and interaction patterns that connect language with data.
+                    </S.SectionText>
+                    <S.SectionText>
+                        I’m especially interested in shaping how humans interact with AI — in ways that feel intuitive, transparent, and empowering.    
+                    </S.SectionText>
+
                 </S.SectionTextWrapper>
                 <Image
                     src="/0.jpg"
