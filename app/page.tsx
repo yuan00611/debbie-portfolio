@@ -15,7 +15,7 @@ export default function Home() {
 
         {/* ── Hero ─────────────────────────────────────────────────────── */}
         <S.HeroSection>
-          <S.HeroEye>Frontend &amp; UX engineer · senior · based in austin</S.HeroEye>
+          <S.HeroEye>Frontend &amp; UX engineer · senior · based in austin / seattle</S.HeroEye>
           <S.HeroH1>
             Frontend &amp; UX engineer building <em>trustworthy</em> AI interfaces.
           </S.HeroH1>
