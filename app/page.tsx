@@ -43,7 +43,7 @@ export default function Home() {
           )}
 
           <div style={{ ...rise(0.05), fontFamily: mono, fontSize: 12, letterSpacing: "0.2em", color: "var(--brand-teal)", marginBottom: 14 }}>
-            DESIGN · PROTOTYPE · ENGINEER
+            UX · DESIGN · PROTOTYPE · ENGINEER
           </div>
 
           <h1 style={{
@@ -62,7 +62,7 @@ export default function Home() {
           </h1>
 
           <div style={{ ...rise(0.26), fontSize: "clamp(15px, 2.2vw, 19px)", fontWeight: 500, color: "var(--muted-foreground)", marginTop: 10 }}>
-            Design Engineer &amp; Rapid Prototyper
+            Design Technologist &amp; Rapid Prototyper
           </div>
 
           <p style={{
