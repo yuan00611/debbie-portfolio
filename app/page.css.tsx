@@ -4,58 +4,28 @@ import { theme } from './theme';
 // ── Layout ──────────────────────────────────────────────────────────────────
 
 export const PageRoot = styled.div`
-  background: oklch(0.985 0.006 172);
+  background: var(--background);
+  color: var(--foreground);
   min-height: 100vh;
+  transition: background-color 0.35s ease, color 0.35s ease;
 `;
 
 // ── Hero ─────────────────────────────────────────────────────────────────────
+// (hero content is now inline in page.tsx; this wrapper provides layout only)
 
-export const HeroSection = styled.section`
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 120px 48px 96px;
+export const HeroWrapper = styled.header`
+  position: relative;
+  background: var(--background);
+  overflow: hidden;
+  background-image: radial-gradient(var(--grid-dot) 1px, transparent 1px);
+  background-size: 26px 26px;
+  padding: 96px 24px 64px;
+  text-align: center;
+  border-bottom: 1px solid var(--stroke-1);
+  transition: background-color 0.35s ease, border-color 0.35s ease;
 
   @media (max-width: ${theme.breakpoints.md}) {
-    padding: 80px 24px 64px;
-  }
-`;
-
-export const HeroEye = styled.p`
-  font-family: var(--font-jetbrains-mono), ui-monospace, monospace;
-  font-size: 11px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: oklch(0.50 0.022 172);
-  margin-bottom: 28px;
-`;
-
-export const HeroH1 = styled.h1`
-  font-family: var(--font-fraunces), Georgia, serif;
-  font-size: clamp(40px, 5.5vw, 64px);
-  font-weight: 400;
-  line-height: 1.05;
-  letter-spacing: -0.025em;
-  color: oklch(0.17 0.022 172);
-  max-width: 880px;
-  margin-bottom: 32px;
-
-  em {
-    font-style: italic;
-    color: oklch(0.38 0.09 165);
-  }
-`;
-
-export const HeroLede = styled.p`
-  font-family: var(--font-inter), system-ui, sans-serif;
-  font-size: 19px;
-  color: oklch(0.28 0.022 172);
-  max-width: 640px;
-  line-height: 1.6;
-
-  em {
-    font-style: italic;
-    color: oklch(0.17 0.022 172);
-    font-family: var(--font-fraunces), Georgia, serif;
+    padding: 80px 24px 48px;
   }
 `;
 
@@ -65,7 +35,7 @@ export const PageSection = styled.section`
   max-width: 1120px;
   margin: 0 auto;
   padding: 80px 48px;
-  border-top: 1px solid oklch(0.88 0.015 172);
+  border-top: 1px solid var(--stroke-2);
 
   @media (max-width: ${theme.breakpoints.md}) {
     padding: 64px 24px;
@@ -78,7 +48,7 @@ export const SecHead = styled.div`
   align-items: baseline;
   margin-bottom: 44px;
   padding-bottom: 18px;
-  border-bottom: 1px dashed oklch(0.88 0.015 172);
+  border-bottom: 1px dashed var(--stroke-2);
 `;
 
 export const SecTitle = styled.h2`
@@ -87,7 +57,7 @@ export const SecTitle = styled.h2`
   font-weight: 400;
   font-style: italic;
   letter-spacing: -0.015em;
-  color: oklch(0.17 0.022 172);
+  color: var(--foreground);
 `;
 
 export const SecMeta = styled.span`
@@ -95,7 +65,7 @@ export const SecMeta = styled.span`
   font-size: 11px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: oklch(0.50 0.022 172);
+  color: var(--muted-foreground);
 `;
 
 // ── Tier 1 — Featured cards ───────────────────────────────────────────────────
@@ -111,8 +81,8 @@ export const FeaturedGrid = styled.div`
 `;
 
 export const FeaturedCard = styled.div`
-  background: #fff;
-  border: 1px solid oklch(0.88 0.015 172);
+  background: var(--card);
+  border: 1px solid var(--stroke-2);
   border-radius: 12px;
   padding: 28px 32px 26px;
   transition: border-color 0.2s, transform 0.2s;
@@ -120,7 +90,7 @@ export const FeaturedCard = styled.div`
   height: 100%;
 
   &:hover {
-    border-color: oklch(0.78 0.08 172);
+    border-color: var(--brand-teal);
     transform: translateY(-2px);
   }
 `;
@@ -142,7 +112,7 @@ export const CardImageBox = styled.div<{ $wide?: boolean }>`
   margin-bottom: 22px;
   overflow: hidden;
   position: relative;
-  background: oklch(0.93 0.01 172);
+  background: var(--raised-2);
 `;
 
 export const CardTags = styled.div`
@@ -158,9 +128,9 @@ export const CardTag = styled.span<{ $neutral?: boolean }>`
   border-radius: 999px;
   font-weight: 500;
   letter-spacing: 0.02em;
-  background: ${({ $neutral }) => $neutral ? 'transparent' : 'oklch(0.93 0.05 172)'};
-  color: ${({ $neutral }) => $neutral ? 'oklch(0.50 0.022 172)' : 'oklch(0.38 0.09 165)'};
-  border: ${({ $neutral }) => $neutral ? '1px solid oklch(0.88 0.015 172)' : 'none'};
+  background: ${({ $neutral }) => $neutral ? 'transparent' : 'var(--secondary)'};
+  color: ${({ $neutral }) => $neutral ? 'var(--muted-foreground)' : 'var(--primary)'};
+  border: ${({ $neutral }) => $neutral ? '1px solid var(--stroke-2)' : 'none'};
 `;
 
 export const CardName = styled.h3`
@@ -168,24 +138,24 @@ export const CardName = styled.h3`
   font-size: 26px;
   font-weight: 400;
   letter-spacing: -0.015em;
-  color: oklch(0.17 0.022 172);
+  color: var(--foreground);
   margin-bottom: 10px;
 `;
 
 export const CardDesc = styled.p`
   font-family: var(--font-inter), system-ui, sans-serif;
   font-size: 15px;
-  color: oklch(0.50 0.022 172);
+  color: var(--muted-foreground);
   line-height: 1.6;
   margin-bottom: 18px;
 `;
 
 export const CardLink = styled.span`
   font-size: 13px;
-  color: oklch(0.38 0.09 165);
+  color: var(--primary);
   font-weight: 500;
   letter-spacing: 0.02em;
-  border-bottom: 1px solid oklch(0.78 0.08 172);
+  border-bottom: 1px solid var(--stroke-3);
   padding-bottom: 2px;
   display: inline-block;
 `;
@@ -193,10 +163,10 @@ export const CardLink = styled.span`
 // ── Tier 2 — Thesis / Point of view ──────────────────────────────────────────
 
 export const ThesisBlock = styled.div`
-  background: oklch(0.97 0.012 80);
+  background: var(--raised-2);
   border-radius: 16px;
   padding: 48px;
-  border: 1px solid oklch(0.88 0.015 172);
+  border: 1px solid var(--stroke-2);
 
   @media (max-width: ${theme.breakpoints.md}) {
     padding: 32px 24px;
@@ -208,7 +178,7 @@ export const ThesisEye = styled.p`
   font-size: 11px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: oklch(0.38 0.09 165);
+  color: var(--brand-warm);
   font-weight: 500;
   margin-bottom: 18px;
 `;
@@ -221,18 +191,18 @@ export const ThesisTitle = styled.h3`
   margin-bottom: 18px;
   letter-spacing: -0.02em;
   max-width: 680px;
-  color: oklch(0.17 0.022 172);
+  color: var(--foreground);
 
   em {
     font-style: italic;
-    color: oklch(0.38 0.09 165);
+    color: var(--primary);
   }
 `;
 
 export const ThesisLede = styled.p`
   font-family: var(--font-inter), system-ui, sans-serif;
   font-size: 16px;
-  color: oklch(0.28 0.022 172);
+  color: var(--muted-foreground);
   max-width: 640px;
   margin-bottom: 36px;
   line-height: 1.65;
@@ -249,15 +219,15 @@ export const PillarGrid = styled.div`
 `;
 
 export const PillarCard = styled.div`
-  background: oklch(0.985 0.006 172);
-  border: 1px solid oklch(0.88 0.015 172);
+  background: var(--card);
+  border: 1px solid var(--stroke-2);
   border-radius: 10px;
   padding: 26px 26px 22px;
   transition: border-color 0.2s, transform 0.2s;
   cursor: pointer;
 
   &:hover {
-    border-color: oklch(0.78 0.08 172);
+    border-color: var(--brand-teal);
     transform: translateY(-2px);
   }
 `;
@@ -265,7 +235,7 @@ export const PillarCard = styled.div`
 export const PillarAngle = styled.p`
   font-family: var(--font-jetbrains-mono), ui-monospace, monospace;
   font-size: 11px;
-  color: oklch(0.38 0.09 165);
+  color: var(--brand-warm);
   letter-spacing: 0.1em;
   margin-bottom: 14px;
   font-weight: 500;
@@ -278,12 +248,12 @@ export const PillarName = styled.h4`
   line-height: 1.3;
   margin-bottom: 10px;
   letter-spacing: -0.01em;
-  color: oklch(0.17 0.022 172);
+  color: var(--foreground);
 `;
 
 export const PillarQ = styled.p`
   font-size: 14px;
-  color: oklch(0.50 0.022 172);
+  color: var(--muted-foreground);
   line-height: 1.55;
   font-style: italic;
   font-family: var(--font-fraunces), Georgia, serif;
@@ -292,12 +262,12 @@ export const PillarQ = styled.p`
 // ── Tier 3 — Archive ──────────────────────────────────────────────────────────
 
 export const ArchiveList = styled.div`
-  border-top: 1px solid oklch(0.88 0.015 172);
+  border-top: 1px solid var(--stroke-2);
 `;
 
 export const ArchiveRow = styled.div`
   padding: 18px 0;
-  border-bottom: 1px solid oklch(0.88 0.015 172);
+  border-bottom: 1px solid var(--stroke-2);
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -307,32 +277,32 @@ export const ArchiveRow = styled.div`
 export const ArchiveName = styled.span`
   font-size: 14px;
   font-weight: 500;
-  color: oklch(0.22 0.022 172);
+  color: var(--foreground);
 `;
 
 export const ArchiveMeta = styled.span`
   font-family: var(--font-jetbrains-mono), ui-monospace, monospace;
   font-size: 12px;
-  color: oklch(0.50 0.022 172);
+  color: var(--muted-foreground);
   letter-spacing: 0.04em;
 `;
 
 // ── Footer ────────────────────────────────────────────────────────────────────
 
 export const HomeFooter = styled.footer`
-  border-top: 1px solid oklch(0.88 0.015 172);
+  border-top: 1px solid var(--stroke-2);
   padding: 48px;
   display: flex;
   justify-content: space-between;
   max-width: 1120px;
   margin: 0 auto;
   font-size: 13px;
-  color: oklch(0.50 0.022 172);
+  color: var(--muted-foreground);
 
   a {
     color: inherit;
     text-decoration: none;
-    border-bottom: 1px solid oklch(0.88 0.015 172);
+    border-bottom: 1px solid var(--stroke-2);
   }
 
   @media (max-width: ${theme.breakpoints.md}) {

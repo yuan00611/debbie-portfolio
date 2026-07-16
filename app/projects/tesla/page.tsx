@@ -5,19 +5,22 @@ import styles from './page.module.css';
 import TeslaImg from '../../../public/Tesla.png';
 
 const C = {
-  brand: '#3b4a5a',
-  brandInk: '#1e2936',
-  brandSoft: '#e4e8ed',
-  brandMid: '#b8c2ce',
-  inkFade: '#9a968e',
-  warn: '#b77226',
-  warnSoft: '#f3e5c8',
-  ink: '#1a1918',
-  ink2: '#3a3835',
-  ink3: '#6e6b65',
-  line: '#d9dce2',
-  paper: '#f7f8fa',
-  white: '#ffffff',
+  brand:     '#3b4a5a',             // slate — decorative borders only
+  brandInk:  'var(--foreground)',   // was #1e2936; adapts to dark mode
+  brandSoft: 'var(--secondary)',
+  brandMid:  'var(--stroke-2)',
+  // Footer uses ink/paper inverted (foreground-as-bg, background-as-text).
+  // inkFade must contrast on BOTH a dark bg (light mode) and a light bg (dark mode),
+  // so we blend 65% background + 35% foreground — gives ~7:1 light, ~4.6:1 dark.
+  inkFade:   'color-mix(in oklch, var(--background) 65%, var(--foreground))',
+  warn:      '#b77226',             // amber warn — intentional, kept
+  warnSoft:  'var(--secondary)',
+  ink:       'var(--foreground)',
+  ink2:      'var(--foreground)',
+  ink3:      'var(--muted-foreground)',
+  line:      'var(--border)',
+  paper:     'var(--background)',
+  white:     'var(--card)',
 };
 
 const principles = [
@@ -69,7 +72,7 @@ export default function Tesla() {
               <div key={i} className={styles.metricsCell} style={{ borderRight: i < 3 ? `1px solid ${C.line}` : 'none' }}>
                 <div style={{ fontFamily: 'var(--font-fraunces), Georgia, serif', fontSize: 30, color: C.brandInk, letterSpacing: '-0.015em', marginBottom: 8, lineHeight: 1 }}>
                   {m.num}
-                  {m.delta && <span style={{ fontFamily: 'var(--font-jetbrains-mono), monospace', fontSize: 13, color: C.brand, marginLeft: 6 }}>{m.delta}</span>}
+                  {m.delta && <span style={{ fontFamily: 'var(--font-jetbrains-mono), monospace', fontSize: 13, color: 'var(--brand-teal)', marginLeft: 6 }}>{m.delta}</span>}
                 </div>
                 <div style={{ fontSize: 12, color: C.ink3, lineHeight: 1.45, whiteSpace: 'pre-line', fontFamily: 'var(--font-inter), sans-serif' }}>{m.label}</div>
               </div>

@@ -5,17 +5,17 @@ import styles from './page.module.css';
 import EldercareImg from '../../../public/Eldercare.png';
 
 const C = {
-  brand: '#2ab8a6',
-  brandInk: '#0e6358',
-  brandSoft: '#e6f6f3',
-  brandMid: '#b8e4db',
-  inkFade: '#9a968e',
-  ink: '#1a1918',
-  ink2: '#3a3835',
-  ink3: '#6e6b65',
-  line: '#e5dfd1',
-  paper: '#faf9f5',
-  white: '#ffffff',
+  brand:     '#2ab8a6',         // teal brand — intentional, kept
+  brandInk:  'var(--foreground)', // was #0e6358; dark teal invisible on dark --secondary bg
+  brandSoft: 'var(--secondary)',
+  brandMid:  'var(--secondary)',
+  inkFade:   'var(--muted-foreground)',
+  ink:       'var(--foreground)',
+  ink2:      'var(--foreground)',
+  ink3:      'var(--muted-foreground)',
+  line:      'var(--border)',
+  paper:     'var(--background)',
+  white:     'var(--card)',
 };
 
 const serif = 'var(--font-fraunces), Georgia, serif';

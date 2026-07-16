@@ -3,21 +3,21 @@ import { Navigation } from "@/components/common/navigation/navigation";
 import styles from './page.module.css';
 
 const C = {
-  ink: '#1a1918',
-  inkSoft: '#3a3835',
-  inkMuted: '#6e6b65',
-  inkFade: '#9a968e',
-  paper: '#faf8f3',
-  paperWarm: '#f3efe6',
-  rule: '#e5dfd1',
-  ruleSoft: '#edeadf',
-  accent: '#c04e1e',
-  accentSoft: '#f3e4da',
-  success: '#5a7d3a',
-  successSoft: '#e7ecd8',
-  warn: '#a06a1e',
-  warnSoft: '#f3e5c8',
-  white: '#ffffff',
+  ink:        'var(--foreground)',
+  inkSoft:    'var(--foreground)',
+  inkMuted:   'var(--muted-foreground)',
+  inkFade:    'var(--muted-foreground)',
+  paper:      'var(--background)',
+  paperWarm:  'var(--card)',
+  rule:       'var(--border)',
+  ruleSoft:   'var(--stroke-1)',
+  accent:     '#c04e1e',        // brand red — intentional, kept
+  accentSoft: 'var(--secondary)',
+  success:    '#5a7d3a',        // brand green — intentional, kept
+  successSoft:'var(--secondary)',
+  warn:       '#a06a1e',        // brand amber — intentional, kept
+  warnSoft:   'var(--secondary)',
+  white:      'var(--card)',
 };
 
 const serif = 'var(--font-fraunces), Georgia, serif';

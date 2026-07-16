@@ -1,30 +1,83 @@
 "use client"
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { IntroOverlay } from "@/components/intro/IntroOverlay";
 import { Navigation } from "@/components/common/navigation/navigation";
+import { CapabilityStrip } from "@/components/hero/CapabilityStrip";
 import * as S from './page.css';
 import AthenaPng from '../public/Athena.png';
 import DellPng from '../public/Dell.png';
 import LifeLongPng from '../public/LifeLong.png';
 
+const mono = "var(--font-jetbrains-mono), ui-monospace, monospace";
+const rise = (d: number): React.CSSProperties => ({
+  animation: `hero-riseIn .7s cubic-bezier(0.22,1,0.36,1) both ${d}s`,
+});
+
 export default function Home() {
+  const [replayKey, setReplayKey] = useState(0);
+
   return (
     <>
-      <Navigation />
+      <IntroOverlay />
+      {replayKey > 0 && <IntroOverlay key={replayKey} force />}
+      <Navigation onReplay={() => setReplayKey(k => k + 1)} />
       <S.PageRoot>
 
         {/* ── Hero ─────────────────────────────────────────────────────── */}
-        <S.HeroSection>
-          <S.HeroEye>Frontend &amp; UX engineer · senior · based in austin / seattle</S.HeroEye>
-          <S.HeroH1>
-            Frontend &amp; UX engineer building <em>trustworthy</em> AI interfaces.
-          </S.HeroH1>
-          <S.HeroLede>
-            I work at the seam where machine intelligence meets human decisions — designing
-            interfaces people trust to handle their <em>money</em>, their <em>health</em>,
-            and their <em>safety</em>.
-          </S.HeroLede>
-        </S.HeroSection>
+        <S.HeroWrapper>
+          {/* ambient dots */}
+          <div aria-hidden style={{ position: "absolute", left: "13%", top: "22%", width: 6, height: 6, borderRadius: 99, background: "var(--brand-teal)", opacity: .35, animation: "k-drift 6s ease-in-out infinite" }} />
+          <div aria-hidden style={{ position: "absolute", right: "12%", bottom: "30%", width: 8, height: 8, borderRadius: 99, border: "1px solid var(--brand-warm)", opacity: .3, animation: "k-driftSlow 7s ease-in-out infinite" }} />
+          <div aria-hidden style={{ position: "absolute", right: "22%", top: "18%", color: "var(--brand-warm)", opacity: .4, fontSize: 13, animation: "k-drift 5s ease-in-out infinite" }}>✦</div>
+
+          {/* replay orb — flies across the strip to the name */}
+          {replayKey > 0 && (
+            <div key={replayKey} aria-hidden style={{
+              position: "absolute", width: 9, height: 9, borderRadius: 99,
+              background: "var(--brand-warm)", zIndex: 6,
+              boxShadow: "0 0 10px 3px rgba(255,176,124,0.4)",
+              animation: "hero-orbFly 2.4s cubic-bezier(0.22,1,0.36,1) both .2s",
+            }} />
+          )}
+
+          <div style={{ ...rise(0.05), fontFamily: mono, fontSize: 12, letterSpacing: "0.2em", color: "var(--brand-teal)", marginBottom: 14 }}>
+            DESIGN · PROTOTYPE · ENGINEER
+          </div>
+
+          <h1 style={{
+            ...rise(0.16),
+            fontSize: "clamp(44px, 6vw, 64px)", fontWeight: 700,
+            letterSpacing: "-0.02em", margin: 0, lineHeight: 1.05,
+            color: "var(--foreground)",
+            fontFamily: "var(--font-fraunces), Georgia, serif",
+          }}>
+            Debbie Chen
+            <span aria-hidden style={{
+              display: "inline-block", width: 4, height: "0.72em",
+              marginLeft: 10, borderRadius: 2, background: "var(--brand-warm)",
+              verticalAlign: "-0.06em", animation: "k-blink 1.1s step-end infinite",
+            }} />
+          </h1>
+
+          <div style={{ ...rise(0.26), fontSize: "clamp(15px, 2.2vw, 19px)", fontWeight: 500, color: "var(--muted-foreground)", marginTop: 10 }}>
+            Design Engineer &amp; Rapid Prototyper
+          </div>
+
+          <p style={{
+            ...rise(0.36),
+            fontSize: "clamp(13px, 1.8vw, 15px)", color: "var(--muted-foreground)",
+            maxWidth: 560, margin: "14px auto 0", lineHeight: 1.65,
+          }}>
+            I turn human needs, emerging technology, and complex systems into clear,
+            trustworthy, production-ready experiences.
+          </p>
+
+          <div style={rise(0.6)}>
+            <CapabilityStrip />
+          </div>
+        </S.HeroWrapper>
 
         {/* ── Tier 1: Featured work ────────────────────────────────────── */}
         <S.PageSection>
@@ -34,11 +87,11 @@ export default function Home() {
           </S.SecHead>
 
           <S.FeaturedGrid>
-            {/* Athena — wide: WideCardWrapper is the grid item with grid-column: 1/-1 */}
+            {/* Athena — wide */}
             <S.WideCardWrapper>
               <Link href="/projects/athena">
                 <S.FeaturedCardWide>
-                  <div style={{ aspectRatio: '21/9', borderRadius: '8px', marginBottom: '22px', overflow: 'hidden', background: 'oklch(0.93 0.015 172)', padding: '24px' }}>
+                  <div style={{ aspectRatio: '21/9', borderRadius: '8px', marginBottom: '22px', overflow: 'hidden', background: 'var(--raised-2)', padding: '24px' }}>
                     <div style={{ position: 'relative', width: '100%', height: '100%' }}>
                       <Image
                         src={AthenaPng}
@@ -70,7 +123,7 @@ export default function Home() {
             <S.HalfCardWrapper>
               <Link href="/projects/dell">
                 <S.FeaturedCard>
-                  <div style={{ aspectRatio: '4/3', borderRadius: '8px', marginBottom: '22px', overflow: 'hidden', background: 'oklch(0.93 0.015 172)', padding: '24px' }}>
+                  <div style={{ aspectRatio: '4/3', borderRadius: '8px', marginBottom: '22px', overflow: 'hidden', background: 'var(--raised-2)', padding: '24px' }}>
                     <div style={{ position: 'relative', width: '100%', height: '100%' }}>
                       <Image
                         src={DellPng}
@@ -101,7 +154,7 @@ export default function Home() {
             <S.HalfCardWrapper>
               <Link href="/projects/lifelong">
                 <S.FeaturedCard>
-                  <div style={{ aspectRatio: '4/3', borderRadius: '8px', marginBottom: '22px', overflow: 'hidden', background: 'oklch(0.93 0.015 172)', padding: '24px' }}>
+                  <div style={{ aspectRatio: '4/3', borderRadius: '8px', marginBottom: '22px', overflow: 'hidden', background: 'var(--raised-2)', padding: '24px' }}>
                     <div style={{ position: 'relative', width: '100%', height: '100%' }}>
                       <Image
                         src={LifeLongPng}
@@ -180,8 +233,6 @@ export default function Home() {
             </S.PillarGrid>
           </S.ThesisBlock>
         </S.PageSection>
-
-        {/* ── Tier 3: Archive — hidden for now ─────────────────────────── */}
 
         {/* ── Footer ───────────────────────────────────────────────────── */}
         <S.HomeFooter>
