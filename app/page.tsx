@@ -20,7 +20,7 @@ export default function Home() {
 
   return (
     <>
-      <IntroOverlay />
+      {/* <IntroOverlay /> */}
       {replayKey > 0 && <IntroOverlay key={replayKey} force />}
       <Navigation onReplay={() => setReplayKey(k => k + 1)} />
       <S.PageRoot>
