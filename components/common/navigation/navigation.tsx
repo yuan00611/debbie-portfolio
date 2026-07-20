@@ -63,7 +63,7 @@ export function Navigation({ onReplay }: { onReplay?: () => void }) {
                 background: "transparent", border: "1px solid var(--stroke-2)",
                 borderRadius: 999, padding: "6px 14px", cursor: "pointer",
               }}>
-              ↻ Replay intro
+              ↻ Intro Animation
             </button>
           )}
 

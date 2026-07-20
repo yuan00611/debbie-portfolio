@@ -44,7 +44,7 @@ export default function Home() {
           )}
 
           <div style={{ ...rise(0.05), fontFamily: mono, fontSize: 12, letterSpacing: "0.2em", color: "var(--brand-teal)", marginBottom: 14 }}>
-            UX · DESIGN · PROTOTYPE · ENGINEER
+            UX · DESIGN · PROTOTYPE · MOTION
           </div>
 
           <h1 style={{
