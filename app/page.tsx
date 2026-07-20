@@ -9,6 +9,7 @@ import * as S from './page.css';
 import AthenaPng from '../public/Athena.png';
 import DellPng from '../public/Dell.png';
 import LifeLongPng from '../public/LifeLong.png';
+import WwbPng from '../public/WWB.png';
 
 const mono = "var(--font-jetbrains-mono), ui-monospace, monospace";
 const rise = (d: number): React.CSSProperties => ({
@@ -62,7 +63,7 @@ export default function Home() {
           </h1>
 
           <div style={{ ...rise(0.26), fontSize: "clamp(15px, 2.2vw, 19px)", fontWeight: 500, color: "var(--muted-foreground)", marginTop: 10 }}>
-            Design Technologist &amp; Rapid Prototyper
+            Frontend Engineer &amp; Design Technologist
           </div>
 
           <p style={{
@@ -232,6 +233,128 @@ export default function Home() {
               </Link>
             </S.PillarGrid>
           </S.ThesisBlock>
+        </S.PageSection>
+
+        {/* ── Tier 3: Interactive & immersive ──────────────────────────── */}
+        <S.PageSection>
+          <S.SecHead>
+            <S.SecTitle>Interactive &amp; immersive</S.SecTitle>
+            <S.SecMeta>Games · VR · AR — 2016–now</S.SecMeta>
+          </S.SecHead>
+
+          <S.SecLede>
+            Before I designed for AI, I was designing for presence — VR, AR, and games
+            that put people inside an idea.
+          </S.SecLede>
+
+          <S.FeaturedGrid>
+            {/* Where Words Begin — half */}
+            <S.HalfCardWrapper>
+              <Link href="/projects/where-words-begin">
+                <S.FeaturedCard>
+                  <div style={{ aspectRatio: '4/3', borderRadius: '8px', marginBottom: '22px', overflow: 'hidden', background: 'var(--raised-2)' }}>
+                    <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+                      <Image
+                        src={WwbPng}
+                        alt="Where Words Begin title screen — ink-wash mountains in mist"
+                        fill
+                        placeholder="blur"
+                        style={{ objectFit: 'cover' }}
+                        sizes="(max-width: 820px) 100vw, 512px"
+                      />
+                    </div>
+                  </div>
+                  <S.CardTags>
+                    <S.CardTag>Game design</S.CardTag>
+                    <S.CardTag $neutral>Immersive</S.CardTag>
+                    <S.CardTag $neutral>Procedural art</S.CardTag>
+                  </S.CardTags>
+                  <S.CardName>Where Words Begin (拾字旅人)</S.CardName>
+                  <S.CardDesc>
+                    A game about how Chinese characters were born — earn each word by truly
+                    observing the world, in a valley where every pixel is painted in code.
+                  </S.CardDesc>
+                  <S.CardLink>View case study →</S.CardLink>
+                </S.FeaturedCard>
+              </Link>
+            </S.HalfCardWrapper>
+
+            {/* The Making of Wind — half */}
+            <S.HalfCardWrapper>
+              <Link href="/projects/wind-turbine-vr">
+                <S.FeaturedCard>
+                  <div style={{ aspectRatio: '4/3', borderRadius: '8px', marginBottom: '22px', overflow: 'hidden', background: 'var(--raised-2)' }}>
+                    <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+                      {/* Temporary: key art from the 2018 archive site */}
+                      <Image
+                        src="https://yuan00611.github.io/portfolio/g04_windturbine/img/g4_intro.png"
+                        alt="The Making of Wind — VR headset key art at the exhibition entrance"
+                        fill
+                        style={{ objectFit: 'cover' }}
+                        sizes="(max-width: 820px) 100vw, 512px"
+                      />
+                    </div>
+                  </div>
+                  <S.CardTags>
+                    <S.CardTag>VR news</S.CardTag>
+                    <S.CardTag $neutral>HTC Vive</S.CardTag>
+                    <S.CardTag $neutral>Immersive</S.CardTag>
+                  </S.CardTags>
+                  <S.CardName>The Making of Wind (海造的風機)</S.CardName>
+                  <S.CardDesc>
+                    Taiwan&apos;s first interactive VR news — putting ~400 visitors inside the
+                    debate over offshore wind, from the shore to the seabed.
+                  </S.CardDesc>
+                  <S.CardLink>View case study →</S.CardLink>
+                </S.FeaturedCard>
+              </Link>
+            </S.HalfCardWrapper>
+          </S.FeaturedGrid>
+
+          <S.MiniGrid>
+            {([
+              {
+                name: 'Is Vincent Alright (梵谷還好)', tag: 'VR escape · HTC Vive', href: '/projects/is-vincent-alright',
+                img: 'https://yuan00611.github.io/img/portfolio/g5_vangogh.png',
+                alt: 'Is Vincent Alright — 梵谷還好 game logo with a grey question mark',
+              },
+              {
+                name: 'Carbon Footprint Adventure', tag: 'VR · Oculus', href: '/projects/carbon-footprint',
+                img: 'https://yuan00611.github.io/portfolio/g06_cfadventure/img/g6_intro.png',
+                alt: 'Carbon Footprint Adventure — low-poly Arctic scene with polar bears on ice floes',
+              },
+              {
+                name: 'Human and Dog', tag: 'Asymmetric · PC', href: '/projects/human-and-dog',
+                img: 'https://yuan00611.github.io/img/portfolio/g1_hnd.png',
+                alt: 'Human and Dog title card — a man and a dog in an industrial escape room',
+              },
+              {
+                name: 'Museum AR Game', tag: 'AR · exhibition', href: '/projects/museum-ar',
+                img: 'https://yuan00611.github.io/img/portfolio/g2_chicken.png',
+                alt: 'Museum AR Game — display case with rooster and hen, AR egg tray on a tablet',
+              },
+            ] as { name: string; tag: string; href: string; thumb?: string; img?: string; alt?: string }[]).map((p) => (
+              /* '#' links are placeholders — those projects get case-study pages later */
+              <S.MiniCard key={p.name} as={Link} href={p.href}>
+                <S.MiniThumb>
+                  {p.img ? (
+                    <Image src={p.img} alt={p.alt ?? p.name} fill style={{ objectFit: 'cover' }} sizes="(max-width: 820px) 50vw, 256px" />
+                  ) : p.thumb}
+                </S.MiniThumb>
+                <S.MiniName>{p.name}</S.MiniName>
+                <S.MiniTag>{p.tag}</S.MiniTag>
+              </S.MiniCard>
+            ))}
+          </S.MiniGrid>
+
+          <S.ArchiveList style={{ marginTop: 32 }}>
+            <Link href="/projects/liberary" style={{ textDecoration: 'none' }}>
+              <S.ArchiveRow>
+                <S.ArchiveName>Liberary — a Galileo-era RPG about intellectual freedom</S.ArchiveName>
+                <S.ArchiveMeta>RPG · Narrative → </S.ArchiveMeta>
+              </S.ArchiveRow>
+            </Link>
+          </S.ArchiveList>
         </S.PageSection>
 
         {/* ── Footer ───────────────────────────────────────────────────── */}

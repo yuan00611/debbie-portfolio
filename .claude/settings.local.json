@@ -14,7 +14,27 @@
       "Bash(curl -sI http://localhost:3002)",
       "Skill(run)",
       "Bash(open *)",
-      "Bash(node *)"
+      "Bash(node *)",
+      "Bash(pnpm exec *)",
+      "Bash(pkill -f \"next start -p 3457\")",
+      "WebFetch(domain:yuan00611.github.io)",
+      "Bash(curl -s \"https://yuan00611.github.io/portfolio/g06_cfadventure/g06_cfadventure.html\")",
+      "Bash(grep -v \"^\\\\s*$\")",
+      "Bash(curl -s \"https://yuan00611.github.io/portfolio/\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"https://yuan00611.github.io/index.html\")",
+      "Bash(curl -s \"https://yuan00611.github.io/Gameportfolio_vangogh.html\")",
+      "Bash(curl -s \"https://yuan00611.github.io/js/portfolio.js\")",
+      "Bash(curl -s \"https://yuan00611.github.io/index.html\")",
+      "Bash(awk '/id=\"vangogh\"/,/modal fade.*id=\"\\(?!vangogh\\)/')",
+      "Bash(grep -iB2 -A 80 'id=\"humandog\"\\\\|id=\"dog\"\\\\|Human and Dog')",
+      "Bash(grep -vE '^\\\\s*$')",
+      "Bash(curl -s -O \"https://yuan00611.github.io/img/portfolio/g1_hnd.png\")",
+      "Bash(sips -g pixelWidth -g pixelHeight g1_hnd.png)",
+      "Bash(curl -s -O \"https://yuan00611.github.io/img/portfolio/g2_chicken.png\")",
+      "Bash(sips -g pixelWidth -g pixelHeight g2_chicken.png)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"https://yuan00611.github.io/download/g2_final.zip\")",
+      "Bash(curl -s -O \"https://yuan00611.github.io/img/portfolio/g3_liberary.png\")",
+      "Bash(sips -g pixelWidth -g pixelHeight g3_liberary.png)"
     ]
   }
 }

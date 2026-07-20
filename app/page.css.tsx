@@ -259,7 +259,82 @@ export const PillarQ = styled.p`
   font-family: var(--font-fraunces), Georgia, serif;
 `;
 
-// ── Tier 3 — Archive ──────────────────────────────────────────────────────────
+// ── Tier 3 — Interactive & immersive ─────────────────────────────────────────
+
+export const SecLede = styled.p`
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 16px;
+  color: var(--muted-foreground);
+  max-width: 640px;
+  line-height: 1.65;
+  margin: -20px 0 40px;
+`;
+
+export const MiniGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 20px;
+
+  @media (max-width: ${theme.breakpoints.md}) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: ${theme.breakpoints.sm}) {
+    grid-template-columns: 1fr;
+  }
+`;
+
+export const MiniCard = styled.a`
+  display: block;
+  text-decoration: none;
+  background: var(--card);
+  border: 1px solid var(--stroke-2);
+  border-radius: 10px;
+  padding: 14px 14px 16px;
+  transition: border-color 0.2s, transform 0.2s;
+
+  &:hover {
+    border-color: var(--brand-teal);
+    transform: translateY(-2px);
+  }
+`;
+
+export const MiniThumb = styled.div`
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    repeating-linear-gradient(135deg, color-mix(in oklch, var(--foreground) 3%, transparent) 0 10px, transparent 10px 20px),
+    var(--raised-2);
+  font-family: var(--font-jetbrains-mono), ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+`;
+
+export const MiniName = styled.h4`
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--foreground);
+  margin-bottom: 6px;
+  line-height: 1.3;
+`;
+
+export const MiniTag = styled.span`
+  font-family: var(--font-jetbrains-mono), ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--muted-foreground);
+`;
+
+// ── Tier 4 — Archive ──────────────────────────────────────────────────────────
 
 export const ArchiveList = styled.div`
   border-top: 1px solid var(--stroke-2);
@@ -272,6 +347,12 @@ export const ArchiveRow = styled.div`
   justify-content: space-between;
   align-items: baseline;
   gap: 20px;
+  cursor: pointer;
+  transition: border-color 0.2s;
+
+  &:hover {
+    border-bottom-color: var(--brand-teal);
+  }
 `;
 
 export const ArchiveName = styled.span`
