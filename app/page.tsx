@@ -192,22 +192,32 @@ export default function Home() {
           </S.SecHead>
 
           <S.ThesisBlock>
-            <S.ThesisEye>Trust in AI — three explorations</S.ThesisEye>
+            <S.ThesisEye>Trust in systems — four explorations</S.ThesisEye>
             <S.ThesisTitle>
-              What does a <em>trustworthy</em> AI interface actually look like?
+              What does a <em>trustworthy</em> interface actually look like?
             </S.ThesisTitle>
             <S.ThesisLede>
-              Three projects, three versions of the same question — each testing a different
-              aspect of how humans learn to trust systems that think for them.
+              Four explorations, four versions of the same question — each testing a different
+              aspect of how humans learn to trust systems that think, or see, for them.
             </S.ThesisLede>
 
             <S.PillarGrid>
-              <Link href="/projects/career-copilot" style={{ textDecoration: 'none' }}>
+              <Link href="/projects/360-film-language" style={{ textDecoration: 'none' }}>
                 <S.PillarCard>
-                  <S.PillarAngle>REASONING</S.PillarAngle>
-                  <S.PillarName>Career Copilot</S.PillarName>
+                  <S.PillarAngle>GUIDANCE</S.PillarAngle>
+                  <S.PillarName>360° Film Language</S.PillarName>
                   <S.PillarQ>
-                    When AI gives you a score, how do you earn the right to be believed?
+                    When the audience can look anywhere, how does the story make sure they understand?
+                  </S.PillarQ>
+                </S.PillarCard>
+              </Link>
+
+              <Link href="/projects/inquisitive" style={{ textDecoration: 'none' }}>
+                <S.PillarCard>
+                  <S.PillarAngle>CURIOSITY</S.PillarAngle>
+                  <S.PillarName>INQUISITIVE (EMNLP &apos;20)</S.PillarName>
+                  <S.PillarQ>
+                    Can a model learn to wonder — to ask what a curious reader would ask?
                   </S.PillarQ>
                 </S.PillarCard>
               </Link>
@@ -232,6 +242,33 @@ export default function Home() {
                 </S.PillarCard>
               </Link>
             </S.PillarGrid>
+
+            <S.ArchiveList style={{ marginTop: 28 }}>
+              <Link href="/projects/career-copilot" style={{ textDecoration: 'none' }}>
+                <S.ArchiveRow>
+                  <S.ArchiveName>Career Copilot — when AI gives you a score, how do you earn the right to be believed?</S.ArchiveName>
+                  <S.ArchiveMeta>AI · UX case study → </S.ArchiveMeta>
+                </S.ArchiveRow>
+              </Link>
+              <Link href="/projects/vizwiz" style={{ textDecoration: 'none' }}>
+                <S.ArchiveRow>
+                  <S.ArchiveName>VizWiz Answerability — can a model tell when a blind user&apos;s question can&apos;t be answered?</S.ArchiveName>
+                  <S.ArchiveMeta>Multimodal ML · 2nd place → </S.ArchiveMeta>
+                </S.ArchiveRow>
+              </Link>
+              <Link href="/projects/mbti" style={{ textDecoration: 'none' }}>
+                <S.ArchiveRow>
+                  <S.ArchiveName>MBTI from Language — RNNs guessing personality from how you write</S.ArchiveName>
+                  <S.ArchiveMeta>NLP · Best-project vote → </S.ArchiveMeta>
+                </S.ArchiveRow>
+              </Link>
+              <Link href="/projects/image-captions" style={{ textDecoration: 'none' }}>
+                <S.ArchiveRow>
+                  <S.ArchiveName>Image Caption Variance — asking the crowd what matters in a picture</S.ArchiveName>
+                  <S.ArchiveMeta>Crowdsourcing · CV → </S.ArchiveMeta>
+                </S.ArchiveRow>
+              </Link>
+            </S.ArchiveList>
           </S.ThesisBlock>
         </S.PageSection>
 

@@ -183,6 +183,9 @@ export default function WindTurbineVr() {
                         <S.H2>VR turned out to be a real instrument for changing minds.</S.H2>
                         <S.Para>Research had suggested VR news lands deeper than 2D — but seeing it happen in a live room was different. When someone watched, in first person, how construction robs the white dolphin of peaceful water, the abstraction became personal, and some of them walked out believing something new.</S.Para>
                         <S.Para>That&apos;s the thread I&apos;ve followed ever since. Before I designed for AI, I was already asking the same question this project asked: <strong>when should a system lead a person&apos;s understanding, and how do you earn their trust while doing it?</strong> The wind turbines were where that line began.</S.Para>
+                        <S.Para>The theory came first: a year earlier we published a study of how film language transforms in 360° news — the working vocabulary this piece was built on.{' '}
+                            <Link href="/projects/360-film-language" style={{ color: 'var(--tide)', textDecoration: 'none', borderBottom: '1px solid var(--line-strong)', fontWeight: 500 }}>Read the research →</Link>
+                        </S.Para>
                         <S.Chips>
                             <S.Chip>Unity</S.Chip>
                             <S.Chip>HTC Vive</S.Chip>

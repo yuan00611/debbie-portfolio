@@ -210,8 +210,10 @@ export const ThesisLede = styled.p`
 
 export const PillarGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 16px;
+
+  a { display: block; height: 100%; }
 
   @media (max-width: ${theme.breakpoints.md}) {
     grid-template-columns: 1fr;
@@ -223,6 +225,7 @@ export const PillarCard = styled.div`
   border: 1px solid var(--stroke-2);
   border-radius: 10px;
   padding: 26px 26px 22px;
+  height: 100%;
   transition: border-color 0.2s, transform 0.2s;
   cursor: pointer;
 

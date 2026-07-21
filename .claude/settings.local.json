@@ -34,7 +34,21 @@
       "Bash(sips -g pixelWidth -g pixelHeight g2_chicken.png)",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"https://yuan00611.github.io/download/g2_final.zip\")",
       "Bash(curl -s -O \"https://yuan00611.github.io/img/portfolio/g3_liberary.png\")",
-      "Bash(sips -g pixelWidth -g pixelHeight g3_liberary.png)"
+      "Bash(sips -g pixelWidth -g pixelHeight g3_liberary.png)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code} \\(%{size_download} bytes via HEAD\\)\\\\n\" -I \"https://yuan00611.github.io/document/film-language.pptx\")",
+      "Bash(grep -oE '\\(github.com/[^\"]*|[Ll]aravel[^<]{0,60}|powtoon[^\"]*\\)')",
+      "Bash(cp \"/Users/chendeyuan/Desktop/截圖 2026-07-20 下午6.50.29.png\" Eldercare-website.png)",
+      "Bash(sips --resampleWidth 1600 Eldercare-website.png)",
+      "Bash(sips -g pixelWidth -g pixelHeight Eldercare-website.png)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"https://github.com/yuan00611/ElderlySmartHomeCollaborationTool\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"https://www.abri.gov.tw/News_Content_Table.aspx?n=862&s=39672\")",
+      "Bash(curl *)",
+      "Bash(sips -s format png --out u7_frame.png u7_solution01.gif)",
+      "Bash(sips -s format png --out u7_frame2.png u7_solution02.gif)",
+      "Bash(ffmpeg -version)",
+      "Bash(brew install *)",
+      "WebFetch(domain:aclanthology.org)",
+      "Bash(grep -vE \"^\\\\s*$|font|margin|padding|color|border|background\")"
     ]
   }
 }
