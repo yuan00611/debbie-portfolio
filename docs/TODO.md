@@ -46,6 +46,18 @@ Three identities, three homes — never merged: **debbie-portfolio** (career; cu
 - [ ] **Rewrite the Story To Be studio site** ([storytobestudio.com](https://storytobestudio.com/), repo `storytobe/storytobe.github.io` — currently a BootstrapMade template): full narrative + page rewrite. Thesis: *stories in every medium* — games, data storytelling, immersive. Works get studio product pages (WWB "Play it" page, dataviz pieces as data stories) while portfolio case studies stay unchanged — same truth, two lenses; "A Story To Be game" credit cross-links the two. **Decided (2026-07-20): works-first.** Homepage leads with works; collaboration via a simple email contact ("Interested in working together? → email") — no service menu, no Calendly-forward front door. A service only earns a mention once a work proves it (immersive ✓ via Wind/Museum AR; AI-workflow-for-creative-teams pending a public "How we build with AI" page). Run the narrative process (thesis → audit → line-by-line copy) before rebuilding.
 - [ ] **Vault triage — Blender / AutoCAD / Maker**: everything goes into the vault (labs / asset library); surface per target only. AutoCAD + CAE degree → gold for AEC-tech roles (e.g. Autodesk); Blender → pipeline evidence for 3D-web/spatial (Three.js/R3F); Maker → already evidenced by the Arduino work on the Wind page. Default-hidden ≠ deleted — the resume shows the lens, the vault keeps the truth.
 
+## Tech-depth evidence to build — Mapbox · D3 · WebGL · Three.js · Motion
+
+Five graphics/interaction technologies to make **legible on the resume + provable in the portfolio**. Rule of the site: a skill only goes on the resume once a page proves it. Status audited 2026-07-21.
+
+- [ ] **D3.js — ✅ has evidence, needs surfacing**: force-directed graph over 60K+ nodes with custom tick logic (Dell page); dataviz library tradeoff Victory/SVG vs Canvas vs D3 (Athena page); About "Three threads" names D3. *Action:* name it explicitly in the skills/resume line and (optional) route the Numeracy Lab data stories here as published D3-adjacent data storytelling.
+- [ ] **Motion — ✅ has evidence, needs a case**: the `motion` package already runs the whole site (Reveal scroll reveals, IntroOverlay orb, CapabilityStrip, reduced-motion kill-switch). *Action:* this is exactly the **"The motion system behind this site" case study** already queued in P2 — that page is the proof. Merge, don't duplicate.
+- [ ] **WebGL — ⚠️ mentioned, not shipped**: appears only as intent (About "D3, WebGL"; Athena tradeoff names WebGL as the scale-up path never reached in prod). No page proves it yet. *Action:* build a real WebGL artifact in `debbie-labs` (shader / particle / GPU-scale dataviz) and graduate it into a case — otherwise soften the claim to honest ("would migrate to WebGL at scale").
+- [ ] **Three.js / R3F — ❌ no evidence yet**: nothing in the repo. Blender pipeline sits in the vault (see Vault triage above). *Action:* build a 3D-web experiment in `debbie-labs` (Blender asset → R3F scene) to back the 3D-web / spatial / immersive positioning; graduate to a case page.
+- [ ] **Mapbox — ❌ no evidence yet**: nothing in the repo. *Action:* build a geospatial data-viz piece (pairs naturally with data storytelling / the Numeracy Lab thread) so the skill is earned, not asserted.
+
+**Honesty gate:** D3 + Motion can go on the resume now (proven). WebGL is borderline (frame as directional, not shipped). Three.js + Mapbox stay OFF the resume until a page exists — the site's whole credibility rests on "shows, doesn't tell." Build first, then claim.
+
 ## Deliberately skipped (with reasons)
 
 - **Datadog**: RUM/APM for a static personal site is overkill and paid. `@vercel/analytics` is already installed; add **Vercel Speed Insights** for free web-vitals RUM instead. Revisit Datadog only as a deliberate learning lab, not as infrastructure this site needs.
@@ -106,6 +118,18 @@ Same truth, different lens:讓同一批經過驗證的作品,對不同觀眾重�
 - [ ] **建立 `debbie-labs`** repo:README + 一實驗一資料夾慣例 + 畢業規則(長大就搬成獨立 repo)。
 - [ ] **重寫 Story To Be 工作室網站**([storytobestudio.com](https://storytobestudio.com/),repo `storytobe/storytobe.github.io`——目前是 BootstrapMade 模板):整個敘事 + 頁面重寫。Thesis:*用各種媒介說故事*——遊戲、data storytelling、immersive。作品開工作室視角的產品頁(拾字旅人的「Play it」頁、資料視覺化以 data stories 呈現),portfolio 案例頁不動——同一個真相,兩個鏡頭;「A Story To Be game」掛牌互連。**已決定(2026-07-20):作品先行。**首頁以作品開場;合作用簡單的 email 聯繫(「有興趣合作?→ email」)——不做服務選單、不把 Calendly 當大門。服務要有作品證明才上檯面(immersive ✓ 風機/Museum AR;AI workflow for creative teams 待寫一頁公開的「How we build with AI」)。重建前先跑敘事流程(主軸 → 健檢 → 逐字文案提案)。
 - [ ] **分倉整理 — Blender / AutoCAD / Maker**:全部進 vault(labs / 素材庫),檯面按目標調用。AutoCAD + 土木 CAE 碩士 → 投 AEC-tech(如 Autodesk)是黃金組合;Blender → 3D web / spatial 的管線證據(Three.js/R3F);Maker → 風機頁的 Arduino 已經是證據。預設隱藏 ≠ 刪除——履歷呈現鏡頭,vault 保存真相。
+
+## 要補的技術深度證據 — Mapbox · D3 · WebGL · Three.js · Motion
+
+五個圖形/互動技術,目標是**在履歷上讓人看得懂、在作品集裡拿得出證據**。全站鐵律:一項技能要有一頁證明它,才准上履歷。現況盤點於 2026-07-21。
+
+- [ ] **D3.js — ✅ 已有證據,待浮上檯面**:6 萬+ 節點的 force-directed graph、自訂 tick 邏輯(Dell 頁);資料視覺化選型 Victory/SVG vs Canvas vs D3(Athena 頁);About「三條線」已點名 D3。*動作:*在技能/履歷行明確寫出,並(選配)把數感實驗室的 data stories 歸到這裡,當作已發表的 D3-adjacent 資料敘事。
+- [ ] **Motion — ✅ 已有證據,待做成案例**:`motion` 套件已經跑整個站(Reveal scroll reveal、IntroOverlay orb、CapabilityStrip、reduced-motion kill-switch)。*動作:*這正是 P2 已排的**「The motion system behind this site」案例頁**——那頁就是證據。合流,不要重做。
+- [ ] **WebGL — ⚠️ 有提到,沒出貨**:目前只是意圖(About 的「D3, WebGL」;Athena 選型把 WebGL 當「規模上去才走、但 prod 沒到過」的路)。還沒有一頁證明它。*動作:*在 `debbie-labs` 做一個真的 WebGL 產物(shader / 粒子 / GPU 級 dataviz)畢業成案例——否則把說法降級為誠實版(「規模大時會遷到 WebGL」)。
+- [ ] **Three.js / R3F — ❌ 目前零證據**:repo 裡沒有。Blender 管線放在 vault(見上面 Vault triage)。*動作:*在 `debbie-labs` 做一個 3D-web 實驗(Blender 素材 → R3F 場景)撐起 3D-web / spatial / immersive 定位;成熟後畢業成案例頁。
+- [ ] **Mapbox — ❌ 目前零證據**:repo 裡沒有。*動作:*做一個地理空間資料視覺化(和 data storytelling / 數感那條線天然搭配),讓這項技能是「賺來的」不是「宣稱的」。
+
+**誠實閘門:**D3 + Motion 現在就能上履歷(已證明)。WebGL 是邊緣(寫成方向,不寫成已出貨)。Three.js + Mapbox 在有頁面之前**不上履歷**——全站可信度靠的就是「用做的證明,不用說的」。先做,再宣稱。
 
 ## 刻意跳過(附理由)
 
