@@ -36,6 +36,14 @@ Same truth, different lens: let the same verified work re-narrate itself per aud
 - [ ] **Phase 3 (parked) — SaaS validation**: only revisit after ~10 real people confirm the same pain ("have you made 2+ resumes/portfolios from the same experience with different narratives?"). Job-seeker tools churn when users get hired — sprint pricing, not subscriptions, if it ever happens.
 - [ ] **Content triage — NTU Maker / Animation** and other exploratory work: sort each piece into the existing weight classes (archive row / About mention / deliberately omitted). Test: can it connect to one of the three axes in a sentence? Animation is extra interesting — it's evidence for the hero's MOTION keyword.
 
+## Identity & repo structure — Story To Be
+
+Three identities, three homes — never merged: **debbie-portfolio** (career; curated, evidence-linked) · **Story To Be** (studio brand — narrative-games publisher, for players/clients) · **debbie-labs** (private playground; messy on purpose). Pipeline: experiments start in labs → graduate either into portfolio case studies (career evidence) or Story To Be products (brand/commercial).
+
+- [ ] **Scaffold `debbie-labs`** repo: README + one-folder-per-experiment convention + graduation rule (grown up → own repo).
+- [ ] **Revive the Story To Be studio site**: own repo + domain, positioned as a narrative-games studio. Games get published under the brand ("A Story To Be game" credit in WWB footer, cross-links with case pages) — portfolio case studies unchanged. Same truth, two lenses.
+- [ ] **Vault triage — Blender / AutoCAD / Maker**: everything goes into the vault (labs / asset library); surface per target only. AutoCAD + CAE degree → gold for AEC-tech roles (e.g. Autodesk); Blender → pipeline evidence for 3D-web/spatial (Three.js/R3F); Maker → already evidenced by the Arduino work on the Wind page. Default-hidden ≠ deleted — the resume shows the lens, the vault keeps the truth.
+
 ## Deliberately skipped (with reasons)
 
 - **Datadog**: RUM/APM for a static personal site is overkill and paid. `@vercel/analytics` is already installed; add **Vercel Speed Insights** for free web-vitals RUM instead. Revisit Datadog only as a deliberate learning lab, not as infrastructure this site needs.
@@ -86,6 +94,14 @@ Same truth, different lens:讓同一批經過驗證的作品,對不同觀眾重�
 - [ ] **Phase 2 — 求職專屬連結**(`/for/<company>` 形式):AI **離線**輔助生成、發布前人工審核、證據連結。
 - [ ] **Phase 3(停車場)— SaaS 驗證**:找到約 10 個真人確認同樣的痛(「你有沒有用同一批經歷做過兩份以上敘事不同的履歷/作品集?」)再重啟。求職工具的用戶找到工作就流失——真要做,用衝刺定價,不用訂閱。
 - [ ] **內容分層 — NTU Maker / Animation** 等探索型作品:逐件分進現有量級(archive row / About 一句話 / 刻意不放)。判斷標準:能不能用一句話接上三軸之一?Animation 特別有趣——它是 hero 的 MOTION 關鍵字的證據。
+
+## 身分與 repo 分工 — Story To Be
+
+三個身分、三個家,絕不合併:**debbie-portfolio**(職業;精選、證據連結)·**Story To Be**(工作室品牌——敘事遊戲發行,給玩家/客戶)·**debbie-labs**(私人實驗場;亂是特權)。管線:實驗在 labs 誕生 → 成熟後往兩邊畢業:portfolio 案例頁(職涯證據)或 Story To Be 產品(品牌/商業)。
+
+- [ ] **建立 `debbie-labs`** repo:README + 一實驗一資料夾慣例 + 畢業規則(長大就搬成獨立 repo)。
+- [ ] **復活 Story To Be 工作室網站**:獨立 repo + 網域,定位為敘事遊戲工作室。遊戲掛品牌發行(拾字旅人 footer 加「A Story To Be game」,與案例頁互連)——portfolio 案例頁不動。同一個真相,兩個鏡頭。
+- [ ] **分倉整理 — Blender / AutoCAD / Maker**:全部進 vault(labs / 素材庫),檯面按目標調用。AutoCAD + 土木 CAE 碩士 → 投 AEC-tech(如 Autodesk)是黃金組合;Blender → 3D web / spatial 的管線證據(Three.js/R3F);Maker → 風機頁的 Arduino 已經是證據。預設隱藏 ≠ 刪除——履歷呈現鏡頭,vault 保存真相。
 
 ## 刻意跳過(附理由)
 
