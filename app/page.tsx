@@ -71,8 +71,9 @@ export default function Home() {
             fontSize: "clamp(13px, 1.8vw, 15px)", color: "var(--muted-foreground)",
             maxWidth: 560, margin: "14px auto 0", lineHeight: 1.65,
           }}>
-            I turn human needs, emerging technology, and complex systems into clear,
-            trustworthy, production-ready experiences.
+            I build interfaces that make complex systems easier to use, honest enough to
+            trust — and leave people feeling more capable, even inspired. Technology is
+            a medium, not the destination.
           </p>
 
           <div style={rise(0.6)}>
@@ -86,6 +87,11 @@ export default function Home() {
             <S.SecTitle>Featured work</S.SecTitle>
             <S.SecMeta>Shipped · at scale</S.SecMeta>
           </S.SecHead>
+
+          <S.SecLede>
+            Production systems where clarity had to survive scale — a $4B fintech
+            platform, enterprise data graphs, and healthcare access.
+          </S.SecLede>
 
           <S.FeaturedGrid>
             {/* Athena — wide */}
@@ -113,7 +119,8 @@ export default function Home() {
                   <S.CardName>Athena Advisory</S.CardName>
                   <S.CardDesc>
                     Led front-end architecture for a $4B+ AUM AI financial platform — from design
-                    system and data visualizations to a conversational AI chat interface.
+                    system and data visualizations to a conversational AI interface people trust
+                    with their money.
                   </S.CardDesc>
                   <S.CardLink>View case study →</S.CardLink>
                 </S.FeaturedCardWide>
@@ -143,8 +150,8 @@ export default function Home() {
                   </S.CardTags>
                   <S.CardName>Dell Network Graph</S.CardName>
                   <S.CardDesc>
-                    Interactive network graphs built in React for Dell&apos;s next-gen enterprise
-                    visualization platform.
+                    Network graphs that make 60K-node enterprise systems readable — built in
+                    React and D3 for Dell&apos;s next-gen visualization platform.
                   </S.CardDesc>
                   <S.CardLink>View case study →</S.CardLink>
                 </S.FeaturedCard>
@@ -197,31 +204,12 @@ export default function Home() {
               What does a <em>trustworthy</em> interface actually look like?
             </S.ThesisTitle>
             <S.ThesisLede>
-              Four explorations, four versions of the same question — each testing a different
-              aspect of how humans learn to trust systems that think, or see, for them.
+              AI amplifies human knowledge — and amplifies its own uncertainty with it.
+              Four explorations of calibrated trust: helping people lean on a system when
+              it&apos;s right, and take over when it isn&apos;t.
             </S.ThesisLede>
 
             <S.PillarGrid>
-              <Link href="/projects/360-film-language" style={{ textDecoration: 'none' }}>
-                <S.PillarCard>
-                  <S.PillarAngle>GUIDANCE</S.PillarAngle>
-                  <S.PillarName>360° Film Language</S.PillarName>
-                  <S.PillarQ>
-                    When the audience can look anywhere, how does the story make sure they understand?
-                  </S.PillarQ>
-                </S.PillarCard>
-              </Link>
-
-              <Link href="/projects/inquisitive" style={{ textDecoration: 'none' }}>
-                <S.PillarCard>
-                  <S.PillarAngle>CURIOSITY</S.PillarAngle>
-                  <S.PillarName>INQUISITIVE (EMNLP &apos;20)</S.PillarName>
-                  <S.PillarQ>
-                    Can a model learn to wonder — to ask what a curious reader would ask?
-                  </S.PillarQ>
-                </S.PillarCard>
-              </Link>
-
               <Link href="/projects/tesla" style={{ textDecoration: 'none' }}>
                 <S.PillarCard>
                   <S.PillarAngle>CALIBRATION</S.PillarAngle>
@@ -238,6 +226,26 @@ export default function Home() {
                   <S.PillarName>Eldercare Smart Home</S.PillarName>
                   <S.PillarQ>
                     Can an 80-year-old trust a system they never see until it saves them?
+                  </S.PillarQ>
+                </S.PillarCard>
+              </Link>
+
+              <Link href="/projects/inquisitive" style={{ textDecoration: 'none' }}>
+                <S.PillarCard>
+                  <S.PillarAngle>CURIOSITY</S.PillarAngle>
+                  <S.PillarName>INQUISITIVE (EMNLP &apos;20)</S.PillarName>
+                  <S.PillarQ>
+                    Can a model learn to wonder — to ask what a curious reader would ask?
+                  </S.PillarQ>
+                </S.PillarCard>
+              </Link>
+
+              <Link href="/projects/360-film-language" style={{ textDecoration: 'none' }}>
+                <S.PillarCard>
+                  <S.PillarAngle>GUIDANCE</S.PillarAngle>
+                  <S.PillarName>360° Film Language</S.PillarName>
+                  <S.PillarQ>
+                    When the audience can look anywhere, how does the story make sure they understand?
                   </S.PillarQ>
                 </S.PillarCard>
               </Link>
@@ -281,7 +289,7 @@ export default function Home() {
 
           <S.SecLede>
             Before I designed for AI, I was designing for presence — VR, AR, and games
-            that put people inside an idea.
+            that put people inside an idea. New media are how interfaces learn new patterns.
           </S.SecLede>
 
           <S.FeaturedGrid>

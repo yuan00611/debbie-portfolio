@@ -162,7 +162,7 @@ export default function Eldercare() {
             A guideline nobody can use is just a PDF.
           </h2>
           <p style={{ fontSize: 16, color: C.ink2, maxWidth: 680, marginBottom: 36, lineHeight: 1.7, fontFamily: 'var(--font-inter), sans-serif' }}>
-            So I translated it twice — once for the professionals who would apply it, once for the families it was written to protect.
+            So I translated it twice — once for the professionals who would apply it, once for the families it was written to protect — and a third time into VR, below. Same guideline, three media: the medium is the means, never the point.
           </p>
 
           {/* Translation 1 — the website */}
@@ -348,7 +348,7 @@ export default function Eldercare() {
             </div>
             <div className={styles.footerBottom} style={{ paddingTop: 24, borderTop: '1px solid rgba(255,255,255,0.1)', fontFamily: mono, fontSize: 11, color: C.inkFade, letterSpacing: '0.05em' }}>
               <span>Debbie Chen · 2026</span>
-              <span>Designed and built with Claude Code ❤️ in two days</span>
+              <span>NTU iNsight UX · 2018–2019</span>
             </div>
           </div>
         </footer>

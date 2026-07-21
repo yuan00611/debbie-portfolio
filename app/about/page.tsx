@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image";
-import { TentTreeIcon, GraduationCapIcon, ScrollIcon, ScrollTextIcon, PaintbrushIcon } from 'lucide-react';
+import { TentTreeIcon, GraduationCapIcon, ScrollIcon, ScrollTextIcon, PaintbrushIcon, SparklesIcon, CompassIcon } from 'lucide-react';
 import { Navigation } from "@/components/common/navigation/navigation";
 import * as S from './page.css';
 
@@ -22,32 +22,26 @@ export default function About() {
             <S.SummaryWrapper>
                 <S.SectionTextWrapper> 
                     <S.SectionText>
-                        I build AI-native interfaces that help people understand, trust, and interact with complex systems.
-                        With a background in frontend engineering and Human-Computer Interaction, I focus on designing experiences that go beyond static UI — toward more dynamic, conversational, and human-centered interactions.
-                    </S.SectionText> 
+                        I design and build interfaces that make complex technology easier to use, easier to understand, and worthy of trust.
+                        Whether the medium is AI, data visualization, immersive media, or a design system, the question underneath is always the same: <strong>how can technology help people feel more capable, informed, and in control?</strong>
+                    </S.SectionText>
                     <S.SectionText>
                         What I care about most:
                     </S.SectionText>
                     <S.SectionText>
-                        🧠 𝗔𝗜-𝗡𝗮𝘁𝗶𝘃𝗲 𝗜𝗻𝘁𝗲𝗿𝗳𝗮𝗰𝗲𝘀: Designing interactive, AI-first experiences, from streaming UI to multi-panel data interactions
+                        🧭 <strong>Use with ease</strong> — intuitive, accessible interfaces that survive real-world complexity, from financial dashboards to WCAG-compliant healthcare sites
                     </S.SectionText>
                     <S.SectionText>
-                        🔍 𝗖𝗹𝗮𝗿𝗶𝘁𝘆: Turning complex systems (financial data, AI outputs) into intuitive, understandable interfaces
+                        🔭 <strong>Open the imagination</strong> — data visualization, immersive media, and new interaction patterns that expand what people can see, ask, and think
                     </S.SectionText>
                     <S.SectionText>
-                        🛡️ 𝗧𝗿𝘂𝘀𝘁: Building transparent, predictable systems through thoughtful feedback, error handling, and UX decisions
-                    </S.SectionText>
-                    <S.SectionText>
-                        ⚙️ 𝗦𝘆𝘀𝘁𝗲𝗺𝘀 & 𝗦𝗰𝗮𝗹𝗲: Creating scalable, maintainable frontend architectures and design systems
-                    </S.SectionText>
-                    <S.SectionText>
-                        🌿 𝗛𝘂𝗺𝗮𝗻-𝗖𝗲𝗻𝘁𝗲𝗿𝗲𝗱 𝗗𝗲𝘀𝗶𝗴𝗻: Grounding technical decisions in how people perceive, understand, and use systems
+                        🤝 <strong>Calibrate trust</strong> — helping people understand what an AI system knows, what it doesn&apos;t, why it recommends — and when their own judgment should stay in the loop
                     </S.SectionText>
                     <S.SectionText>
                         Most recently at Athena Advisory, I helped transform a traditional financial platform into an AI-first experience, working on real-time interfaces, streaming responses, and interaction patterns that connect language with data.
                     </S.SectionText>
                     <S.SectionText>
-                        I’m especially interested in shaping how humans interact with AI — in ways that feel intuitive, transparent, and empowering.    
+                        As AI becomes a more powerful amplifier of human knowledge, I want to build the interfaces that keep humans confident inside the loop — intuitive, transparent, and empowering.
                     </S.SectionText>
 
                 </S.SectionTextWrapper>
@@ -60,6 +54,45 @@ export default function About() {
                     style={{borderRadius: '50%', maxWidth: '240px', maxHeight: '240px', minHeight: '240px', minWidth: '240px'}}
                 />
             </S.SummaryWrapper>
+        </S.SectionWrapper>
+
+        <S.SectionWrapper>
+            <S.SectionTitleWrapper>
+                <SparklesIcon color={mainColor} />
+                <S.SectionTitle>Where it started</S.SectionTitle>
+            </S.SectionTitleWrapper>
+            <S.SectionTextWrapper>
+                <S.SectionText>
+                    Randy Pausch was one of my earliest inspirations in Human-Computer Interaction. Watching <em>The Last Lecture</em>, what struck me wasn&apos;t only his passion for dreams — it was the way he connected technology, education, games, and creativity back to people. He convinced me that technology can be more than a tool for efficiency: it can be a medium for learning, imagination, and helping people pursue what matters to them.
+                </S.SectionText>
+                <S.SectionText>
+                    Two beliefs from that lecture never left: pursue ambitious dreams, and build things real enough to change someone&apos;s life. I want to create technology that doesn&apos;t make people feel smaller in front of complexity — but more capable, more curious, and more able to imagine what&apos;s possible.
+                </S.SectionText>
+            </S.SectionTextWrapper>
+        </S.SectionWrapper>
+
+        <S.SectionWrapper>
+            <S.SectionTitleWrapper>
+                <CompassIcon color={mainColor} />
+                <S.SectionTitle>Three threads</S.SectionTitle>
+            </S.SectionTitleWrapper>
+            <S.SectionTextWrapper>
+                <S.SectionText>
+                    My path looks winding on paper — library science, civil engineering, HCI. It was actually one question, pulled from three directions.
+                </S.SectionText>
+                <S.SectionText>
+                    <strong>01 · Understanding people</strong> — Interviews, surveys, personas, contextual inquiry — and a cognitive science program on top of my HCI degree — because before designing anything, I wanted every possible way of understanding how people think, feel, and decide to trust.
+                </S.SectionText>
+                <S.SectionText>
+                    <strong>02 · Making complexity visible</strong> — Library &amp; Information Science taught me how knowledge is organized; a knowledge management program taught me how it&apos;s kept alive. D3, WebGL, information architecture, and frontend craft are how I turn vast, abstract systems into something a person can see, navigate, and remember.
+                </S.SectionText>
+                <S.SectionText>
+                    <strong>03 · Designing trustworthy intelligence</strong> — To me, ML and AI are amplifiers of collective human intelligence — and an amplifier also amplifies uncertainty, bias, and power gaps. From publishing NLP research at EMNLP to building Athena&apos;s AI chat, this thread is about interfaces that help people calibrate trust instead of demanding it.
+                </S.SectionText>
+                <S.SectionText>
+                    Three threads, one job: bridge the gap between humans and technology — and make the crossing feel worth it.
+                </S.SectionText>
+            </S.SectionTextWrapper>
         </S.SectionWrapper>
 
           <S.SectionWrapper>

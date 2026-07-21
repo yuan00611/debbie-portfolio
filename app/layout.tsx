@@ -26,7 +26,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "Debbie Chen — Senior Frontend Engineer",
-  description: "Debbie Chen's portfolio showcasing her work in designing and building intuitive, scalable, and accessible interfaces.",
+  description: "Debbie Chen — frontend engineer & design technologist building interfaces that make complex systems easier to use, understand, and trust.",
 };
 
 export default function RootLayout({
