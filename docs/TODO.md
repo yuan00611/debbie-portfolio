@@ -27,6 +27,15 @@ Prioritized backlog for turning this portfolio into a full software-engineering 
 - [ ] **Bundle analysis**: `@next/bundle-analyzer` pass; styled-components runtime and per-route JS are the things to look at.
 - [ ] **Dependabot/Renovate**: automated dependency PRs (pairs with CI from P0).
 
+## Perspective links — the "Prism" experiment
+
+Same truth, different lens: let the same verified work re-narrate itself per audience. Trust principles: never invent experience; always show the current lens; one click back to the full story; visitor never fills a form (one-tap persona chips at most — sender-side links do the targeting).
+
+- [ ] **Phase 1 — hand-authored lens switcher** on the homepage: "Meet Debbie as: Storyteller / Design Engineer / Frontend Engineer / Forward Deployed Engineer". Switching changes hero headline, section order, and card emphasis. Zero runtime AI, zero hallucination risk — and it doubles as the site's strongest AI-interaction case study (it demonstrates the calibrated-trust thesis on itself).
+- [ ] **Phase 2 — application-specific links** (`/for/<company>` style): AI-assisted generation *offline*, human-reviewed before publish, evidence-linked.
+- [ ] **Phase 3 (parked) — SaaS validation**: only revisit after ~10 real people confirm the same pain ("have you made 2+ resumes/portfolios from the same experience with different narratives?"). Job-seeker tools churn when users get hired — sprint pricing, not subscriptions, if it ever happens.
+- [ ] **Content triage — NTU Maker / Animation** and other exploratory work: sort each piece into the existing weight classes (archive row / About mention / deliberately omitted). Test: can it connect to one of the three axes in a sentence? Animation is extra interesting — it's evidence for the hero's MOTION keyword.
+
 ## Deliberately skipped (with reasons)
 
 - **Datadog**: RUM/APM for a static personal site is overkill and paid. `@vercel/analytics` is already installed; add **Vercel Speed Insights** for free web-vitals RUM instead. Revisit Datadog only as a deliberate learning lab, not as infrastructure this site needs.
