@@ -35,6 +35,7 @@ Same truth, different lens: let the same verified work re-narrate itself per aud
 - [ ] **Phase 2 — application-specific links** (`/for/<company>` style): AI-assisted generation *offline*, human-reviewed before publish, evidence-linked.
 - [ ] **Phase 3 (parked) — SaaS validation**: only revisit after ~10 real people confirm the same pain ("have you made 2+ resumes/portfolios from the same experience with different narratives?"). Job-seeker tools churn when users get hired — sprint pricing, not subscriptions, if it ever happens.
 - [ ] **Content triage — NTU Maker / Animation** and other exploratory work: sort each piece into the existing weight classes (archive row / About mention / deliberately omitted). Test: can it connect to one of the three axes in a sentence? Animation is extra interesting — it's evidence for the hero's MOTION keyword.
+- [ ] **Numeracy Lab data-storytelling articles** (OKAPI 三國 series + 數感 column): route to Story To Be's data-storytelling section when the studio site is rebuilt; resume gets the internship entry. Positioning: published data storytelling, not "data viz skills" — D3 evidence lives in Dell.
 
 ## Identity & repo structure — Story To Be
 
@@ -94,6 +95,7 @@ Same truth, different lens:讓同一批經過驗證的作品,對不同觀眾重�
 - [ ] **Phase 2 — 求職專屬連結**(`/for/<company>` 形式):AI **離線**輔助生成、發布前人工審核、證據連結。
 - [ ] **Phase 3(停車場)— SaaS 驗證**:找到約 10 個真人確認同樣的痛(「你有沒有用同一批經歷做過兩份以上敘事不同的履歷/作品集?」)再重啟。求職工具的用戶找到工作就流失——真要做,用衝刺定價,不用訂閱。
 - [ ] **內容分層 — NTU Maker / Animation** 等探索型作品:逐件分進現有量級(archive row / About 一句話 / 刻意不放)。判斷標準:能不能用一句話接上三軸之一?Animation 特別有趣——它是 hero 的 MOTION 關鍵字的證據。
+- [ ] **數感實驗室 data storytelling 文章**(OKAPI 三國系列 + 數感專欄):Story To Be 重建時歸入 data storytelling 作品區;履歷加實習條目。定位:已發表的 data storytelling,不是「data viz 技能」——D3 證據在 Dell 那邊。
 
 ## 身分與 repo 分工 — Story To Be
 
