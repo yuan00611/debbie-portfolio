@@ -46,3 +46,54 @@ Same truth, different lens: let the same verified work re-narrate itself per aud
 
 - [ ] Confirm 輔具之友 gov link opens in a browser (curl-blocked)
 - [ ] Swap WWB journal / homepage thumbs when newer screenshots exist
+
+---
+
+# 中文版
+
+依「這個 repo 的情境」(個人專案、靜態生成、內容為主、Vercel 部署)按 CP 值排序的工程待辦。
+
+## P0 — 品質閘門(便宜,先做)
+
+- [ ] **GitHub Actions CI**:每次 push/PR 跑 lint + `tsc --noEmit` + `next build`。Vercel 已經是 CD(branch preview + main 上 prod)——CI 是補在前面的品質閘門。
+- [ ] **連結檢查(排程)**:大量頁面連到 `yuan00611.github.io`、YouTube、ACM/IEEE、政府網站。每週 CI(如 lychee)抓死連結,保護網站可信度。*這個 repo 最專屬的風險。*
+- [ ] **每頁 SEO metadata + OG 圖**:目前所有 `/projects/*` 共用同一組全域 title/description(頁面是 client component)。需要小重構——server layout 或 server wrapper 配 `generateMetadata`,加 `next/og` 分享圖和 sitemap。**真實價值高於清單上任何監控工具。**
+
+## P1 — 測試與無障礙(最對品牌)
+
+- [ ] **Playwright smoke 測試**:24 條路由會渲染、導覽有效、主題切換翻轉 `html.dark`、YouTube iframe 存在。這個 repo 真正需要的測試形狀——不是內容頁的 unit test。
+- [ ] **CI 裡的無障礙稽核**:axe-core 走 Playwright 掃每一頁、兩種主題。Portfolio 拿 WCAG 專業說故事(LifeLong 頁)——repo 該在自己身上證明。
+- [ ] **Lighthouse CI 設 budget**:每個 PR 檢查 perf/a11y/SEO/best-practices 門檻。盯緊圖多案例頁的 LCP。
+- [ ] **舊站圖片搬家**:風機 / 碳足跡 / 梵谷 / HnD / 博物館 / Liberary 素材還在外連舊 GitHub Pages——單點故障 + 效能成本。搬進 `public/`,移除 `remotePatterns`。
+
+## P2 — Design system 作為作品
+
+- [ ] **抽取 design tokens**:把顏色 / 字級 / 間距 / 12 套案例雙色盤從 `globals.css` 和各 `page.css.tsx` 抽成 tokens 模組。這是讓 Storybook 和 Figma 同步都容易十倍的前置。
+- [ ] **Storybook**:限縮範圍——共用 primitives(`components/ui`、Reveal、Navigation、卡片/柱/archive 模式)+ 一個**「12 套色盤雙主題總覽」story**。Athena 經歷有引用 Storybook——用做的證明,不用說的。
+- [ ] **Chromatic 或 Storybook test-runner**(選配):Storybook 建好後對 primitives 做視覺回歸。
+
+## P3 — Showcase 實驗
+
+- [ ] **Figma design system 同步(Figma MCP)**:把抽好的 tokens + primitives 推進 Figma library。對個人網站基礎建設 ROI 低,**作為 design technologist 的 showcase 價值高**——code→design 橋接就是定位本身。tokens 抽取後再做。
+- [ ] **Bundle 分析**:跑一輪 `@next/bundle-analyzer`;styled-components runtime 和各路由 JS 是重點。
+- [ ] **Dependabot/Renovate**:依賴更新自動化(配 P0 的 CI)。
+
+## Perspective links —「Prism」實驗
+
+Same truth, different lens:讓同一批經過驗證的作品,對不同觀眾重新敘事。信任原則:絕不虛構經歷;永遠顯示當前視角;一鍵回到完整版;訪客絕不填表單(最多一鍵 persona chips——定向靠寄件端連結)。
+
+- [ ] **Phase 1 — 手寫視角切換器**:首頁「Meet Debbie as: Storyteller / Design Engineer / Frontend Engineer / Forward Deployed Engineer」。切換改變 hero headline、區塊排序、卡片強調。零 runtime AI、零幻覺風險——而且本身就是全站最強的 AI 互動案例(用自己示範 calibrated trust 論文)。
+- [ ] **Phase 2 — 求職專屬連結**(`/for/<company>` 形式):AI **離線**輔助生成、發布前人工審核、證據連結。
+- [ ] **Phase 3(停車場)— SaaS 驗證**:找到約 10 個真人確認同樣的痛(「你有沒有用同一批經歷做過兩份以上敘事不同的履歷/作品集?」)再重啟。求職工具的用戶找到工作就流失——真要做,用衝刺定價,不用訂閱。
+- [ ] **內容分層 — NTU Maker / Animation** 等探索型作品:逐件分進現有量級(archive row / About 一句話 / 刻意不放)。判斷標準:能不能用一句話接上三軸之一?Animation 特別有趣——它是 hero 的 MOTION 關鍵字的證據。
+
+## 刻意跳過(附理由)
+
+- **Datadog**:對靜態個人網站做 RUM/APM 是大砲打蚊子,而且要錢。已裝 `@vercel/analytics`,改補免費的 **Vercel Speed Insights** 拿 web vitals。除非目標是刻意學 Datadog——那是 learning lab,不是這個站需要的基礎建設。
+- **Sentry / 錯誤監控**:靜態生成的內容站幾乎沒有 runtime 錯誤面。不值得接。
+- **Unit test 覆蓋率目標**:對內容頁是錯的工具;上面的 Playwright + axe + Lighthouse 才是這個 repo 正確的測試金字塔。
+
+## 內容未結事項(承接 worklog)
+
+- [ ] 輔具之友政府連結請在瀏覽器確認可開(curl 被擋)
+- [ ] 拾字旅人 journal / 首頁縮圖之後有新截圖可換
