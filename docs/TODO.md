@@ -20,6 +20,7 @@ Prioritized backlog for turning this portfolio into a full software-engineering 
 - [ ] **Extract design tokens**: colors / type scale / spacing / the 12 case-study duo-palettes out of `globals.css` + `page.css.tsx` files into a tokens module. Prerequisite that makes both Storybook and Figma sync 10× easier.
 - [ ] **Storybook**: scope it to shared primitives (`components/ui`, Reveal, Navigation, card/pillar/archive patterns) + a **palette gallery story** showing all 12 case-study palettes in both themes. Debbie cites Storybook practice at Athena — this shows it instead of telling it.
 - [ ] **Chromatic or Storybook test-runner** (optional): visual regression on the primitives once Storybook exists.
+- [ ] **Motion case study — "The motion system behind this site"**: a case page that makes MOTION the protagonist, using assets that already exist — IntroOverlay orb animation, CapabilityStrip keyframes, scroll reveals, reduced-motion handling, WWB game feel. Feeds the Design Engineer / Design Systems positioning; merges with Storybook (motion primitives as stories). Optional companion: an interaction lab in `debbie-labs` (springs, micro-interactions) that graduates pieces into the case page.
 
 ## P3 — showcase experiments
 
@@ -80,6 +81,7 @@ Three identities, three homes — never merged: **debbie-portfolio** (career; cu
 - [ ] **抽取 design tokens**:把顏色 / 字級 / 間距 / 12 套案例雙色盤從 `globals.css` 和各 `page.css.tsx` 抽成 tokens 模組。這是讓 Storybook 和 Figma 同步都容易十倍的前置。
 - [ ] **Storybook**:限縮範圍——共用 primitives(`components/ui`、Reveal、Navigation、卡片/柱/archive 模式)+ 一個**「12 套色盤雙主題總覽」story**。Athena 經歷有引用 Storybook——用做的證明,不用說的。
 - [ ] **Chromatic 或 Storybook test-runner**(選配):Storybook 建好後對 primitives 做視覺回歸。
+- [ ] **Motion 案例頁——「The motion system behind this site」**:讓 MOTION 當主角的案例頁,素材全部現成——IntroOverlay orb 動畫、CapabilityStrip keyframes、scroll reveal、reduced-motion 處理、拾字旅人的 game feel。餵養 Design Engineer / Design Systems 定位;與 Storybook 合流(motion primitives 做成 stories)。選配:`debbie-labs` 開 interaction lab(spring、micro-interactions),成熟的畢業進案例頁。
 
 ## P3 — Showcase 實驗
 
