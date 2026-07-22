@@ -10,6 +10,8 @@ import AthenaPng from '../public/Athena.png';
 import DellPng from '../public/Dell.png';
 import LifeLongPng from '../public/LifeLong.png';
 import WwbPng from '../public/WWB.png';
+import BaseballPng from '../public/Baseball-map.png';
+import type { StaticImageData } from 'next/image';
 
 const mono = "var(--font-jetbrains-mono), ui-monospace, monospace";
 const rise = (d: number): React.CSSProperties => ({
@@ -284,7 +286,7 @@ export default function Home() {
         <S.PageSection>
           <S.SecHead>
             <S.SecTitle>Interactive &amp; immersive</S.SecTitle>
-            <S.SecMeta>Games · VR · AR — 2016–now</S.SecMeta>
+            <S.SecMeta>Data viz · Games · VR · AR — 2016–now</S.SecMeta>
           </S.SecHead>
 
           <S.SecLede>
@@ -293,6 +295,37 @@ export default function Home() {
           </S.SecLede>
 
           <S.FeaturedGrid>
+            {/* Taiwan Players Abroad — half */}
+            <S.HalfCardWrapper>
+              <Link href="/projects/baseball-players-tw">
+                <S.FeaturedCard>
+                  <div style={{ aspectRatio: '4/3', borderRadius: '8px', marginBottom: '22px', overflow: 'hidden', background: 'var(--raised-2)' }}>
+                    <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+                      <Image
+                        src={BaseballPng}
+                        alt="Taiwan Players Abroad — a dark US map under night-game lighting, with a green Taiwan marker on the left and dotted arcs crossing the Pacific to a constellation of red pins marking where Taiwanese ballplayers are playing"
+                        fill
+                        placeholder="blur"
+                        style={{ objectFit: 'cover' }}
+                        sizes="(max-width: 820px) 100vw, 512px"
+                      />
+                    </div>
+                  </div>
+                  <S.CardTags>
+                    <S.CardTag>Data viz</S.CardTag>
+                    <S.CardTag $neutral>D3 map</S.CardTag>
+                    <S.CardTag $neutral>Live data</S.CardTag>
+                  </S.CardTags>
+                  <S.CardName>Taiwan Players Abroad (旅美幫)</S.CardName>
+                  <S.CardDesc>
+                    Two dozen Taiwanese ballplayers, scattered from Rookie ball to the majors —
+                    one live map that answers, at a glance, who&apos;s on tonight and where.
+                  </S.CardDesc>
+                  <S.CardLink>View case study →</S.CardLink>
+                </S.FeaturedCard>
+              </Link>
+            </S.HalfCardWrapper>
+
             {/* Where Words Begin — half */}
             <S.HalfCardWrapper>
               <Link href="/projects/where-words-begin">
@@ -324,40 +357,15 @@ export default function Home() {
               </Link>
             </S.HalfCardWrapper>
 
-            {/* The Making of Wind — half */}
-            <S.HalfCardWrapper>
-              <Link href="/projects/wind-turbine-vr">
-                <S.FeaturedCard>
-                  <div style={{ aspectRatio: '4/3', borderRadius: '8px', marginBottom: '22px', overflow: 'hidden', background: 'var(--raised-2)' }}>
-                    <div style={{ position: 'relative', width: '100%', height: '100%' }}>
-                      {/* Temporary: key art from the 2018 archive site */}
-                      <Image
-                        src="https://yuan00611.github.io/portfolio/g04_windturbine/img/g4_intro.png"
-                        alt="The Making of Wind — VR headset key art at the exhibition entrance"
-                        fill
-                        style={{ objectFit: 'cover' }}
-                        sizes="(max-width: 820px) 100vw, 512px"
-                      />
-                    </div>
-                  </div>
-                  <S.CardTags>
-                    <S.CardTag>VR news</S.CardTag>
-                    <S.CardTag $neutral>HTC Vive</S.CardTag>
-                    <S.CardTag $neutral>Immersive</S.CardTag>
-                  </S.CardTags>
-                  <S.CardName>The Making of Wind (海造的風機)</S.CardName>
-                  <S.CardDesc>
-                    Taiwan&apos;s first interactive VR news — putting ~400 visitors inside the
-                    debate over offshore wind, from the shore to the seabed.
-                  </S.CardDesc>
-                  <S.CardLink>View case study →</S.CardLink>
-                </S.FeaturedCard>
-              </Link>
-            </S.HalfCardWrapper>
           </S.FeaturedGrid>
 
           <S.MiniGrid>
             {([
+              {
+                name: 'The Making of Wind (海造的風機)', tag: 'VR news · HTC Vive', href: '/projects/wind-turbine-vr',
+                img: 'https://yuan00611.github.io/portfolio/g04_windturbine/img/g4_intro.png',
+                alt: 'The Making of Wind — VR headset key art at the exhibition entrance',
+              },
               {
                 name: 'Is Vincent Alright (梵谷還好)', tag: 'VR escape · HTC Vive', href: '/projects/is-vincent-alright',
                 img: 'https://yuan00611.github.io/img/portfolio/g5_vangogh.png',
@@ -373,17 +381,21 @@ export default function Home() {
                 img: 'https://yuan00611.github.io/img/portfolio/g1_hnd.png',
                 alt: 'Human and Dog title card — a man and a dog in an industrial escape room',
               },
-              {
-                name: 'Museum AR Game', tag: 'AR · exhibition', href: '/projects/museum-ar',
-                img: 'https://yuan00611.github.io/img/portfolio/g2_chicken.png',
-                alt: 'Museum AR Game — display case with rooster and hen, AR egg tray on a tablet',
-              },
-            ] as { name: string; tag: string; href: string; thumb?: string; img?: string; alt?: string }[]).map((p) => (
+            ] as { name: string; tag: string; href: string; external?: boolean; thumb?: string; img?: string | StaticImageData; alt?: string }[]).map((p) => (
               /* '#' links are placeholders — those projects get case-study pages later */
-              <S.MiniCard key={p.name} as={Link} href={p.href}>
+              <S.MiniCard
+                key={p.name}
+                as={p.external ? 'a' : Link}
+                href={p.href}
+                {...(p.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+              >
                 <S.MiniThumb>
                   {p.img ? (
-                    <Image src={p.img} alt={p.alt ?? p.name} fill style={{ objectFit: 'cover' }} sizes="(max-width: 820px) 50vw, 256px" />
+                    typeof p.img === 'string' ? (
+                      <Image src={p.img} alt={p.alt ?? p.name} fill style={{ objectFit: 'cover' }} sizes="(max-width: 820px) 50vw, 256px" />
+                    ) : (
+                      <Image src={p.img} alt={p.alt ?? p.name} fill placeholder="blur" style={{ objectFit: 'cover' }} sizes="(max-width: 820px) 50vw, 256px" />
+                    )
                   ) : p.thumb}
                 </S.MiniThumb>
                 <S.MiniName>{p.name}</S.MiniName>
@@ -393,6 +405,12 @@ export default function Home() {
           </S.MiniGrid>
 
           <S.ArchiveList style={{ marginTop: 32 }}>
+            <Link href="/projects/museum-ar" style={{ textDecoration: 'none' }}>
+              <S.ArchiveRow>
+                <S.ArchiveName>Museum AR Game — bringing a museum display case to life on a visitor&apos;s tablet</S.ArchiveName>
+                <S.ArchiveMeta>AR · Exhibition → </S.ArchiveMeta>
+              </S.ArchiveRow>
+            </Link>
             <Link href="/projects/liberary" style={{ textDecoration: 'none' }}>
               <S.ArchiveRow>
                 <S.ArchiveName>Liberary — a Galileo-era RPG about intellectual freedom</S.ArchiveName>

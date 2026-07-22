@@ -48,7 +48,11 @@
       "Bash(ffmpeg -version)",
       "Bash(brew install *)",
       "WebFetch(domain:aclanthology.org)",
-      "Bash(grep -vE \"^\\\\s*$|font|margin|padding|color|border|background\")"
+      "Bash(grep -vE \"^\\\\s*$|font|margin|padding|color|border|background\")",
+      "Bash(python3 -c \"import fitz; print\\('pymupdf ok'\\)\")",
+      "Bash(pip3 install *)",
+      "Bash(python3 -c \"import fitz; print\\('pymupdf now ok'\\)\")",
+      "Bash(python3 -)"
     ]
   }
 }
