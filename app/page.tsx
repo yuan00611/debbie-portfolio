@@ -35,7 +35,7 @@ export default function Home() {
           <div aria-hidden style={{ position: "absolute", right: "12%", bottom: "30%", width: 8, height: 8, borderRadius: 99, border: "1px solid var(--brand-warm)", opacity: .3, animation: "k-driftSlow 7s ease-in-out infinite" }} />
           <div aria-hidden style={{ position: "absolute", right: "22%", top: "18%", color: "var(--brand-warm)", opacity: .4, fontSize: 13, animation: "k-drift 5s ease-in-out infinite" }}>✦</div>
 
-          {/* replay orb — flies across the strip to the name */}
+          {/* replay orb — flies across the strip to the name  */}
           {replayKey > 0 && (
             <div key={replayKey} aria-hidden style={{
               position: "absolute", width: 9, height: 9, borderRadius: 99,
