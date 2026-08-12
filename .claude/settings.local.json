@@ -52,7 +52,30 @@
       "Bash(python3 -c \"import fitz; print\\('pymupdf ok'\\)\")",
       "Bash(pip3 install *)",
       "Bash(python3 -c \"import fitz; print\\('pymupdf now ok'\\)\")",
-      "Bash(python3 -)"
+      "Bash(python3 -)",
+      "Bash(gh repo *)",
+      "Bash(mdls -name kMDItemNumberOfPages \"/Users/chendeyuan/Downloads/BrightNight Final.pdf\")",
+      "Bash(python3 -c \"import pypdf; print\\('pypdf ok'\\)\")",
+      "Bash(python3 -c ' *)",
+      "Bash(awk '{print $5, $9}')",
+      "Bash(python3)",
+      "Bash(cp detail-full.png __TRACKED_VAR__/PVFleet-detail.png)",
+      "Bash(cp form-full.png __TRACKED_VAR__/PVFleet-form.png)",
+      "Bash(sips -g pixelHeight public/PVFleet-detail.png)",
+      "Bash(sips -g pixelHeight /tmp/served-detail.png)",
+      "Read(//tmp/**)",
+      "Bash(sips -g pixelWidth -g pixelHeight /tmp/opt-detail.img)",
+      "Bash(sips -g pixelHeight public/PVFleet-detail.png public/PVFleet-form.png)",
+      "Bash(awk '{print $2, $11, $12, $13, $14}')",
+      "Bash(ps -p 69661 -o command=)",
+      "Bash(perl -0pi -e 's/sizes=\"\\\\\\(max-width: 860px\\\\\\) 100vw, 392px\"/sizes=\"\\(max-width: 860px\\) 100vw, 320px\"/g' app/projects/pv-fleet-explorer/page.tsx)",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless --disable-gpu --screenshot=pvcard.png --window-size=1600,1200 --default-background-color=00000000 file://__TRACKED_VAR__/pvcard.html)",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless --disable-gpu --screenshot=pvcard.png --window-size=1600,1200 file://__TRACKED_VAR__/pvcard.html)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(git commit *)",
+      "Bash(rm /tmp/pv-commit-msg.txt)"
     ]
   }
 }

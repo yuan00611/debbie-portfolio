@@ -11,6 +11,7 @@ import DellPng from '../public/Dell.png';
 import LifeLongPng from '../public/LifeLong.png';
 import WwbPng from '../public/WWB.png';
 import BaseballPng from '../public/Baseball-map.png';
+import PvFleetCardPng from '../public/PVFleet-card.png';
 import type { StaticImageData } from 'next/image';
 
 const mono = "var(--font-jetbrains-mono), ui-monospace, monospace";
@@ -326,15 +327,15 @@ export default function Home() {
               </Link>
             </S.HalfCardWrapper>
 
-            {/* Where Words Begin — half */}
+            {/* PV Fleet Explorer — half */}
             <S.HalfCardWrapper>
-              <Link href="/projects/where-words-begin">
+              <Link href="/projects/pv-fleet-explorer">
                 <S.FeaturedCard>
                   <div style={{ aspectRatio: '4/3', borderRadius: '8px', marginBottom: '22px', overflow: 'hidden', background: 'var(--raised-2)' }}>
                     <div style={{ position: 'relative', width: '100%', height: '100%' }}>
                       <Image
-                        src={WwbPng}
-                        alt="Where Words Begin title screen — ink-wash mountains in mist"
+                        src={PvFleetCardPng}
+                        alt="PV Fleet Explorer — a 2.5D solar panel under a night sky of state-count bubbles, one yellow site pin selected"
                         fill
                         placeholder="blur"
                         style={{ objectFit: 'cover' }}
@@ -343,14 +344,15 @@ export default function Home() {
                     </div>
                   </div>
                   <S.CardTags>
-                    <S.CardTag>Game design</S.CardTag>
-                    <S.CardTag $neutral>Immersive</S.CardTag>
-                    <S.CardTag $neutral>Procedural art</S.CardTag>
+                    <S.CardTag>Data viz</S.CardTag>
+                    <S.CardTag $neutral>Built with Claude Code</S.CardTag>
+                    <S.CardTag $neutral>Live demo</S.CardTag>
                   </S.CardTags>
-                  <S.CardName>Where Words Begin (拾字旅人)</S.CardName>
+                  <S.CardName>PV Fleet Explorer</S.CardName>
                   <S.CardDesc>
-                    A game about how Chinese characters were born — earn each word by truly
-                    observing the world, in a valley where every pixel is painted in code.
+                    A trust-scored map explorer for 10,000 messy solar-site records —
+                    every number the UI shows traces back to a pure, tested function.
+                    Built solo with Claude Code, live in the browser.
                   </S.CardDesc>
                   <S.CardLink>View case study →</S.CardLink>
                 </S.FeaturedCard>
@@ -361,6 +363,11 @@ export default function Home() {
 
           <S.MiniGrid>
             {([
+              {
+                name: 'Where Words Begin (拾字旅人)', tag: 'Game · Procedural art', href: '/projects/where-words-begin',
+                img: WwbPng,
+                alt: 'Where Words Begin title screen — ink-wash mountains in mist',
+              },
               {
                 name: 'The Making of Wind (海造的風機)', tag: 'VR news · HTC Vive', href: '/projects/wind-turbine-vr',
                 img: 'https://yuan00611.github.io/portfolio/g04_windturbine/img/g4_intro.png',
@@ -375,11 +382,6 @@ export default function Home() {
                 name: 'Carbon Footprint Adventure', tag: 'VR · Oculus', href: '/projects/carbon-footprint',
                 img: 'https://yuan00611.github.io/portfolio/g06_cfadventure/img/g6_intro.png',
                 alt: 'Carbon Footprint Adventure — low-poly Arctic scene with polar bears on ice floes',
-              },
-              {
-                name: 'Human and Dog', tag: 'Asymmetric · PC', href: '/projects/human-and-dog',
-                img: 'https://yuan00611.github.io/img/portfolio/g1_hnd.png',
-                alt: 'Human and Dog title card — a man and a dog in an industrial escape room',
               },
             ] as { name: string; tag: string; href: string; external?: boolean; thumb?: string; img?: string | StaticImageData; alt?: string }[]).map((p) => (
               /* '#' links are placeholders — those projects get case-study pages later */
@@ -405,6 +407,12 @@ export default function Home() {
           </S.MiniGrid>
 
           <S.ArchiveList style={{ marginTop: 32 }}>
+            <Link href="/projects/human-and-dog" style={{ textDecoration: 'none' }}>
+              <S.ArchiveRow>
+                <S.ArchiveName>Human and Dog — a co-op escape game where one of you is human, and one of you is a dog</S.ArchiveName>
+                <S.ArchiveMeta>PC · CHI&apos;16 Top 3 → </S.ArchiveMeta>
+              </S.ArchiveRow>
+            </Link>
             <Link href="/projects/museum-ar" style={{ textDecoration: 'none' }}>
               <S.ArchiveRow>
                 <S.ArchiveName>Museum AR Game — bringing a museum display case to life on a visitor&apos;s tablet</S.ArchiveName>

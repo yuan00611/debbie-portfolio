@@ -30,6 +30,7 @@ Duo-accent, themed to the project's world. Registry of taken palettes:
 | mbti | plum `#ce8ade` + spark `#b8d45e` | dichotomy grid |
 | image-captions | sepia `#cf9a67` + ash `#a49bb4` | old photograph |
 | vizwiz | shutter `#e585ad` + silver `#9aa5ad` | darkroom |
+| pv-fleet-explorer | cobalt `#6f97e8` + sun `#f2bb2e` | fleet at noon (duo = the record vs the reviewer's attention; yellow is selection-only, as in the app) |
 
 (Dark-theme values shown; each has a darker light-theme counterpart tuned for contrast on the light bg.)
 
